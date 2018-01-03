@@ -31,5 +31,8 @@
     <ClCompile Include="TripletsWithSumBetweenGivenRange.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="LargestNumber.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
