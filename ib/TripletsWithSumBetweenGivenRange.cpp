@@ -41,46 +41,52 @@ int Triplets(vector<string> &A)
 	}
 
 	const float a_hi = 2 / static_cast<float>(3);
-	float a_min1 = a_hi, a_min2 = a_hi;
-	float b_min1 = 1.0f, b_min2 = 1.0f;
-	float c_min = 2.0f;
-	float a_max1 = .0f, a_max2 = .0f, a_max3 = .0f;
-	float b_max = .0f;
+	float a_min1 = FLT_MAX, a_min2 = FLT_MAX;
+	float b_min1 = FLT_MAX, b_min2 = FLT_MAX;
+	float c_min = FLT_MAX;
+	float a_max1 = FLT_MIN, a_max2 = FLT_MIN, a_max3 = FLT_MIN;
+	float b_max = FLT_MIN;
 	for (size_t i = 0; i < len; i++)
 	{
 		if (num[i] < a_hi)
 		{
 			if (num[i] < a_min1)
 			{
-				if (a_min1 < a_min2) a_min2 = a_min1;
+				a_min2 = a_min1;
 				a_min1 = num[i];
 			}
-			else if (num[i] < a_min2) a_min2 = num[i];
+			else if (num[i] < a_min2)
+			{
+				a_min2 = num[i];
+			}
 
 			if (num[i] > a_max1)
 			{
-				if (a_max2 < a_max1)
-				{
-					if (a_max3 < a_max2) a_max3 = a_max2;
-					a_max2 = a_max1;
-				}
+				a_max3 = a_max2;
+				a_max2 = a_max1;
 				a_max1 = num[i];
 			}
 			else if (num[i] > a_max2)
 			{
-				if (a_max3 < a_max2) a_max2 = a_max3;
+				a_max3 = a_max2;
 				a_max2 = num[i];
 			}
-			else if (num[i] > a_max3) a_max3 = num[i];
+			else if (num[i] > a_max3)
+			{
+				a_max3 = num[i];
+			}
 		}
 		else if (num[i] > a_hi && num[i] < 1)
 		{
 			if (num[i] < b_min1)
 			{
-				if (b_min1 < b_min2) b_min2 = b_min1;
+				b_min2 = b_min1;
 				b_min1 = num[i];
 			}
-			else if (num[i] < b_min2) b_min2 = num[i];
+			else if (num[i] < b_min2)
+			{
+				b_min2 = num[i];
+			}
 
 			b_max = max(b_max, num[i]);
 		}
@@ -90,12 +96,30 @@ int Triplets(vector<string> &A)
 		}
 	}
 
-	if (a_max1 + a_max2 + a_max3 > 1 && a_max1 != .0f && a_max2 != .0f && a_max3 != .0f) return 1;
-	if (a_max1 + a_max2 + b_max > 1 && a_min1 + a_min2 + b_min1 < 2
-		&& a_max1 != .0f && a_max2 != .0f && b_max != .0f && a_min1 != a_hi && a_min2 != a_hi && b_min1 != 1.0f) return 1;
-	if (a_min1 + a_min2 + c_min < 2 && a_min1 != a_hi && a_min2 != a_hi && c_min != 2.0f) return 1;
-	if (a_min1 + b_min1 + b_min2 < 2 && a_min1 != a_hi && b_min1 != 1.0f && b_min2 != 1.0f) return 1;
-	if (a_min1 + b_min1 + c_min < 2 && a_min1 != a_hi && b_min1 != 1.0f && c_min != 2.0f) return 1;
+	if (a_max1 != FLT_MIN && a_max2 != FLT_MIN && a_max3 != FLT_MIN)
+	{
+		if (a_max1 + a_max2 + a_max3 > 1) return 1;
+	}
+	
+	if (a_max1 != FLT_MIN && a_max2 != FLT_MIN && b_max != FLT_MIN && a_min1 != FLT_MAX && a_min2 != FLT_MAX && b_min1 != 1.0f)
+	{
+		if (a_max1 + a_max2 + b_max > 1 && a_min1 + a_min2 + b_min1 < 2) return 1;
+	}
+	
+	if (a_min1 != FLT_MAX && a_min2 != FLT_MAX && c_min != FLT_MAX)
+	{
+		if (a_min1 + a_min2 + c_min < 2) return 1;
+	}
+	
+	if (a_min1 != FLT_MAX && b_min1 != FLT_MAX && b_min2 != FLT_MAX)
+	{
+		if (a_min1 + b_min1 + b_min2 < 2) return 1;
+	}
+	
+	if (a_min1 != FLT_MAX && b_min1 != FLT_MAX && c_min != FLT_MAX)
+	{
+		if (a_min1 + b_min1 + c_min < 2) return 1;
+	}
 
 	return 0;
 }
