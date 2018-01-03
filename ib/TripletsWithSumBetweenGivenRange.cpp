@@ -101,7 +101,7 @@ int Triplets(vector<string> &A)
 		if (a_max1 + a_max2 + a_max3 > 1) return 1;
 	}
 	
-	if (a_max1 != FLT_MIN && a_max2 != FLT_MIN && b_max != FLT_MIN && a_min1 != FLT_MAX && a_min2 != FLT_MAX && b_min1 != 1.0f)
+	if (a_max1 != FLT_MIN && a_max2 != FLT_MIN && b_max != FLT_MIN && a_min1 != FLT_MAX && a_min2 != FLT_MAX && b_min1 != FLT_MAX)
 	{
 		if (a_max1 + a_max2 + b_max > 1 && a_min1 + a_min2 + b_min1 < 2) return 1;
 	}
