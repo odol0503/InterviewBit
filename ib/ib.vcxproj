@@ -112,11 +112,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AntiDiagonals.cpp" />
+    <ClCompile Include="FindDuplicate.cpp" />
     <ClCompile Include="HotelBookings.cpp" />
     <ClCompile Include="KthPascalTriangle.cpp" />
     <ClCompile Include="LargestNumber.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MaxDistance.cpp" />
+    <ClCompile Include="MaxUnsortedSubarray.cpp" />
     <ClCompile Include="NobleInteger.cpp" />
     <ClCompile Include="PascalTriangle.cpp" />
     <ClCompile Include="SpiralOrderMatrix.cpp" />
