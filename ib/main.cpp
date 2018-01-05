@@ -14,6 +14,7 @@ bool HotelBooking(vector<int> &arrive, vector<int> &depart, int K);
 int MaxDistance(const vector<int> &A);
 vector<int> MaxUnsortedSubarray(vector<int> &A);
 int FindDuplicate(vector<int> &A);
+vector<int> PrimeSum(int A);
 
 int main()
 {
@@ -22,6 +23,6 @@ int main()
 	int ans2;
 	bool ans3;
 	string ret;
-	ans2 = FindDuplicate(A);
+	ans = PrimeSum(16777214);
 	return 0;
 }

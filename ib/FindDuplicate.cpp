@@ -23,17 +23,21 @@ int FindDuplicate(vector<int> &V)
 	if (range * range < valueRange) range++;
 	vector<int> count(range + 1, 0);
 
-	for (int i = 0; i < V.size(); i++) {
+	for (int i = 0; i < V.size(); i++) 
+	{
 		count[(V[i] - 1) / range]++;
 	}
 
 	int repeatingRange = -1;
 	int numRanges = ((valueRange - 1) / range) + 1;
-	for (int i = 0; i < numRanges && repeatingRange == -1; i++) {
-		if (i < numRanges - 1 || valueRange % range == 0) {
+	for (int i = 0; i < numRanges && repeatingRange == -1; i++) 
+	{
+		if (i < numRanges - 1 || valueRange % range == 0) 
+		{
 			if (count[i] > range) repeatingRange = i;
 		}
-		else {
+		else 
+		{
 			if (count[i] > valueRange % range) repeatingRange = i;
 		}
 	}
@@ -42,11 +46,14 @@ int FindDuplicate(vector<int> &V)
 	{
 		count[i] = 0;
 	}
-	for (int i = 0; i < V.size(); i++) {
+	for (int i = 0; i < V.size(); i++) 
+	{
 		if ((V[i] - 1) / range == repeatingRange) count[(V[i] - 1) % range]++;
 	}
-	for (int i = 0; i < range; i++) {
-		if (count[i] > 1) {
+	for (int i = 0; i < range; i++) 
+	{
+		if (count[i] > 1) 
+		{
 			return repeatingRange * range + i + 1;
 		}
 	}

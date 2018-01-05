@@ -121,6 +121,7 @@
     <ClCompile Include="MaxUnsortedSubarray.cpp" />
     <ClCompile Include="NobleInteger.cpp" />
     <ClCompile Include="PascalTriangle.cpp" />
+    <ClCompile Include="PrimeSum.cpp" />
     <ClCompile Include="SpiralOrderMatrix.cpp" />
     <ClCompile Include="TripletsWithSumBetweenGivenRange.cpp" />
     <ClCompile Include="WaveArray.cpp" />
