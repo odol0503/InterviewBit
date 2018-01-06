@@ -15,14 +15,15 @@ int MaxDistance(const vector<int> &A);
 vector<int> MaxUnsortedSubarray(vector<int> &A);
 int FindDuplicate(vector<int> &A);
 vector<int> PrimeSum(int A);
+void RotateMatrix(vector<vector<int> > &A);
 
 int main()
 {
-	vector<int> A = { 3, 4, 1, 4, 1 };
+	vector<vector<int>> A = { {1,2,3}, {4,5,6}, {7,8,9} };
 	vector<int> ans;
 	int ans2;
 	bool ans3;
 	string ret;
-	ans = PrimeSum(16777214);
+	RotateMatrix(A);
 	return 0;
 }
