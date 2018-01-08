@@ -15,6 +15,48 @@ If there is no duplicate, output -1
 #include <cmath>
 using namespace std;
 
+#define OWN
+
+#ifdef OWN
+int FindDuplicate(vector<int> &A)
+{
+	int len = static_cast<int>(A.size());
+	int n = len - 1;
+	int sr_num = static_cast<int>(ceil(sqrt(n)));
+	vector<int>cnt(sr_num, 0);
+	
+	for (int i = 0; i < len; i++)
+	{
+		cnt[(A[i]-1) / sr_num]++;
+	}
+
+	for (int i = 0; i < sr_num; i++)
+	{
+		if (cnt[i] > sr_num || (i == n/sr_num && cnt[i] > n%sr_num))
+		{
+			for (int j = 0; j < cnt.size(); j++) cnt[j] = 0;
+			for (int k = 0; k < len; k++)
+			{
+				if (sr_num*i + 1 <= A[k] && A[k] <= (i + 1)*sr_num)
+				{
+					cnt[(A[k]-1)% sr_num]++;
+				}
+			}
+			
+			for (int x = 0; x < cnt.size(); x++)
+			{
+				if (cnt[x] > 1)
+				{
+					int a = i*sr_num + x + 1;
+					return a;
+				}
+			}
+		}
+	}
+
+	return -1;
+}
+#else
 int FindDuplicate(vector<int> &V)
 {
 	if (V.size() <= 1) return -1;
@@ -59,3 +101,4 @@ int FindDuplicate(vector<int> &V)
 	}
 	return -1;
 }
+#endif
