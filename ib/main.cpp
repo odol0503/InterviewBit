@@ -24,8 +24,26 @@ struct Interval {
 };
 vector<Interval> MergeIntervals(vector<Interval> &intervals, Interval newInterval);
 
+enum {
+	SPIRAL_ORDER_MATRIX,
+	PASCAL_TRIANGLE,
+	ROW_PASCAL_TRIANGLE,
+	ANTI_DIAGONALS,
+	NOBLE_INTEGER,
+	TRIPLETS_WITH_SUM,
+	LARGEST_NUMBER,
+	WAVE_ARRAY,
+	HOTEL_BOOKINGS,
+	MAX_DISTANCE,
+	MAXIMUM_UNSORTED_ARRAY,
+	FIND_DUPLICATE,
+	ROTATE_MATRIX,
+	PRIME_SUM,
+};
+
 int main()
 {
+	
 #if 0
 	vector<Interval> A = {
 		Interval(6037774, 6198243), Interval(6726550, 7004541), Interval(8842554, 10866536), Interval(11027721, 11341296), Interval(11972532, 14746848),
@@ -44,6 +62,6 @@ int main()
 	bool ans3;
 	string ret;
 	vector<Interval>ret2;
-	ret2 = MergeIntervals(A, B);
+	ret2 = FindDuplicate(A, B);
 	return 0;
 }
