@@ -103,7 +103,7 @@ bool doesIntersect(Interval a, Interval b) {
 }
 
 vector<Interval> MergeIntervals(vector<Interval> &intervals, Interval newInterval) {
-	int sz = intervals.size();
+	int sz = static_cast<int>(intervals.size());
 	vector<Interval> result;
 
 	// check corner cases
