@@ -20,5 +20,6 @@
     <ClCompile Include="MaxConsecutiveGap.cpp" />
     <ClCompile Include="NextPermutation.cpp" />
     <ClCompile Include="FindPermutation.cpp" />
+    <ClCompile Include="MergeOverlappingIntervals.cpp" />
   </ItemGroup>
 </Project>

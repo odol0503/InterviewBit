@@ -122,6 +122,7 @@
     <ClCompile Include="MaxDistance.cpp" />
     <ClCompile Include="MaxUnsortedSubarray.cpp" />
     <ClCompile Include="MergeIntervals.cpp" />
+    <ClCompile Include="MergeOverlappingIntervals.cpp" />
     <ClCompile Include="NextPermutation.cpp" />
     <ClCompile Include="NobleInteger.cpp" />
     <ClCompile Include="PascalTriangle.cpp" />
