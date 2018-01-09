@@ -26,7 +26,6 @@ void RotateMatrix(vector<vector<int> > &A)
 	int N = static_cast<int>(A.size());
 	int temp1 = 0;
 	int temp2 = 0;
-	int dir = 0;
 	for (int i = 0; i < N/2; i++)
 	{
 		for (int j = i; j < N-i-1; j++)
