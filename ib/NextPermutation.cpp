@@ -18,6 +18,9 @@ Warning : DO NOT USE LIBRARY FUNCTION FOR NEXT PERMUTATION. Use
 #include <utility>
 using namespace std;
 
+#define OWN
+
+#ifdef OWN
 void NextPermutation(vector<int> &A) 
 {
 	int len = static_cast<int>(A.size());
@@ -25,7 +28,7 @@ void NextPermutation(vector<int> &A)
 	if (len < 2) return;
 	else if (len == 2)
 	{
-		reverse(A.begin(), A.end());
+		swap(A[0], A[1]);
 		return;
 	}
 
@@ -48,5 +51,26 @@ void NextPermutation(vector<int> &A)
 		}
 	}
 
-	sort(A.begin() + suffix + 1, A.end());
+	reverse(A.begin() + suffix + 1, A.end());
 }
+#else
+void NextPermutation(vector<int> &A)
+{
+	int len = num.size();
+	int i, j;
+	for (i = len - 2; i >= 0; i--)
+		if (num[i] < num[i + 1]) break;
+
+	if (i == -1) {
+		reverse(num.begin(), num.end());
+		return;
+	}
+
+	for (j = len - 1; j > i; j--)
+		if (num[j] > num[i]) break;
+
+	swap(num[i], num[j]);
+	reverse(num.begin() + i + 1, num.end());
+	return;
+}
+#endif
