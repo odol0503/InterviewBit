@@ -17,6 +17,7 @@ int FindDuplicate(vector<int> &A);
 vector<int> PrimeSum(int A);
 void RotateMatrix(vector<vector<int> > &A);
 void NextPermutation(vector<int> &A);
+vector<int> FindPermutation(const string A, int B);
 
 struct Interval {
 	int start;
@@ -44,11 +45,12 @@ enum TEST_CASE
 	ePRIME_SUM,
 	eMERGE_INTERVALS,
 	eNEXT_PERMUTATION,
+	eFIND_PERMUTATION,
 };
 
 int main()
 {
-	TEST_CASE test = eNEXT_PERMUTATION;
+	TEST_CASE test = eFIND_PERMUTATION;
 
 	switch (test)
 	{
@@ -124,10 +126,18 @@ int main()
 		break;
 	}
 	case eNEXT_PERMUTATION:
+	{
 		vector<int> A = { 769, 533 };
 		//vector<int> A = { 1,2,3, 4,5 };
 		NextPermutation(A);
+		break;
 	}
-	
+	case eFIND_PERMUTATION:
+	{
+		string A = "IDDID";
+		int B = 6;
+		vector<int> ret = FindPermutation(A, B);
+	}
+	}
 	return 0;
 }

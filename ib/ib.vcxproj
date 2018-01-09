@@ -113,6 +113,7 @@
   <ItemGroup>
     <ClCompile Include="AntiDiagonals.cpp" />
     <ClCompile Include="FindDuplicate.cpp" />
+    <ClCompile Include="FindPermutation.cpp" />
     <ClCompile Include="HotelBookings.cpp" />
     <ClCompile Include="KthPascalTriangle.cpp" />
     <ClCompile Include="LargestNumber.cpp" />

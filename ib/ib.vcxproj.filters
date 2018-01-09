@@ -19,5 +19,6 @@
     <ClCompile Include="WaveArray.cpp" />
     <ClCompile Include="MaxConsecutiveGap.cpp" />
     <ClCompile Include="NextPermutation.cpp" />
+    <ClCompile Include="FindPermutation.cpp" />
   </ItemGroup>
 </Project>
