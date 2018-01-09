@@ -16,6 +16,7 @@ vector<int> MaxUnsortedSubarray(vector<int> &A);
 int FindDuplicate(vector<int> &A);
 vector<int> PrimeSum(int A);
 void RotateMatrix(vector<vector<int> > &A);
+void NextPermutation(vector<int> &A);
 
 struct Interval {
 	int start;
@@ -42,11 +43,12 @@ enum TEST_CASE
 	eROTATE_MATRIX,
 	ePRIME_SUM,
 	eMERGE_INTERVALS,
+	eNEXT_PERMUTATION,
 };
 
 int main()
 {
-	TEST_CASE test = eFIND_DUPLICATE;
+	TEST_CASE test = eNEXT_PERMUTATION;
 
 	switch (test)
 	{
@@ -119,7 +121,12 @@ int main()
 		Interval B = { Interval(36210193, 61984219) };
 
 		vector<Interval> ret = MergeIntervals(A, B);
+		break;
 	}
+	case eNEXT_PERMUTATION:
+		vector<int> A = { 769, 533 };
+		//vector<int> A = { 1,2,3, 4,5 };
+		NextPermutation(A);
 	}
 	
 	return 0;

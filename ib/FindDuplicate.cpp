@@ -37,7 +37,7 @@ int FindDuplicate(vector<int> &A)
 			for (int j = 0; j < cnt.size(); j++) cnt[j] = 0;
 			for (int k = 0; k < len; k++)
 			{
-				if (sr_num*i + 1 <= A[k] && A[k] <= (i + 1)*sr_num)
+				if (sr_num*i < A[k] && A[k] <= sr_num*(i + 1))
 				{
 					cnt[(A[k]-1)% sr_num]++;
 				}
@@ -47,8 +47,7 @@ int FindDuplicate(vector<int> &A)
 			{
 				if (cnt[x] > 1)
 				{
-					int a = i*sr_num + x + 1;
-					return a;
+					return i*sr_num + x + 1;
 				}
 			}
 		}
