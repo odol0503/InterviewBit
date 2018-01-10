@@ -23,5 +23,6 @@
     <ClCompile Include="MergeOverlappingIntervals.cpp" />
     <ClCompile Include="SetMatrixZeros.cpp" />
     <ClCompile Include="FirstMissingInteger.cpp" />
+    <ClCompile Include="N3RepeatNumber.cpp" />
   </ItemGroup>
 </Project>
