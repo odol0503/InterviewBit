@@ -18,6 +18,8 @@ Return: [1, 3, 2]
 #include <cassert>
 using namespace std;
 
+#define OWN
+
 #ifdef OWN
 vector<int> FindPermutation(const string A, int B)
 {
@@ -37,13 +39,9 @@ vector<int> FindPermutation(const string A, int B)
 			ret.push_back(max_value--);
 		}
 		else assert(0);
-
-		if (i == len - 1)
-		{
-			if (A[i] == 'I') ret.push_back(min_value);
-			else if (A[i] == 'D') ret.push_back(max_value);
-		}
 	}
+
+	if (min_value == max_value) ret.push_back(min_value);
 
 	return ret;
 }

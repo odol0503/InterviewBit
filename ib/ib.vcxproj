@@ -128,6 +128,7 @@
     <ClCompile Include="PascalTriangle.cpp" />
     <ClCompile Include="PrimeSum.cpp" />
     <ClCompile Include="RotateMatrix.cpp" />
+    <ClCompile Include="SetMatrixZeros.cpp" />
     <ClCompile Include="SpiralOrderMatrix.cpp" />
     <ClCompile Include="TripletsWithSumBetweenGivenRange.cpp" />
     <ClCompile Include="WaveArray.cpp" />

@@ -21,5 +21,6 @@
     <ClCompile Include="NextPermutation.cpp" />
     <ClCompile Include="FindPermutation.cpp" />
     <ClCompile Include="MergeOverlappingIntervals.cpp" />
+    <ClCompile Include="SetMatrixZeros.cpp" />
   </ItemGroup>
 </Project>
