@@ -24,5 +24,6 @@
     <ClCompile Include="SetMatrixZeros.cpp" />
     <ClCompile Include="FirstMissingInteger.cpp" />
     <ClCompile Include="N3RepeatNumber.cpp" />
+    <ClCompile Include="HammingDistance.cpp" />
   </ItemGroup>
 </Project>
