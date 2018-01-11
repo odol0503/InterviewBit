@@ -19,6 +19,7 @@ void RotateMatrix(vector<vector<int> > &A);
 void NextPermutation(vector<int> &A);
 vector<int> FindPermutation(const string A, int B);
 int RepeatNumber(const vector<int> &A);
+int MaxConsecutiveGap(const vector<int> &A);
 
 struct Interval {
 	int start;
@@ -51,6 +52,7 @@ enum TEST_CASE
 	eNEXT_PERMUTATION,
 	eFIND_PERMUTATION,
 	eMERGE_OVERLAPPING_INTERVALS,
+	eMAX_CONSECUTIVE_GAP,
 	eSET_MATRIX_ZEROS,
 	eFIRST_MISSING_INTEGER,
 	e3TIMES_REPEAT_NUMBER,
@@ -58,7 +60,7 @@ enum TEST_CASE
 
 int main()
 {
-	TEST_CASE test = e3TIMES_REPEAT_NUMBER;
+	TEST_CASE test = eMAX_CONSECUTIVE_GAP;
 
 	switch (test)
 	{
@@ -146,6 +148,11 @@ int main()
 		int B = 6;
 		vector<int> ret = FindPermutation(A, B);
 		break;
+	}
+	case eMAX_CONSECUTIVE_GAP:
+	{
+		vector<int> A = { 5, 3, 1, 8, 9, 2, 4 };
+		int ret = MaxConsecutiveGap(A);
 	}
 	case eMERGE_OVERLAPPING_INTERVALS:
 	{

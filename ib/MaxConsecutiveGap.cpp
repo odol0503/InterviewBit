@@ -16,21 +16,42 @@ You may also assume that the difference will not overflow.
 #include <algorithm>
 using namespace std;
 
-#define OWN6
+#define OWN
 
 #ifdef OWN
 int MaxConsecutiveGap(const vector<int> &A)
 {
 	int len = static_cast<int>(A.size());
-	vector<int> B(A);
-	sort(B.begin(), B.end());
-	int max_gap = 0;
-	for (int i = 0; i < len-1; i++)
+	int b_num = len - 1;
+	int max_value = *max_element(A.begin(), A.end());
+	int min_value = *min_element(A.begin(), A.end());
+	float gap = (max_value - min_value) / static_cast<float>(b_num);
+	vector<int>max_buf(b_num, INT_MIN);
+	vector<int>min_buf(b_num, INT_MAX);
+
+	for (int i = 0; i < len; i++)
 	{
-		max_gap = max(max_gap, abs(B[i+1] - B[i]));
+		if (A[i] != min_value && A[i] != max_value)
+		{
+			int idx = static_cast<int>(floor((A[i] - min_value) / gap));
+			max_buf[idx] = max(max_buf[idx], A[i]);
+			min_buf[idx] = min(min_buf[idx], A[i]);
+		}
+	}
+
+	int prev = min_value;
+	int max_diff = 0;
+	for (int i = 0; i < b_num; i++)
+	{
+		if (max_buf[i] == INT_MIN || min_buf[i] == INT_MAX) continue;
+		int diff = min_buf[i] - prev;
+		max_diff = max(max_diff, diff);
+		prev = max_buf[i];
 	}
 	
-	return max_gap;
+	max_diff = max(max_diff, (max_value - prev));
+
+	return max_diff;
 }
 #else
 int MaxConsecutiveGap(const vector<int> &num) {
