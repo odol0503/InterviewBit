@@ -37,6 +37,7 @@ int IsPower(int A);
 int TitleToNumber(string A);
 string ConvertToTitle(int A);
 int IsPalindrome(int A);
+int ReverseInt(int A);
 
 enum TEST_CASE
 {
@@ -68,11 +69,12 @@ enum TEST_CASE
 	eEXCEL_COLUMN_NUM,
 	eCONVERT_TO_TITLE,
 	ePALINDROME_INT,
+	eREVERSE_INT,
 };
 
 int main()
 {
-	TEST_CASE test = ePALINDROME_INT;
+	TEST_CASE test = eREVERSE_INT;
 
 	switch (test)
 	{
@@ -225,6 +227,11 @@ int main()
 	case ePALINDROME_INT:
 	{
 		int ret = IsPalindrome(-2147447412);
+		break;
+	}
+	case eREVERSE_INT:
+	{
+		int ret = ReverseInt(-1234567891);
 		break;
 	}
 	}

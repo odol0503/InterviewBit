@@ -30,5 +30,6 @@
     <ClCompile Include="ExcelColumnNumber.cpp" />
     <ClCompile Include="ExcelColumnTitle.cpp" />
     <ClCompile Include="PalindromeInteger.cpp" />
+    <ClCompile Include="ReverseInteger.cpp" />
   </ItemGroup>
 </Project>
