@@ -25,5 +25,7 @@
     <ClCompile Include="FirstMissingInteger.cpp" />
     <ClCompile Include="N3RepeatNumber.cpp" />
     <ClCompile Include="HammingDistance.cpp" />
+    <ClCompile Include="FizzBuzz.cpp" />
+    <ClCompile Include="PowerOfTwoIntegers.cpp" />
   </ItemGroup>
 </Project>

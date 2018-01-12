@@ -115,6 +115,7 @@
     <ClCompile Include="FindDuplicate.cpp" />
     <ClCompile Include="FindPermutation.cpp" />
     <ClCompile Include="FirstMissingInteger.cpp" />
+    <ClCompile Include="FizzBuzz.cpp" />
     <ClCompile Include="HammingDistance.cpp" />
     <ClCompile Include="HotelBookings.cpp" />
     <ClCompile Include="KthPascalTriangle.cpp" />
@@ -129,6 +130,7 @@
     <ClCompile Include="NextPermutation.cpp" />
     <ClCompile Include="NobleInteger.cpp" />
     <ClCompile Include="PascalTriangle.cpp" />
+    <ClCompile Include="PowerOfTwoIntegers.cpp" />
     <ClCompile Include="PrimeSum.cpp" />
     <ClCompile Include="RotateMatrix.cpp" />
     <ClCompile Include="SetMatrixZeros.cpp" />
