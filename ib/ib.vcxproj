@@ -112,6 +112,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AntiDiagonals.cpp" />
+    <ClCompile Include="ExcelColumnNumber.cpp" />
     <ClCompile Include="FindDuplicate.cpp" />
     <ClCompile Include="FindPermutation.cpp" />
     <ClCompile Include="FirstMissingInteger.cpp" />

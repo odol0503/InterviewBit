@@ -34,6 +34,7 @@ int FirstMissingInteger(vector<int> &A);
 int HammingDistance(const vector<int> &A);
 vector<string> FizzBuzz(int A);
 int IsPower(int A);
+int TitleToNumber(string A);
 
 enum TEST_CASE
 {
@@ -62,11 +63,12 @@ enum TEST_CASE
 	eHAMMING_DISTANCE,
 	eFIZZ_BUZZ,
 	eIS_POWER,
+	eEXCEL_COLUMN_NUM,
 };
 
 int main()
 {
-	TEST_CASE test = eIS_POWER;
+	TEST_CASE test = eEXCEL_COLUMN_NUM;
 
 	switch (test)
 	{
@@ -206,6 +208,8 @@ int main()
 		int ret = IsPower(7988);
 		break;
 	}
+	case eEXCEL_COLUMN_NUM:
+		int ret = TitleToNumber("AAA");
 	}
 	return 0;
 }

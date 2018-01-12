@@ -27,5 +27,6 @@
     <ClCompile Include="HammingDistance.cpp" />
     <ClCompile Include="FizzBuzz.cpp" />
     <ClCompile Include="PowerOfTwoIntegers.cpp" />
+    <ClCompile Include="ExcelColumnNumber.cpp" />
   </ItemGroup>
 </Project>
