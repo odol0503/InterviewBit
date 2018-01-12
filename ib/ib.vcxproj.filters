@@ -28,5 +28,7 @@
     <ClCompile Include="FizzBuzz.cpp" />
     <ClCompile Include="PowerOfTwoIntegers.cpp" />
     <ClCompile Include="ExcelColumnNumber.cpp" />
+    <ClCompile Include="ExcelColumnTitle.cpp" />
+    <ClCompile Include="PalindromeInteger.cpp" />
   </ItemGroup>
 </Project>

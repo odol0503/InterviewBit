@@ -113,6 +113,7 @@
   <ItemGroup>
     <ClCompile Include="AntiDiagonals.cpp" />
     <ClCompile Include="ExcelColumnNumber.cpp" />
+    <ClCompile Include="ExcelColumnTitle.cpp" />
     <ClCompile Include="FindDuplicate.cpp" />
     <ClCompile Include="FindPermutation.cpp" />
     <ClCompile Include="FirstMissingInteger.cpp" />
@@ -130,6 +131,7 @@
     <ClCompile Include="N3RepeatNumber.cpp" />
     <ClCompile Include="NextPermutation.cpp" />
     <ClCompile Include="NobleInteger.cpp" />
+    <ClCompile Include="PalindromeInteger.cpp" />
     <ClCompile Include="PascalTriangle.cpp" />
     <ClCompile Include="PowerOfTwoIntegers.cpp" />
     <ClCompile Include="PrimeSum.cpp" />

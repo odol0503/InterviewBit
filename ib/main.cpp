@@ -35,6 +35,8 @@ int HammingDistance(const vector<int> &A);
 vector<string> FizzBuzz(int A);
 int IsPower(int A);
 int TitleToNumber(string A);
+string ConvertToTitle(int A);
+int IsPalindrome(int A);
 
 enum TEST_CASE
 {
@@ -64,11 +66,13 @@ enum TEST_CASE
 	eFIZZ_BUZZ,
 	eIS_POWER,
 	eEXCEL_COLUMN_NUM,
+	eCONVERT_TO_TITLE,
+	ePALINDROME_INT,
 };
 
 int main()
 {
-	TEST_CASE test = eEXCEL_COLUMN_NUM;
+	TEST_CASE test = ePALINDROME_INT;
 
 	switch (test)
 	{
@@ -209,7 +213,20 @@ int main()
 		break;
 	}
 	case eEXCEL_COLUMN_NUM:
+	{
 		int ret = TitleToNumber("AAA");
+		break;
+	}
+	case eCONVERT_TO_TITLE:
+	{
+		string ret = ConvertToTitle(943566);
+		break;
+	}
+	case ePALINDROME_INT:
+	{
+		int ret = IsPalindrome(-2147447412);
+		break;
+	}
 	}
 	return 0;
 }
