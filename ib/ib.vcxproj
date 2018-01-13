@@ -118,6 +118,7 @@
     <ClCompile Include="FindPermutation.cpp" />
     <ClCompile Include="FirstMissingInteger.cpp" />
     <ClCompile Include="FizzBuzz.cpp" />
+    <ClCompile Include="GCD.cpp" />
     <ClCompile Include="HammingDistance.cpp" />
     <ClCompile Include="HotelBookings.cpp" />
     <ClCompile Include="KthPascalTriangle.cpp" />
@@ -139,6 +140,7 @@
     <ClCompile Include="RotateMatrix.cpp" />
     <ClCompile Include="SetMatrixZeros.cpp" />
     <ClCompile Include="SpiralOrderMatrix.cpp" />
+    <ClCompile Include="TrailingZeros.cpp" />
     <ClCompile Include="TripletsWithSumBetweenGivenRange.cpp" />
     <ClCompile Include="WaveArray.cpp" />
   </ItemGroup>

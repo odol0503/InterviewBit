@@ -31,5 +31,7 @@
     <ClCompile Include="ExcelColumnTitle.cpp" />
     <ClCompile Include="PalindromeInteger.cpp" />
     <ClCompile Include="ReverseInteger.cpp" />
+    <ClCompile Include="GCD.cpp" />
+    <ClCompile Include="TrailingZeros.cpp" />
   </ItemGroup>
 </Project>

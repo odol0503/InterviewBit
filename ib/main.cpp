@@ -38,6 +38,8 @@ int TitleToNumber(string A);
 string ConvertToTitle(int A);
 int IsPalindrome(int A);
 int ReverseInt(int A);
+int GCD(int A, int B);
+int TrailingZeroes(int A);
 
 enum TEST_CASE
 {
@@ -70,11 +72,13 @@ enum TEST_CASE
 	eCONVERT_TO_TITLE,
 	ePALINDROME_INT,
 	eREVERSE_INT,
+	eGCD,
+	eTRAILING_ZEROS,
 };
 
 int main()
 {
-	TEST_CASE test = eREVERSE_INT;
+	TEST_CASE test = eTRAILING_ZEROS;
 
 	switch (test)
 	{
@@ -232,6 +236,16 @@ int main()
 	case eREVERSE_INT:
 	{
 		int ret = ReverseInt(-1234567891);
+		break;
+	}
+	case eGCD:
+	{
+		int ret = GCD(10, 20);
+		break;
+	}
+	case eTRAILING_ZEROS:
+	{
+		int ret = TrailingZeroes(9247);
 		break;
 	}
 	}
