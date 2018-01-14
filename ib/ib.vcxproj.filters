@@ -34,5 +34,6 @@
     <ClCompile Include="GCD.cpp" />
     <ClCompile Include="TrailingZeros.cpp" />
     <ClCompile Include="SortedPermutationRank.cpp" />
+    <ClCompile Include="LargestCoprimeDivisor.cpp" />
   </ItemGroup>
 </Project>

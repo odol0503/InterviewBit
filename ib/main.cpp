@@ -41,6 +41,7 @@ int ReverseInt(int A);
 int GCD(int A, int B);
 int TrailingZeroes(int A);
 int FindPermutationRank(string A);
+int CoprimeDivisor(int A, int B);
 
 enum TEST_CASE
 {
@@ -76,11 +77,12 @@ enum TEST_CASE
 	eGCD,
 	eTRAILING_ZEROS,
 	eFIND_PERMUTATION_RANK,
+	eCOPRIME_DIVISOR,
 };
 
 int main()
 {
-	TEST_CASE test = eFIND_PERMUTATION_RANK;
+	TEST_CASE test = eCOPRIME_DIVISOR;
 
 	switch (test)
 	{
@@ -253,6 +255,11 @@ int main()
 	case eFIND_PERMUTATION_RANK:
 	{
 		int ret = FindPermutationRank("ZCSFLVHXRYJQKWABGT");
+		break;
+	}
+	case eCOPRIME_DIVISOR:
+	{
+		int ret = CoprimeDivisor(2, 2);
 		break;
 	}
 	}
