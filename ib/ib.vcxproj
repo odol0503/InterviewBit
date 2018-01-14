@@ -22,7 +22,7 @@
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{964FFB0A-C6BD-4222-A3D7-6C5D27A32795}</ProjectGuid>
     <RootNamespace>ib</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -41,7 +41,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -139,6 +139,7 @@
     <ClCompile Include="ReverseInteger.cpp" />
     <ClCompile Include="RotateMatrix.cpp" />
     <ClCompile Include="SetMatrixZeros.cpp" />
+    <ClCompile Include="SortedPermutationRank.cpp" />
     <ClCompile Include="SpiralOrderMatrix.cpp" />
     <ClCompile Include="TrailingZeros.cpp" />
     <ClCompile Include="TripletsWithSumBetweenGivenRange.cpp" />

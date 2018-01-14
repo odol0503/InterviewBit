@@ -33,5 +33,6 @@
     <ClCompile Include="ReverseInteger.cpp" />
     <ClCompile Include="GCD.cpp" />
     <ClCompile Include="TrailingZeros.cpp" />
+    <ClCompile Include="SortedPermutationRank.cpp" />
   </ItemGroup>
 </Project>

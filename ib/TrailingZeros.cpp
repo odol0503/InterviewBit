@@ -13,6 +13,9 @@ So, return 1
 #include <algorithm>
 using namespace std;
 
+#define OWN
+
+#ifdef OWN
 int TrailingZeroes(int A)
 {
 	int cnt2 = 0;
@@ -37,3 +40,14 @@ int TrailingZeroes(int A)
 
 	return min(cnt2, cnt5);
 }
+#else
+int TrailingZeroes(int A)
+{
+	int sum = 0;
+	while (n / 5 > 0) {
+		sum += (n / 5);
+		n /= 5;
+		}
+	return sum;
+}
+#endif

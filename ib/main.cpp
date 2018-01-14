@@ -40,6 +40,7 @@ int IsPalindrome(int A);
 int ReverseInt(int A);
 int GCD(int A, int B);
 int TrailingZeroes(int A);
+int FindPermutationRank(string A);
 
 enum TEST_CASE
 {
@@ -74,11 +75,12 @@ enum TEST_CASE
 	eREVERSE_INT,
 	eGCD,
 	eTRAILING_ZEROS,
+	eFIND_PERMUTATION_RANK,
 };
 
 int main()
 {
-	TEST_CASE test = eTRAILING_ZEROS;
+	TEST_CASE test = eFIND_PERMUTATION_RANK;
 
 	switch (test)
 	{
@@ -246,6 +248,11 @@ int main()
 	case eTRAILING_ZEROS:
 	{
 		int ret = TrailingZeroes(9247);
+		break;
+	}
+	case eFIND_PERMUTATION_RANK:
+	{
+		int ret = FindPermutationRank("ZCSFLVHXRYJQKWABGT");
 		break;
 	}
 	}
