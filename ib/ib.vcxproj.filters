@@ -36,5 +36,6 @@
     <ClCompile Include="SortedPermutationRank.cpp" />
     <ClCompile Include="LargestCoprimeDivisor.cpp" />
     <ClCompile Include="SortedPermutationRank2.cpp" />
+    <ClCompile Include="GridUniquePaths.cpp" />
   </ItemGroup>
 </Project>

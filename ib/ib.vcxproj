@@ -119,6 +119,7 @@
     <ClCompile Include="FirstMissingInteger.cpp" />
     <ClCompile Include="FizzBuzz.cpp" />
     <ClCompile Include="GCD.cpp" />
+    <ClCompile Include="GridUniquePaths.cpp" />
     <ClCompile Include="HammingDistance.cpp" />
     <ClCompile Include="HotelBookings.cpp" />
     <ClCompile Include="KthPascalTriangle.cpp" />
