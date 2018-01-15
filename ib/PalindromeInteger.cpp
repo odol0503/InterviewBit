@@ -13,7 +13,7 @@ Output : False
 *************************************************************************************************/
 #include <cmath>
 
-#define OWN7
+#define OWN
 
 #ifdef OWN
 int IsPalindrome(int A)

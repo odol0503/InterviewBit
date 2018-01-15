@@ -25,20 +25,10 @@ int GCD2(int a, int b)
 
 int CoprimeDivisor(int A, int B) 
 {
-	vector<int> xlist;
-	int x = 1;
-	for (int i = 2; i<=A; i++)
+	int X = 0;
+	while ((X = GCD2(A, B)) != 1)
 	{
-		if (A%i == 0) xlist.push_back(i);
+		A = A / X;
 	}
-
-	for (auto a : xlist)
-	{
-		if (GCD2(a, B) == 1)
-		{
-			x = max(x, a);
-		}
-	}
-
-	return x;
+	return A;
 }
