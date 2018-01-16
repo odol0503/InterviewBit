@@ -43,6 +43,7 @@ int TrailingZeroes(int A);
 int FindPermutationRank(string A);
 int CoprimeDivisor(int A, int B);
 int FindPermutationRank2(string A);
+int UniquePaths(int A, int B);
 
 enum TEST_CASE
 {
@@ -80,11 +81,12 @@ enum TEST_CASE
 	eFIND_PERMUTATION_RANK,
 	eCOPRIME_DIVISOR,
 	eFIND_PERMUTATION_RANK2,
+	eGRID_UNIQUE_PATHS,
 };
 
 int main()
 {
-	TEST_CASE test = eFIND_PERMUTATION_RANK2;
+	TEST_CASE test = eGRID_UNIQUE_PATHS;
 
 	switch (test)
 	{
@@ -267,6 +269,11 @@ int main()
 	case eFIND_PERMUTATION_RANK2:
 	{
 		int ret = FindPermutationRank2("acd");
+		break;
+	}
+	case eGRID_UNIQUE_PATHS:
+	{
+		int ret = UniquePaths(15, 19);
 		break;
 	}
 	}
