@@ -23,6 +23,7 @@ NOTE: Assume the number of characters in string < 1000003
 #include <string>
 #include <algorithm>
 #include <vector>
+#include <cstring>
 using namespace std;
 #define OWN
 
@@ -57,17 +58,82 @@ int inverse(int a, int b) {
 	return t2;
 }
 
-int FindPermutationRank2(string S) 
+int FindPermutationRank2(string A) 
 {
+	int len = static_cast<int>(A.size());
+	int rank = 0;
+	char temp[256];
+	memset(temp, 0, 256);
+
+	for (int i = 0; i < len; i++)
+	{
+		temp[A[i]]++;
+	}
+
+	
+	for (int i = 0; i < len; i++)
+	{
+		int less = 0;
+		int dup = 1;
+		for (int j = 0; j < 256; j++)
+		{
+			if (temp[j] > 1)
+			{
+				dup = (dup * (inverse(Factorial(temp[j]), MOD) % MOD)) % MOD;
+			}
+		}
+
+		for (int k = i + 1; k < len; k++)
+		{
+			if (A[k] < A[i]) less++;
+		}
+
+		rank = (rank + (((Factorial(len - i - 1) * less) % MOD) * dup) % MOD) % MOD;
+
+		temp[A[i]]--;
+	}
+
+	return (int)((rank + 1) % MOD);
+}
+#else
+int Factorial(int a)
+{
+	int ret = 1;
+	for (int i = 2; i <= a; i++) ret = (ret * i) % MOD;
+	return ret;
+}
+
+int inverse(int a, int b) {
+	int r1, r2, q, r, t, t1, t2;
+	r1 = a;
+	r2 = b;
+	t1 = 0; t2 = 1;
+
+	while (r1 != 1)
+	{
+		q = r2 / r1;
+		r = r2 - r1*q;
+		t = t1 - t2*q;
+		r2 = r1;
+		r1 = r;
+		t1 = t2;
+		t2 = t;
+	}
+	if (t2 < 0)
+		t2 = t2 + b;
+	return t2;
+}
+
+int FindPermutationRank2(string S) {
 	int charCount[256]; // count of characters in S. 
 	memset(charCount, 0, sizeof(charCount));
 	for (int i = 0; i < S.length(); i++) charCount[S[i]]++;
 
-	int rank = 0;
+	long long rank = 0;
 	for (int i = 0; i < S.length(); i++) {
 		// find number of characters smaller than S[i] still left. 
 		int less = 0;
-		int dup = 1;
+		long long dup = 1;
 		for (int ch = 0; ch < S[i]; ch++) {
 			less += charCount[ch];
 		}
@@ -80,7 +146,7 @@ int FindPermutationRank2(string S)
 				dup = (dup * (inverse(Factorial(cnt), MOD) % MOD)) % MOD;
 			}
 		}
-		int fact = Factorial(S.length() - i - 1);
+		long long fact = Factorial(S.length() - i - 1);
 		rank = (rank + (((fact * less) % MOD) * dup) % MOD) % MOD;
 		// remove the current character from the set. 
 		charCount[S[i]]--;
