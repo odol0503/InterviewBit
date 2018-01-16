@@ -86,7 +86,7 @@ enum TEST_CASE
 
 int main()
 {
-	TEST_CASE test = eGRID_UNIQUE_PATHS;
+	TEST_CASE test = eFIND_PERMUTATION_RANK2;
 
 	switch (test)
 	{
@@ -268,7 +268,7 @@ int main()
 	}
 	case eFIND_PERMUTATION_RANK2:
 	{
-		int ret = FindPermutationRank2("acd");
+		int ret = FindPermutationRank2("asasdsdsadasdadsadasdsa");
 		break;
 	}
 	case eGRID_UNIQUE_PATHS:
