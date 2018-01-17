@@ -96,64 +96,6 @@ int FindPermutationRank2(string A)
 	return (int)((rank + 1) % MOD);
 }
 #else
-int Factorial(int a)
-{
-	int ret = 1;
-	for (int i = 2; i <= a; i++) ret = (ret * i) % MOD;
-	return ret;
-}
-
-int inverse(int a, int b) {
-	int r1, r2, q, r, t, t1, t2;
-	r1 = a;
-	r2 = b;
-	t1 = 0; t2 = 1;
-
-	while (r1 != 1)
-	{
-		q = r2 / r1;
-		r = r2 - r1*q;
-		t = t1 - t2*q;
-		r2 = r1;
-		r1 = r;
-		t1 = t2;
-		t2 = t;
-	}
-	if (t2 < 0)
-		t2 = t2 + b;
-	return t2;
-}
-
-int FindPermutationRank2(string S) {
-	int charCount[256]; // count of characters in S. 
-	memset(charCount, 0, sizeof(charCount));
-	for (int i = 0; i < S.length(); i++) charCount[S[i]]++;
-
-	long long rank = 0;
-	for (int i = 0; i < S.length(); i++) {
-		// find number of characters smaller than S[i] still left. 
-		int less = 0;
-		long long dup = 1;
-		for (int ch = 0; ch < S[i]; ch++) {
-			less += charCount[ch];
-		}
-
-		for (int j = 0; j < 256; j++)
-		{
-			if (charCount[j] > 1)
-			{
-				int cnt = charCount[j];
-				dup = (dup * (inverse(Factorial(cnt), MOD) % MOD)) % MOD;
-			}
-		}
-		long long fact = Factorial(S.length() - i - 1);
-		rank = (rank + (((fact * less) % MOD) * dup) % MOD) % MOD;
-		// remove the current character from the set. 
-		charCount[S[i]]--;
-	}
-	return (int)((rank + 1) % MOD);
-}
-#else
 void initializeFactorials(int totalLen, vector<int> &fact) {
 	long long int factorial = 1;
 	fact.push_back(1); // 0!= 1

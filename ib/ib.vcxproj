@@ -134,10 +134,12 @@
     <ClCompile Include="N3RepeatNumber.cpp" />
     <ClCompile Include="NextPermutation.cpp" />
     <ClCompile Include="NobleInteger.cpp" />
+    <ClCompile Include="NumbersOfLengthN.cpp" />
     <ClCompile Include="PalindromeInteger.cpp" />
     <ClCompile Include="PascalTriangle.cpp" />
     <ClCompile Include="PowerOfTwoIntegers.cpp" />
     <ClCompile Include="PrimeSum.cpp" />
+    <ClCompile Include="RearrangeArray.cpp" />
     <ClCompile Include="ReverseInteger.cpp" />
     <ClCompile Include="RotateMatrix.cpp" />
     <ClCompile Include="SetMatrixZeros.cpp" />

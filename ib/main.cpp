@@ -44,6 +44,7 @@ int FindPermutationRank(string A);
 int CoprimeDivisor(int A, int B);
 int FindPermutationRank2(string A);
 int UniquePaths(int A, int B);
+void RearrangeArray(vector<int> &A);
 
 enum TEST_CASE
 {
@@ -82,11 +83,12 @@ enum TEST_CASE
 	eCOPRIME_DIVISOR,
 	eFIND_PERMUTATION_RANK2,
 	eGRID_UNIQUE_PATHS,
+	eREARRANGE_ARRAY,
 };
 
 int main()
 {
-	TEST_CASE test = eFIND_PERMUTATION_RANK2;
+	TEST_CASE test = eREARRANGE_ARRAY;
 
 	switch (test)
 	{
@@ -275,6 +277,11 @@ int main()
 	{
 		int ret = UniquePaths(15, 19);
 		break;
+	}
+	case eREARRANGE_ARRAY:
+	{
+		vector<int> A = { 2, 1, 3, 0 };
+		RearrangeArray(A);
 	}
 	}
 	return 0;

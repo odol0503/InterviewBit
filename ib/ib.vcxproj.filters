@@ -37,5 +37,7 @@
     <ClCompile Include="LargestCoprimeDivisor.cpp" />
     <ClCompile Include="SortedPermutationRank2.cpp" />
     <ClCompile Include="GridUniquePaths.cpp" />
+    <ClCompile Include="NumbersOfLengthN.cpp" />
+    <ClCompile Include="RearrangeArray.cpp" />
   </ItemGroup>
 </Project>
