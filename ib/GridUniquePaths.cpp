@@ -22,7 +22,7 @@ using namespace std;
 #define OWN
 
 #ifdef OWN
-long long Factorial3(int a)
+static long long Factorial(int a)
 {
 	long long f = 1;
 	for (int i = 2; i <= a; i++)
@@ -45,7 +45,7 @@ int UniquePaths(int A, int B)
 		temp *= i;
 	}
 
-	return (int)(temp / Factorial3(t-n));
+	return (int)(temp / Factorial(t-n));
 }
 #else
 int UniquePaths(int A, int B)

@@ -45,6 +45,7 @@ int CoprimeDivisor(int A, int B);
 int FindPermutationRank2(string A);
 int UniquePaths(int A, int B);
 void RearrangeArray(vector<int> &A);
+int NumbersOfLengthN(vector<int> &A, int B, int C);
 
 enum TEST_CASE
 {
@@ -84,11 +85,12 @@ enum TEST_CASE
 	eFIND_PERMUTATION_RANK2,
 	eGRID_UNIQUE_PATHS,
 	eREARRANGE_ARRAY,
+	eNUM_LEN_N,
 };
 
 int main()
 {
-	TEST_CASE test = eREARRANGE_ARRAY;
+	TEST_CASE test = eNUM_LEN_N;
 
 	switch (test)
 	{
@@ -147,7 +149,8 @@ int main()
 	}
 	case ePRIME_SUM:
 	{
-
+		vector<int> ret = PrimeSum(16);
+		break;
 	}
 	case eMERGE_INTERVALS:
 	{
@@ -282,6 +285,13 @@ int main()
 	{
 		vector<int> A = { 2, 1, 3, 0 };
 		RearrangeArray(A);
+	}
+	case eNUM_LEN_N:
+	{
+		vector<int> A = { 0, 1, 2, 5 };
+		int B = 2;
+		int C = 21;
+		int ret = NumbersOfLengthN(A, B, C);
 	}
 	}
 	return 0;
