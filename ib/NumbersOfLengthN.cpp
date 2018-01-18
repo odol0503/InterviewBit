@@ -34,7 +34,6 @@ int NumbersOfLengthN(vector<int> &A, int B, int C)
 {
 	int ret = 0;
 	int n = A.size();
-	int clen = 0;
 	vector<int> CVec;
 	int temp = C;
 	if (A.size() == 0 || C == 0) return 0;
@@ -43,15 +42,14 @@ int NumbersOfLengthN(vector<int> &A, int B, int C)
 	{
 		CVec.push_back(temp % 10);
 		temp /= 10;
-		clen++;
 	}
 	reverse(CVec.begin(), CVec.end());
 
-	if (B > clen)
+	if (B > CVec.size())
 	{
 		return 0;
 	}
-	else if (B < clen)
+	else if (B < CVec.size())
 	{
 		for (auto a : A)
 		{

@@ -39,5 +39,6 @@
     <ClCompile Include="GridUniquePaths.cpp" />
     <ClCompile Include="NumbersOfLengthN.cpp" />
     <ClCompile Include="RearrangeArray.cpp" />
+    <ClCompile Include="PrettyPrint.cpp" />
   </ItemGroup>
 </Project>

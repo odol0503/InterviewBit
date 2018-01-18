@@ -46,6 +46,7 @@ int FindPermutationRank2(string A);
 int UniquePaths(int A, int B);
 void RearrangeArray(vector<int> &A);
 int NumbersOfLengthN(vector<int> &A, int B, int C);
+vector<vector<int> > PrettyPrint(int A);
 
 enum TEST_CASE
 {
@@ -86,11 +87,12 @@ enum TEST_CASE
 	eGRID_UNIQUE_PATHS,
 	eREARRANGE_ARRAY,
 	eNUM_LEN_N,
+	ePRETTY_PRINT,
 };
 
-int main()
+int main(int argc, char** argv)
 {
-	TEST_CASE test = eNUM_LEN_N;
+	TEST_CASE test = eFIND_DUPLICATE;
 
 	switch (test)
 	{
@@ -292,6 +294,10 @@ int main()
 		int B = 2;
 		int C = 21;
 		int ret = NumbersOfLengthN(A, B, C);
+	}
+	case ePRETTY_PRINT:
+	{
+		vector<vector<int>> ret = PrettyPrint(3);
 	}
 	}
 	return 0;
