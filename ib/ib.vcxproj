@@ -126,6 +126,7 @@
     <ClCompile Include="LargestCoprimeDivisor.cpp" />
     <ClCompile Include="LargestNumber.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MatrixMedian.cpp" />
     <ClCompile Include="MaxConsecutiveGap.cpp" />
     <ClCompile Include="MaxDistance.cpp" />
     <ClCompile Include="MaxUnsortedSubarray.cpp" />
@@ -140,9 +141,11 @@
     <ClCompile Include="PowerOfTwoIntegers.cpp" />
     <ClCompile Include="PrettyPrint.cpp" />
     <ClCompile Include="PrimeSum.cpp" />
+    <ClCompile Include="qsort.cpp" />
     <ClCompile Include="RearrangeArray.cpp" />
     <ClCompile Include="ReverseInteger.cpp" />
     <ClCompile Include="RotateMatrix.cpp" />
+    <ClCompile Include="SearchRange.cpp" />
     <ClCompile Include="SetMatrixZeros.cpp" />
     <ClCompile Include="SortedPermutationRank.cpp" />
     <ClCompile Include="SortedPermutationRank2.cpp" />

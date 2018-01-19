@@ -40,6 +40,12 @@
     <ClCompile Include="NumbersOfLengthN.cpp" />
     <ClCompile Include="RearrangeArray.cpp" />
     <ClCompile Include="PrettyPrint.cpp" />
+<<<<<<< HEAD
     <ClCompile Include="SquareRootInt.cpp" />
+=======
+    <ClCompile Include="MatrixMedian.cpp" />
+    <ClCompile Include="qsort.cpp" />
+    <ClCompile Include="SearchRange.cpp" />
+>>>>>>> ef82f946b3024fe6301572c94f1b7263ab58f2c2
   </ItemGroup>
 </Project>
