@@ -40,5 +40,6 @@
     <ClCompile Include="NumbersOfLengthN.cpp" />
     <ClCompile Include="RearrangeArray.cpp" />
     <ClCompile Include="PrettyPrint.cpp" />
+    <ClCompile Include="SquareRootInt.cpp" />
   </ItemGroup>
 </Project>
