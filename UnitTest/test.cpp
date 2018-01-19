@@ -47,6 +47,8 @@ int FindPermutationRank2(string A);
 int UniquePaths(int A, int B);
 void RearrangeArray(vector<int> &A);
 int NumbersOfLengthN(vector<int> &A, int B, int C);
+int MatrixMedian(vector<vector<int> > &A);
+void qsort(vector<int> &A, int left, int right);
 vector<vector<int> > PrettyPrint(int A);
 
 TEST(IB, FindDuplicate) {
@@ -57,6 +59,33 @@ TEST(IB, FindDuplicate) {
 TEST(IB, NumbersOfLengthN) {
 	vector<int> A = { 0, 1, 2, 5 };
 	EXPECT_EQ(5, NumbersOfLengthN(A, 2, 21));
+}
+
+TEST(IB, MatrixMedian) {
+	vector<vector<int>> A = { {1, 3, 5}, {2, 6, 9}, {3, 6, 9} };
+	EXPECT_EQ(5, MatrixMedian(A));
+	vector<vector<int>> B = { {1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3} };
+	EXPECT_EQ(2, MatrixMedian(B));
+	vector<vector<int>> C = { { 1, 1, 3, 3, 3, 3, 3} };
+	EXPECT_EQ(3, MatrixMedian(C));
+	vector<vector<int>> D = { {4} , {2}, {5} };
+	EXPECT_EQ(4, MatrixMedian(D));
+};
+
+TEST(IB, qsort) {
+	vector<int> A = { 5, 4, 7, 3, 2, 6 };
+	vector<int> B(A);
+	sort(B.begin(), B.end());
+	qsort(A, 0, (int)A.size() - 1);
+	EXPECT_EQ(A, B);
+	vector<int> C = { 1, 1, 1, 1, 1, 2 };
+	qsort(C, 0, (int)C.size() - 1);
+	EXPECT_EQ(C, C);
+	vector<int> D = { 9,8,7,6,5,4,3,2,1,0 };
+	vector<int> E(D);
+	sort(E.begin(), E.end());
+	qsort(D, 0, (int)D.size() - 1);
+	EXPECT_EQ(D, E);
 }
 
 TEST(IB, PrettyPrint) {
