@@ -42,5 +42,6 @@
     <ClCompile Include="PrettyPrint.cpp" />
     <ClCompile Include="MatrixMedian.cpp" />
     <ClCompile Include="qsort.cpp" />
+    <ClCompile Include="SearchRange.cpp" />
   </ItemGroup>
 </Project>

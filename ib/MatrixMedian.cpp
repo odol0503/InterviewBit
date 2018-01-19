@@ -33,17 +33,12 @@ int MatrixMedian(vector<vector<int> > &A)
 	int start = 0;
 	int end = INT_MAX;
 	int mid = end / 2;
-	int i, j;
-
 	while (end - start > 1)
 	{
 		int less = 0;
-		for (i = 0; i < rlen; i++)
+		for (int i = 0; i < rlen; i++)
 		{
-			for (j = 0; j < clen; j++)
-			{
-				if (A[i][j] < mid) less++;
-			}
+			less += (int)(lower_bound(A[i].begin(), A[i].end(), mid) - A[i].begin());
 		}
 		
 		if (less < num) start = mid;

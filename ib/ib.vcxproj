@@ -145,6 +145,7 @@
     <ClCompile Include="RearrangeArray.cpp" />
     <ClCompile Include="ReverseInteger.cpp" />
     <ClCompile Include="RotateMatrix.cpp" />
+    <ClCompile Include="SearchRange.cpp" />
     <ClCompile Include="SetMatrixZeros.cpp" />
     <ClCompile Include="SortedPermutationRank.cpp" />
     <ClCompile Include="SortedPermutationRank2.cpp" />
