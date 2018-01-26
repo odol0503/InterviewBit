@@ -18,6 +18,52 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="level2\Arrays\AntiDiagonals.cpp" />
+    <ClCompile Include="level2\Arrays\FindDuplicate.cpp" />
+    <ClCompile Include="level2\Arrays\FindPermutation.cpp" />
+    <ClCompile Include="level2\Arrays\FirstMissingInteger.cpp" />
+    <ClCompile Include="level2\Arrays\HotelBookings.cpp" />
+    <ClCompile Include="level2\Arrays\KthPascalTriangle.cpp" />
+    <ClCompile Include="level2\Arrays\LargestNumber.cpp" />
+    <ClCompile Include="level2\Arrays\MaxConsecutiveGap.cpp" />
+    <ClCompile Include="level2\Arrays\MaxDistance.cpp" />
+    <ClCompile Include="level2\Arrays\MaxUnsortedSubarray.cpp" />
+    <ClCompile Include="level2\Arrays\MergeIntervals.cpp" />
+    <ClCompile Include="level2\Arrays\MergeOverlappingIntervals.cpp" />
+    <ClCompile Include="level2\Arrays\N3RepeatNumber.cpp" />
+    <ClCompile Include="level2\Arrays\NextPermutation.cpp" />
+    <ClCompile Include="level2\Arrays\NobleInteger.cpp" />
+    <ClCompile Include="level2\Arrays\PascalTriangle.cpp" />
+    <ClCompile Include="level2\Arrays\RotateMatrix.cpp" />
+    <ClCompile Include="level2\Arrays\SetMatrixZeros.cpp" />
+    <ClCompile Include="level2\Arrays\SpiralOrderMatrix.cpp" />
+    <ClCompile Include="level2\Arrays\TripletsWithSumBetweenGivenRange.cpp" />
+    <ClCompile Include="level2\Arrays\WaveArray.cpp" />
+    <ClCompile Include="level2\Math\ExcelColumnNumber.cpp" />
+    <ClCompile Include="level2\Math\ExcelColumnTitle.cpp" />
+    <ClCompile Include="level2\Math\FizzBuzz.cpp" />
+    <ClCompile Include="level2\Math\GCD.cpp" />
+    <ClCompile Include="level2\Math\GridUniquePaths.cpp" />
+    <ClCompile Include="level2\Math\HammingDistance.cpp" />
+    <ClCompile Include="level2\Math\LargestCoprimeDivisor.cpp" />
+    <ClCompile Include="level2\Math\NumbersOfLengthN.cpp" />
+    <ClCompile Include="level2\Math\PalindromeInteger.cpp" />
+    <ClCompile Include="level2\Math\PowerOfTwoIntegers.cpp" />
+    <ClCompile Include="level2\Math\PrimeSum.cpp" />
+    <ClCompile Include="level2\Math\RearrangeArray.cpp" />
+    <ClCompile Include="level2\Math\ReverseInteger.cpp" />
+    <ClCompile Include="level2\Math\SortedPermutationRank.cpp" />
+    <ClCompile Include="level2\Math\SortedPermutationRank2.cpp" />
+    <ClCompile Include="level2\Math\TrailingZeros.cpp" />
+    <ClCompile Include="level2\PrettyPrint.cpp" />
+    <ClCompile Include="level3\BinarySearch\AllocateBooks.cpp" />
+    <ClCompile Include="level3\BinarySearch\MatrixMedian.cpp" />
+    <ClCompile Include="level3\BinarySearch\PainterPartitionProblem.cpp" />
+    <ClCompile Include="level3\BinarySearch\SearchRange.cpp" />
+    <ClCompile Include="level3\BinarySearch\SquareRootInt.cpp" />
+    <ClCompile Include="level3\qsort.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{964FFB0A-C6BD-4222-A3D7-6C5D27A32795}</ProjectGuid>
@@ -110,53 +156,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="AllocateBooks.cpp" />
-    <ClCompile Include="AntiDiagonals.cpp" />
-    <ClCompile Include="ExcelColumnNumber.cpp" />
-    <ClCompile Include="ExcelColumnTitle.cpp" />
-    <ClCompile Include="FindDuplicate.cpp" />
-    <ClCompile Include="FindPermutation.cpp" />
-    <ClCompile Include="FirstMissingInteger.cpp" />
-    <ClCompile Include="FizzBuzz.cpp" />
-    <ClCompile Include="GCD.cpp" />
-    <ClCompile Include="GridUniquePaths.cpp" />
-    <ClCompile Include="HammingDistance.cpp" />
-    <ClCompile Include="HotelBookings.cpp" />
-    <ClCompile Include="KthPascalTriangle.cpp" />
-    <ClCompile Include="LargestCoprimeDivisor.cpp" />
-    <ClCompile Include="LargestNumber.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="MatrixMedian.cpp" />
-    <ClCompile Include="MaxConsecutiveGap.cpp" />
-    <ClCompile Include="MaxDistance.cpp" />
-    <ClCompile Include="MaxUnsortedSubarray.cpp" />
-    <ClCompile Include="MergeIntervals.cpp" />
-    <ClCompile Include="MergeOverlappingIntervals.cpp" />
-    <ClCompile Include="N3RepeatNumber.cpp" />
-    <ClCompile Include="NextPermutation.cpp" />
-    <ClCompile Include="NobleInteger.cpp" />
-    <ClCompile Include="NumbersOfLengthN.cpp" />
-    <ClCompile Include="PainterPartitionProblem.cpp" />
-    <ClCompile Include="PalindromeInteger.cpp" />
-    <ClCompile Include="PascalTriangle.cpp" />
-    <ClCompile Include="PowerOfTwoIntegers.cpp" />
-    <ClCompile Include="PrettyPrint.cpp" />
-    <ClCompile Include="PrimeSum.cpp" />
-    <ClCompile Include="qsort.cpp" />
-    <ClCompile Include="RearrangeArray.cpp" />
-    <ClCompile Include="ReverseInteger.cpp" />
-    <ClCompile Include="RotateMatrix.cpp" />
-    <ClCompile Include="SearchRange.cpp" />
-    <ClCompile Include="SetMatrixZeros.cpp" />
-    <ClCompile Include="SortedPermutationRank.cpp" />
-    <ClCompile Include="SortedPermutationRank2.cpp" />
-    <ClCompile Include="SpiralOrderMatrix.cpp" />
-    <ClCompile Include="SquareRootInt.cpp" />
-    <ClCompile Include="TrailingZeros.cpp" />
-    <ClCompile Include="TripletsWithSumBetweenGivenRange.cpp" />
-    <ClCompile Include="WaveArray.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
