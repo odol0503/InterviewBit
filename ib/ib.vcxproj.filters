@@ -150,5 +150,8 @@
     <ClCompile Include="level3\BinarySearch\SquareRootInt.cpp">
       <Filter>level3\BinarySearch</Filter>
     </ClCompile>
+    <ClCompile Include="level3\BinarySearch\MatrixSearch.cpp">
+      <Filter>level3\BinarySearch</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

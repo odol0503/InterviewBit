@@ -59,6 +59,7 @@
     <ClCompile Include="level2\PrettyPrint.cpp" />
     <ClCompile Include="level3\BinarySearch\AllocateBooks.cpp" />
     <ClCompile Include="level3\BinarySearch\MatrixMedian.cpp" />
+    <ClCompile Include="level3\BinarySearch\MatrixSearch.cpp" />
     <ClCompile Include="level3\BinarySearch\PainterPartitionProblem.cpp" />
     <ClCompile Include="level3\BinarySearch\SearchRange.cpp" />
     <ClCompile Include="level3\BinarySearch\SquareRootInt.cpp" />
