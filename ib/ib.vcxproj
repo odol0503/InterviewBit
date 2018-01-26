@@ -111,6 +111,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AllocateBooks.cpp" />
     <ClCompile Include="AntiDiagonals.cpp" />
     <ClCompile Include="ExcelColumnNumber.cpp" />
     <ClCompile Include="ExcelColumnTitle.cpp" />

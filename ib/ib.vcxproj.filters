@@ -45,5 +45,6 @@
     <ClCompile Include="qsort.cpp" />
     <ClCompile Include="SearchRange.cpp" />
     <ClCompile Include="PainterPartitionProblem.cpp" />
+    <ClCompile Include="AllocateBooks.cpp" />
   </ItemGroup>
 </Project>
