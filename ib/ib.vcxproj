@@ -136,6 +136,7 @@
     <ClCompile Include="NextPermutation.cpp" />
     <ClCompile Include="NobleInteger.cpp" />
     <ClCompile Include="NumbersOfLengthN.cpp" />
+    <ClCompile Include="PainterPartitionProblem.cpp" />
     <ClCompile Include="PalindromeInteger.cpp" />
     <ClCompile Include="PascalTriangle.cpp" />
     <ClCompile Include="PowerOfTwoIntegers.cpp" />
