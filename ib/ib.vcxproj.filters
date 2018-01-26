@@ -40,6 +40,7 @@
     <ClCompile Include="NumbersOfLengthN.cpp" />
     <ClCompile Include="RearrangeArray.cpp" />
     <ClCompile Include="PrettyPrint.cpp" />
+    <ClCompile Include="SquareRootInt.cpp" />
     <ClCompile Include="MatrixMedian.cpp" />
     <ClCompile Include="qsort.cpp" />
     <ClCompile Include="SearchRange.cpp" />

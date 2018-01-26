@@ -50,6 +50,7 @@ int NumbersOfLengthN(vector<int> &A, int B, int C);
 int MatrixMedian(vector<vector<int> > &A);
 void qsort(vector<int> &A, int left, int right);
 vector<vector<int> > PrettyPrint(int A);
+int SqrtInt(int A);
 vector<int> SearchRange(const vector<int> &A, int B);
 int PainterPartionProblem(int A, int B, vector<int> &C);
 
@@ -94,6 +95,15 @@ TEST(IB, PrettyPrint) {
 	EXPECT_EQ(ret, PrettyPrint(3));
 }
 
+TEST(IB, SqrtInt) {
+	//EXPECT_EQ(0, SqrtInt(0));
+	//EXPECT_EQ(1, SqrtInt(2));
+	EXPECT_EQ(1, SqrtInt(6));
+	//EXPECT_EQ(1, SqrtInt(15));
+	//EXPECT_EQ(1, SqrtInt(25));
+	//EXPECT_EQ(1, SqrtInt(37));
+	//EXPECT_EQ(1, SqrtInt(67035753));
+	//EXPECT_EQ(1, SqrtInt(930675566));
 TEST(IB, SearchRange) {
 	EXPECT_EQ(vector<int>({ 3,4 }), SearchRange({ 5, 7, 7, 8, 8, 10 }, 8));
 	EXPECT_EQ(vector<int>({ 0, 0 }), SearchRange({ 1 }, 1)); 
