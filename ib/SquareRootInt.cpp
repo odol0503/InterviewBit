@@ -21,21 +21,19 @@ int SqrtInt(int A)
 	long long i = A / 2;
 	long long start = 0;
 	long long end = A;
-	while (i*i > A || A >= (i+1)*(i+1))
+	while (i*i > A || A >= (i + 1)*(i + 1))
 	{
 		if (i == 1) break;
-		
+
 		if (i*i < A)
 		{
-			long long diff = end - i;
 			start = i;
-			i += (long long)(diff / 2);
+			i += (long long)((end - i) / 2);
 		}
 		else if (i*i > A)
 		{
-			long long diff = i - start;
 			end = i;
-			i -= (long long)(diff / 2);
+			i -= (long long)((i - start) / 2);
 		}
 	}
 

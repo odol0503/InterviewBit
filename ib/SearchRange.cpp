@@ -20,21 +20,29 @@ vector<int> SearchRange(const vector<int> &A, int B)
 	int end = (int)A.size() -1;
 	int mid = 0;
 
-	while (start <= end)
+	while (start < end)
 	{
 		mid = (start + end) / 2;
-		if (A[mid] >= B) end = mid;
+		if (A[mid] == B) break;
+		if (A[mid] > B) end = mid;
 		else start = mid+1;
 	}
 
 	if (A[mid] != B) return vector<int>({ -1, -1 });
 
-	int cnt = 0;
-	for (int i = mid+1; i < A.size(); i++)
+	int cnt1 = 0;
+	for (int i = mid - 1; i >= 0; i--)
 	{
-		if (A[i] == A[mid]) cnt++;
+		if (A[i] == A[mid]) cnt1++;
 		else break;
 	}
 
-	return vector<int>({ mid, mid + cnt });
+	int cnt2 = 0;
+	for (int i = mid+1; i < A.size(); i++)
+	{
+		if (A[i] == A[mid]) cnt2++;
+		else break;
+	}
+
+	return vector<int>({ mid -cnt1, mid + cnt2 });
 }
