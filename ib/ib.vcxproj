@@ -62,6 +62,7 @@
     <ClCompile Include="level3\BinarySearch\MatrixSearch.cpp" />
     <ClCompile Include="level3\BinarySearch\PainterPartitionProblem.cpp" />
     <ClCompile Include="level3\BinarySearch\SearchRange.cpp" />
+    <ClCompile Include="level3\BinarySearch\SortedInsertPosition.cpp" />
     <ClCompile Include="level3\BinarySearch\SquareRootInt.cpp" />
     <ClCompile Include="level3\qsort.cpp" />
   </ItemGroup>

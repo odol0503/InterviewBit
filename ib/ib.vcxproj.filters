@@ -153,5 +153,8 @@
     <ClCompile Include="level3\BinarySearch\MatrixSearch.cpp">
       <Filter>level3\BinarySearch</Filter>
     </ClCompile>
+    <ClCompile Include="level3\BinarySearch\SortedInsertPosition.cpp">
+      <Filter>level3\BinarySearch</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
