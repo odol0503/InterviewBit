@@ -168,5 +168,8 @@
     <ClCompile Include="level3\BinarySearch\CountElementOccurence.cpp">
       <Filter>level3\BinarySearch</Filter>
     </ClCompile>
+    <ClCompile Include="level3\BinarySearch\RotatedArray.cpp">
+      <Filter>level3\BinarySearch</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

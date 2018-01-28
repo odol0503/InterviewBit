@@ -64,6 +64,7 @@
     <ClCompile Include="level3\BinarySearch\MatrixSearch.cpp" />
     <ClCompile Include="level3\BinarySearch\MedianOfArray.cpp" />
     <ClCompile Include="level3\BinarySearch\PainterPartitionProblem.cpp" />
+    <ClCompile Include="level3\BinarySearch\RotatedArray.cpp" />
     <ClCompile Include="level3\BinarySearch\RotatedSortedArraySearch.cpp" />
     <ClCompile Include="level3\BinarySearch\SearchRange.cpp" />
     <ClCompile Include="level3\BinarySearch\SortedInsertPosition.cpp" />
