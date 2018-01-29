@@ -56,7 +56,6 @@
     <ClCompile Include="level2\Math\SortedPermutationRank.cpp" />
     <ClCompile Include="level2\Math\SortedPermutationRank2.cpp" />
     <ClCompile Include="level2\Math\TrailingZeros.cpp" />
-    <ClCompile Include="level2\PrettyPrint.cpp" />
     <ClCompile Include="level3\BinarySearch\AllocateBooks.cpp" />
     <ClCompile Include="level3\BinarySearch\CountElementOccurence.cpp" />
     <ClCompile Include="level3\BinarySearch\ImplementPowerFunction.cpp" />

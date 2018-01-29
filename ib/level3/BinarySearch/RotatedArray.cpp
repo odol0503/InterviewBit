@@ -18,24 +18,18 @@ using namespace std;
 #ifdef OWN
 int RotatedArray(const vector<int> &A) 
 {
-	int len = (int)A.size();
 	int low = 0;
-	int high = len - 1;
+	int high = (int)A.size() - 1;
 	int mid = 0;
 
 	while (low <= high)
 	{
-		if (A[low] <= A[high]) return A[low];
 		mid = (low + high) / 2;
-		int prev = (mid + len - 1) % len;
-		int next = (mid + 1) % len;
-
-		if (A[mid] <= A[prev]) return A[mid];
-		else if (A[low] <= A[mid] && A[low] > A[high]) low = mid + 1;
-		else if (A[mid] <= A[high]) high = mid - 1;
+		if (A[mid] > A[high]) low = mid + 1;
+		else if (A[mid] < A[high]) high = mid;
 	}
 
-	return A[mid];
+	return A[low];
 }
 #else
 int RotatedArray(const vector<int> &A) {

@@ -23,32 +23,32 @@ using namespace std;
 int RotatedSortedArraySearch(const vector<int> &A, int B) 
 {
 	int len = (int)A.size();
-	int p = A[0];
+	int pivot = A[0];
 	int left = 0, right = len - 1;
 	int mid = 0;
 
 	while (left <= right)
 	{
 		mid = (left + right) / 2;
-		if (p > B)
+		if (pivot > B)
 		{
-			if (A[mid] > p) left = mid + 1;
-			else if (A[mid] < p)
+			if (A[mid] > pivot) left = mid + 1;
+			else if (A[mid] < pivot)
 			{
 				if (B < A[mid]) right = mid - 1;
 				else if (B > A[mid]) left = mid + 1;
 				else return mid;
 			}
 		}
-		else if (p < B)
+		else if (pivot < B)
 		{
-			if (A[mid] > p)
+			if (A[mid] > pivot)
 			{
 				if (B < A[mid]) right = mid - 1;
 				else if (B > A[mid]) left = mid + 1;
 				else return mid;
 			}
-			else if (A[mid] < p) right = mid - 1;
+			else if (A[mid] < pivot) right = mid - 1;
 		}
 		else
 		{
@@ -82,7 +82,7 @@ int findMin(const vector<int> &A, int start, int end) {
 		else if (index1 != -1) return index1;
 		else return index2;
 	}
-		}
+}
 
 int binarySearch(const vector<int> &A, int start, int end, int target) {
 	if (start > end) return -1;
