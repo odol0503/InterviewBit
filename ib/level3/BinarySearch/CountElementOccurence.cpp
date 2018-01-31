@@ -12,7 +12,7 @@ return 2.
 #include <vector>
 using namespace std;
 
-#define OWN4
+#define OWN
 
 #ifdef OWN
 int CountOccurence(const vector<int> &A, int B) 

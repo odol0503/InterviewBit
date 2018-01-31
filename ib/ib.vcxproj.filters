@@ -21,9 +21,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="level2\PrettyPrint.cpp">
-      <Filter>level2</Filter>
-    </ClCompile>
     <ClCompile Include="level2\Arrays\AntiDiagonals.cpp">
       <Filter>level2\Arrays</Filter>
     </ClCompile>
