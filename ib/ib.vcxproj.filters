@@ -16,6 +16,9 @@
     <Filter Include="level3\BinarySearch">
       <UniqueIdentifier>{6a42f5b9-019a-45cb-983b-ade1d8b28efc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="level6">
+      <UniqueIdentifier>{7410203f-aa11-4476-9e99-d7ca45de29a1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="level2\PrettyPrint.cpp">
@@ -170,6 +173,9 @@
     </ClCompile>
     <ClCompile Include="level3\BinarySearch\RotatedArray.cpp">
       <Filter>level3\BinarySearch</Filter>
+    </ClCompile>
+    <ClCompile Include="level6\VerticalOrderTraversalOfBinaryTree.cpp">
+      <Filter>level6</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
