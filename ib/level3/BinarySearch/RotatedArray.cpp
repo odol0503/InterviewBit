@@ -22,7 +22,7 @@ int RotatedArray(const vector<int> &A)
 	int high = (int)A.size() - 1;
 	int mid = 0;
 
-	while (low <= high)
+	while (low < high)
 	{
 		mid = (low + high) / 2;
 		if (A[mid] > A[high]) low = mid + 1;

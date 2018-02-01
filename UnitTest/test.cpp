@@ -178,8 +178,7 @@ struct TreeNode {
 	TreeNode *right;
 	TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
-//vector<vector<int> > VerticalOrderTraversal(TreeNode* A);
-int VerticalOrderTraversal(TreeNode* A);
+vector<vector<int> > VerticalOrderTraversal(TreeNode* A);
 TEST(IB, VerticalOrderTraversal) {
 	TreeNode A(6);
 	TreeNode B(3);
@@ -189,8 +188,7 @@ TEST(IB, VerticalOrderTraversal) {
 	B.left = &TreeNode(2);
 	B.right = &TreeNode(5);
 	C.right = &TreeNode(9);
-	//EXPECT_EQ(vector<vector<int>>({ {2}, {3}, {6 5}, {7}, {9} }), VerticalOrderTraversal(&A));
-	EXPECT_EQ(5, VerticalOrderTraversal(&A));
+	EXPECT_EQ(vector<vector<int>>({ {2}, {3}, {6, 5}, {7}, {9} }), VerticalOrderTraversal(&A));
 }
 
 int main(int argc, char** argv)
