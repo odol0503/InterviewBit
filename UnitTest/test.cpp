@@ -192,9 +192,15 @@ TEST(IB, VerticalOrderTraversal) {
 	EXPECT_EQ(vector<vector<int>>({ {2}, {3}, {6, 5}, {7}, {9} }), VerticalOrderTraversal(&A));
 }
 
+double MediaArraySameSize(const vector<int> &A, const vector<int> &B);
+TEST(IB, MediaArraySameSize) {
+	EXPECT_EQ(16, MediaArraySameSize(vector<int>({ 1, 12, 15, 26, 38 }), vector<int>({ 2, 13, 17, 30, 45 })));
+	EXPECT_EQ(5.5f, MediaArraySameSize(vector<int>({ 1, 2, 3, 4, 5 }), vector<int>({ 6, 7, 8, 9, 10 })));
+	EXPECT_EQ(3.5f, MediaArraySameSize(vector<int>({ 1, 4, 5 }), vector<int>({ 2, 3, 6 })));
+}
 int main(int argc, char** argv)
 {
-	testing::InitGoogleTest(&argc, argv);	
+	testing::InitGoogleTest(&argc, argv);
 	return RUN_ALL_TESTS();
 }
 

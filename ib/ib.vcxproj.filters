@@ -174,5 +174,8 @@
     <ClCompile Include="level6\VerticalOrderTraversalOfBinaryTree.cpp">
       <Filter>level6</Filter>
     </ClCompile>
+    <ClCompile Include="level3\BinarySearch\MedianArraySameSize.cpp">
+      <Filter>level3\BinarySearch</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

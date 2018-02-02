@@ -61,6 +61,7 @@
     <ClCompile Include="level3\BinarySearch\ImplementPowerFunction.cpp" />
     <ClCompile Include="level3\BinarySearch\MatrixMedian.cpp" />
     <ClCompile Include="level3\BinarySearch\MatrixSearch.cpp" />
+    <ClCompile Include="level3\BinarySearch\MedianArraySameSize.cpp" />
     <ClCompile Include="level3\BinarySearch\MedianOfArray.cpp" />
     <ClCompile Include="level3\BinarySearch\PainterPartitionProblem.cpp" />
     <ClCompile Include="level3\BinarySearch\RotatedArray.cpp" />
