@@ -14,7 +14,7 @@ double GetMedian(vector<int> A)
 	else return (double)((A[len / 2] + A[len / 2 - 1]) / 2.0f);
 }
 
-double MediaArraySameSize(const vector<int> &A, const vector<int> &B)
+double MedianArraySameSize(const vector<int> &A, const vector<int> &B)
 {
 	if (A.size() != B.size()) return -1;
 	int len = (int)A.size();
@@ -73,7 +73,7 @@ int median(vector<int> arr, int n)
 		return arr[n / 2];
 }
 
-double MediaArraySameSize(const vector<int> &A, const vector<int> &B)
+double MedianArraySameSize(const vector<int> &A, const vector<int> &B)
 {
 	vector<int> ar1(A);
 	vector<int> ar2(B);

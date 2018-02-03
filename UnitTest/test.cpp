@@ -192,15 +192,29 @@ TEST(IB, VerticalOrderTraversal) {
 	EXPECT_EQ(vector<vector<int>>({ {2}, {3}, {6, 5}, {7}, {9} }), VerticalOrderTraversal(&A));
 }
 
-double MediaArraySameSize(const vector<int> &A, const vector<int> &B);
-TEST(IB, MediaArraySameSize) {
-	EXPECT_EQ(10.5, MediaArraySameSize(vector<int>({ 1, 8, 13, 77 }), vector<int>({ 2, 5, 67, 68 })));
-	EXPECT_EQ(16, MediaArraySameSize(vector<int>({ 1, 12, 15, 26, 38 }), vector<int>({ 2, 13, 17, 30, 45 })));
-	EXPECT_EQ(5.5, MediaArraySameSize(vector<int>({ 1, 2, 3, 4, 5 }), vector<int>({ 6, 7, 8, 9, 10 })));
-	EXPECT_EQ(3.5, MediaArraySameSize(vector<int>({ 1, 4, 5 }), vector<int>({ 2, 3, 6 })));
-	EXPECT_EQ(1.5, MediaArraySameSize(vector<int>({ 1 }), vector<int>({ 2 })));
-	EXPECT_EQ(3.5, MediaArraySameSize(vector<int>({ 1, 8 }), vector<int>({ 2, 5 })));
+double MedianArraySameSize(const vector<int> &A, const vector<int> &B);
+TEST(IB, MedianArraySameSize) {
+	EXPECT_EQ(10.5, MedianArraySameSize(vector<int>({ 1, 8, 13, 77 }), vector<int>({ 2, 5, 67, 68 })));
+	EXPECT_EQ(16, MedianArraySameSize(vector<int>({ 1, 12, 15, 26, 38 }), vector<int>({ 2, 13, 17, 30, 45 })));
+	EXPECT_EQ(5.5, MedianArraySameSize(vector<int>({ 1, 2, 3, 4, 5 }), vector<int>({ 6, 7, 8, 9, 10 })));
+	EXPECT_EQ(3.5, MedianArraySameSize(vector<int>({ 1, 4, 5 }), vector<int>({ 2, 3, 6 })));
+	EXPECT_EQ(1.5, MedianArraySameSize(vector<int>({ 1 }), vector<int>({ 2 })));
+	EXPECT_EQ(3.5, MedianArraySameSize(vector<int>({ 1, 8 }), vector<int>({ 2, 5 })));
 }
+
+double MedianArray(const vector<int> &A, const vector<int> &B);
+TEST(IB, MediaArray) {
+	EXPECT_EQ(12.5, MedianArray(vector<int>({ -24, -11, -7, 4, 21, 26 }), vector<int>({ 25, 44 })));
+	EXPECT_EQ(-8.5, MedianArray(vector<int>({ -37, -36, -33, -23, 1, 14, 24, 46, 47 }), vector<int>({ -33, -18, 9 })));
+	EXPECT_EQ(18.0, MedianArray(vector<int>({ -48, -43, 46 }), vector<int>({ 18, 29 })));
+	EXPECT_EQ(14.0, MedianArray(vector<int>({ -34, -18, -12, -3, 12, 16, 20, 31, 44 }), vector<int>({ -27, 25, 38 })));
+	EXPECT_EQ(5.0, MedianArray(vector<int>({ -50, -47, -36, -35, 0, 13, 14, 16 }), vector<int>({ -31, 1, 9, 23, 30, 39 })));
+	EXPECT_EQ(3.0, MedianArray(vector<int>({ -40, -25, 5, 10, 14, 28, 29, 48 }), vector<int>({ -48, -31, -15, -6, 1, 8 })));
+	EXPECT_EQ(11.5, MedianArray(vector<int>({ 0, 23 }), vector<int>()));
+	EXPECT_EQ(-20.0, MedianArray(vector<int>({ -50, -41, -40, -19, 5, 21, 28 }), vector<int>({ -50, -21, -10 })));
+	EXPECT_EQ(3, MedianArray(vector<int>({ 1, 4, 5 }), vector<int>({ 2, 3 })));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);

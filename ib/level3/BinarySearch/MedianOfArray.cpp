@@ -18,139 +18,178 @@ is the average of n / 2 th and n/2 + 1th element.
 For example, if the array is [1 2 3 4], the median is (2 + 3) / 2.0 = 2.5
 *************************************************************************************************/
 #include <vector>
+#include <algorithm>
 using namespace std;
 
-#define OWN45
+#define OWN34
 
 #ifdef OWN
-double MedianArray(const vector<int> &A, const vector<int> &B) 
+static double Median(const vector<int> &A)
 {
-	return 0.0;
+	int len = (int)A.size();
+
+	if (len == 1) return A[0];
+	else if (len & 0x01) return A[len / 2];
+	else return (A[len / 2 - 1] + A[len / 2]) / 2.0;
 }
+
+static double Median3(int a, int b, int c)
+{
+	return a+b+c-max(max(a, b), c)-min(min(a,b),c);
+}
+
+static double Median4(int a, int b, int c, int d)
+{
+	return ((a + b + c + d) - max(max(max(a, b), c), d) - min(min(min(a, b), c), d)) / 2.0;
+}
+
+double findMedianSortedArrays(const vector<int> &a, const vector<int> &b)
+{
+	vector<int> A(a);
+	vector<int> B(b);
+	int n = (int)A.size();
+	int m = (int)B.size();
+
+	// case1 n == 0 or m == 0
+	if (n == 0) {
+		if (m == 0) return -1;
+		else if (m == 1) return B[0];
+		else return Median(B);
+	}
+	else if (m == 0)
+	{
+		return Median(A);
+	}
+
+	// case2 n==1, m==1
+	if (n == 1 && m == 1) return (A[0] + B[0]) / 2.0;
+
+	// case3 n==1, m==odd
+	if (n == 1 && (m & 0x01))
+	{
+		return Median4(A[0], B[m / 2 - 1], B[m / 2], B[m / 2 + 1]); // A[0] 1 2 3 | 1 2 A[0] 3 | 1 2 3 A[0]
+	}
+	// case4 n==1, m==even
+	else if (n == 1)
+	{
+		return Median3(A[0], B[m/2-1], B[m/2]); // A[0] 1 2 |1 A[0] 2 | 1 2 A[0]
+	}
+	// case5 n==2, m==odd
+	else if (n == 2 && (m & 0x01))
+	{
+		return Median3(max(A[0], B[m/2-1]), B[m/2], min(A[1], B[m/2+1])); // A[0] A[1] 1 2 3 | A[0] 1 A[1] 2 3 | 1 A[0] 2 A[1] 3 |  1 2 A[0] 3 A[1] | 1 2 3 A[0] A[1]
+	}
+	// case5 n==2, m==2
+	else if (n == 2 && m == 2)
+	{
+		return Median4(A[0], A[1], B[0], B[1]); // A[0] A[1] 1 2 | 1 2 A[0] | 1 A[0] A[1] 2 | 1 A[0] 2 A[1]
+	}
+	// case6 n==2, m==even
+	else if (n == 2)
+	{
+		return Median4(max(A[0], B[m / 2 - 2]), B[m / 2 - 1], B[m / 2], min(A[1], B[m / 2 + 1]));
+	}
+	else
+	{
+		int idxA = (n - 1) / 2;
+		int idxB = (m - 1) / 2;
+#if 1
+		/* if A[idxA] <= B[idxB], then median must exist in
+		A[idxA....] and B[....idxB] */
+		if (A[idxA] <= B[idxB])
+		{
+			A.assign(A.begin() + idxA, A.end());
+			B.assign(B.begin(), B.begin() + m - idxA);
+			return findMedianSortedArrays(A, B);
+		}
+
+		/* if A[idxA] > B[idxB], then median must exist in
+		A[...idxA] and B[idxB....] */
+		A.assign(A.begin(), A.begin() + n / 2 + 1);
+		B.assign(B.begin() + idxA, B.end());
+		return findMedianSortedArrays(A, B);
 #else
-/*
-Given a sorted array A of length m, we can split it into two parts :
+		double m1 = Median(A);
+		double m2 = Median(B);
+		int diff = 0;
 
-{ A[0], A[1], ¡¦, A[i - 1] } { A[i], A[i + 1], ¡¦, A[m - 1] }
-All the elements in right part are greater than the elements in left part.
+		if (m1 < m2)
+		{
+			if (n & 0x01) diff = n / 2;
+			else diff = n / 2 - 1;
+			
+			A.assign(A.begin() + diff, A.end());
+			B.assign(B.begin(), B.begin() + m - diff);
+		}
+		else 
+		{
+			if (m & 0x01) diff = m / 2;
+			else diff = m / 2 - 1;
 
-The left part has ¡°i¡± elements, and right part has ¡°m - i¡± elements.
+			A.assign(A.begin(), A.begin() + n/2+1);
+			B.assign(B.begin() + diff, B.end());
+		}
 
-There are ¡°m + 1¡± kinds of splits. (i = 0 ~m)
+		return findMedianSortedArrays(A, B);
+#endif
+	}
 
-When i = 0, the left part has ¡°0¡± elements, right part has ¡°m¡± elements.
+	return -1;
+}
 
-When i = m, the left part has ¡°m¡± elements, right part has ¡°0¡± elements.
+double MedianArray(const vector<int> &a, const vector<int> &b)
+{
+	if (a.size() > b.size())
+	{
+		return findMedianSortedArrays(b, a);
+	}
+	return findMedianSortedArrays(a, b);
+}
 
-For array B, we can split it with the same way :
-
-{ B[0], B[1], ¡¦, B[j - 1] } { B[j], B[j + 1], ¡¦, B[n - 1] }
-The left part has ¡°j¡± elements, and right part has ¡°n - j¡± elements.
-
-Put A¡¯s left part and B¡¯s left part into one set. (Let us name this set ¡°LeftPart¡±)
-
-Put A¡¯s right part and B¡¯s right part into one set. (Let us name this set¡±RightPart¡±)
-
-LeftPart | RightPart
-{ A[0], A[1], ¡¦ , A[i - 1] }	{ A[i], A[i + 1], ¡¦, A[m - 1] }
-{ B[0], B[1], ¡¦, B[j - 1] } { B[j], B[j + 1], ¡¦, B[n - 1] }
-If we can ensure the following :
-
-1) LeftPart¡¯s length == RightPart¡¯s length(or RightPart¡¯s length + 1)
-
-2) All elements in RightPart is greater than elements in LeftPart,
-
-then we split all elements in{ A, B } into two parts with eqaul length, and one part is
-
-always greater than the other part.
-
-Then the median can be easily found.
-
-The expected time complexity gives away binary search in this case.
-We are going to do binary search for the answer in this case.
-
-Given a sorted array A of length m, we can split it into two parts :
-
-{ A[0], A[1], ¡¦, A[i - 1] } { A[i], A[i + 1], ¡¦, A[m - 1] }
-All elements in right part are greater than elements in the left part.
-
-The left part has i elements, and right part has m - i elements.
-There are m + 1 kinds of splits.
-
-(i = 0 ~m)
-
-When i = 0, the left part has ¡°0¡± elements, the right part has ¡°m¡± elements.
-When i = m, the left part has ¡°m¡± elements, right part has ¡°0¡± elements.
-
-For the array B, we can split it in the same way :
-
-{ B[0], B[1], ¡¦, B[j - 1] } { B[j], B[j + 1], ¡¦, B[n - 1] }
-The left part has ¡°j¡± elements, and right part has ¡°n - j¡± elements.
-
-Put A¡¯s left part and B¡¯s left part into one set. (Let¡¯s name this set ¡°LeftPart¡±)
-
-Put A¡¯s right part and B¡¯s right part into one set. (Let¡¯s name this set¡±RightPart¡±)
-
-LeftPart | RightPart
-{ A[0], A[1], ¡¦ , A[i - 1] }	{ A[i], A[i + 1], ¡¦, A[m - 1] }
-{ B[0], B[1], ¡¦, B[j - 1] } { B[j], B[j + 1], ¡¦, B[n - 1] }
-If we can ensure the following :
-
-LeftPart¡¯s length == RightPart¡¯s length(or RightPart¡¯s length + 1)
-All elements in RightPart is greater than elements in LeftPart,
-then we can split all elements in{ A, B } into two parts with equal length, and one part is always greater than the other part.
-
-Then the median can thus be easily found.
-
-To ensure these two condition, we just need to ensure :
-
-Condition 1 :
-	i + j == (m - i) + (n - j)
-	OR i + j == (m - i) + (n - j) + 1
-	Which means if n >= m,
-
-	i = 0 to m
-	j = (m + n + 1) / 2 - i
-	Condition 2
-	B[j - 1] <= A[i] and A[i - 1] <= B[j]
-	Considering edge values, we need to ensure :
-
-(j == 0 or i == m or B[j - 1] <= A[i]) and
-
-(i == 0 or j == n or A[i - 1] <= B[j])
-So, all we need to do is :
-
-	Search i from 0 to m, to find an object i to meet condition(1) and (2) above.
-	And we can do this search by binary search.
-
-	How ?
-
-	If B[j0 - 1] > A[i0], than the object ix can¡¯t be in[0, i0].
-
-	Why ?
-
-	Because if
-
-	ix < i0,
-	=> jx = (m + n + 1) / 2 - ix > j0
-	= > B[jx - 1] >= B[j0 - 1] > A[i0] >= A[ix].
-	This violates the condition(2).So ix can¡¯t be less than i0.
-
-	And if A[i0 - 1] > B[j0], than the object ix can¡¯t be in[i0, m].
-	So we can do the binary search following the steps described below :
-
-set imin, imax = 0, m, then start searching in[imin, imax]
-Search in[imin, imax] :
-	i = (imin + imax) / 2
-	j = ((m + n + 1) / 2) - i
-	if B[j - 1] > A[i]:
-search in[i + 1, imax]
-	else if A[i - 1] > B[j]:
-search in[imin, i - 1]
-	else:
-if m + n is odd :
-answer is max(A[i - 1], B[j - 1])
-else :
-	answer is(max(A[i - 1], B[j - 1]) + min(A[i], B[j])) / 2
-*/
+#else
+double MedianArray(const vector<int> &A, const vector<int> &B)
+{
+	int m = A.size(), n = B.size();
+	if (m > n) return MedianArray(B, A);
+	int imin, imax, i, j;
+	imin = 0;
+	imax = m;
+	while (imin <= imax) {
+		i = (imin + imax) / 2;
+		j = (m + n + 1) / 2 - i;
+		if (j > 0 && i < m && B[j - 1] > A[i]) {
+			imin = i + 1;
+		}
+		else if (i > 0 && j < n && A[i - 1] > B[j]) {
+			imax = i - 1;
+		}
+		else {
+			// Figure out median now. 
+			int median1 = 0, median2 = 0;
+			if (i == 0) {
+				median1 = B[j - 1];
+			}
+			else if (j == 0) {
+				median1 = A[i - 1];
+			}
+			else {
+				median1 = max(A[i - 1], B[j - 1]);
+			}
+			if ((m + n) % 2 == 1) {
+				return 1.0 * median1;
+			}
+			if (i == m) {
+				median2 = B[j];
+			}
+			else if (j == n) {
+				median2 = A[i];
+			}
+			else {
+				median2 = min(A[i], B[j]);
+			}
+			return 1.0 * (median1 + median2) / 2.0;
+		}
+	}
+	return -1.0;
+}
 #endif
