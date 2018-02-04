@@ -21,15 +21,14 @@ For example, if the array is [1 2 3 4], the median is (2 + 3) / 2.0 = 2.5
 #include <algorithm>
 using namespace std;
 
-#define OWN34
+#define OWN
 
 #ifdef OWN
 static double Median(const vector<int> &A)
 {
 	int len = (int)A.size();
 
-	if (len == 1) return A[0];
-	else if (len & 0x01) return A[len / 2];
+	if (len & 0x01) return A[len / 2];
 	else return (A[len / 2 - 1] + A[len / 2]) / 2.0;
 }
 
@@ -53,7 +52,6 @@ double findMedianSortedArrays(const vector<int> &a, const vector<int> &b)
 	// case1 n == 0 or m == 0
 	if (n == 0) {
 		if (m == 0) return -1;
-		else if (m == 1) return B[0];
 		else return Median(B);
 	}
 	else if (m == 0)
@@ -61,89 +59,66 @@ double findMedianSortedArrays(const vector<int> &a, const vector<int> &b)
 		return Median(A);
 	}
 
-	// case2 n==1, m==1
-	if (n == 1 && m == 1) return (A[0] + B[0]) / 2.0;
+	if (n == 1)
+	{
+		// case2 n==1, m==1
+		if (m == 1) return (A[0] + B[0]) / 2.0;
 
-	// case3 n==1, m==odd
-	if (n == 1 && (m & 0x01))
-	{
-		return Median4(A[0], B[m / 2 - 1], B[m / 2], B[m / 2 + 1]); // A[0] 1 2 3 | 1 2 A[0] 3 | 1 2 3 A[0]
+		// case3 n==1, m==odd
+		if (m & 0x01)
+		{
+			return Median4(A[0], B[m / 2 - 1], B[m / 2], B[m / 2 + 1]); // A[0] 1 2 3 | 1 2 A[0] 3 | 1 2 3 A[0]
+		}
+		// case4 n==1, m==even
+		else if (n == 1)
+		{
+			return Median3(A[0], B[m / 2 - 1], B[m / 2]); // A[0] 1 2 |1 A[0] 2 | 1 2 A[0]
+		}
 	}
-	// case4 n==1, m==even
-	else if (n == 1)
+
+	if (n == 2)
 	{
-		return Median3(A[0], B[m/2-1], B[m/2]); // A[0] 1 2 |1 A[0] 2 | 1 2 A[0]
+		// case5 n==2, m==2
+		if (m == 2)
+		{
+			return Median4(A[0], A[1], B[0], B[1]); // A[0] A[1] 1 2 | 1 2 A[0] | 1 A[0] A[1] 2 | 1 A[0] 2 A[1]
+		}
+
+		// case6 n==2, m==odd
+		if (m & 0x01)
+		{
+			return Median3(max(A[0], B[m / 2 - 1]), B[m / 2], min(A[1], B[m / 2 + 1])); // A[0] A[1] 1 2 3 | A[0] 1 A[1] 2 3 | 1 A[0] 2 A[1] 3 |  1 2 A[0] 3 A[1] | 1 2 3 A[0] A[1]
+		}
+		// case7 n==2, m==even
+		else
+		{
+			return Median4(max(A[0], B[m / 2 - 2]), B[m / 2 - 1], B[m / 2], min(A[1], B[m / 2 + 1]));
+		}
 	}
-	// case5 n==2, m==odd
-	else if (n == 2 && (m & 0x01))
+
+	int idxA = (A.size() & 0x01) ? n / 2 : n / 2 - 1;
+
+	if (Median(A) <= Median(B))
 	{
-		return Median3(max(A[0], B[m/2-1]), B[m/2], min(A[1], B[m/2+1])); // A[0] A[1] 1 2 3 | A[0] 1 A[1] 2 3 | 1 A[0] 2 A[1] 3 |  1 2 A[0] 3 A[1] | 1 2 3 A[0] A[1]
-	}
-	// case5 n==2, m==2
-	else if (n == 2 && m == 2)
-	{
-		return Median4(A[0], A[1], B[0], B[1]); // A[0] A[1] 1 2 | 1 2 A[0] | 1 A[0] A[1] 2 | 1 A[0] 2 A[1]
-	}
-	// case6 n==2, m==even
-	else if (n == 2)
-	{
-		return Median4(max(A[0], B[m / 2 - 2]), B[m / 2 - 1], B[m / 2], min(A[1], B[m / 2 + 1]));
+		A.assign(A.begin() + idxA, A.end());
+		B.assign(B.begin(), B.begin() + m - idxA);
 	}
 	else
 	{
-		int idxA = (n - 1) / 2;
-		int idxB = (m - 1) / 2;
-#if 1
-		/* if A[idxA] <= B[idxB], then median must exist in
-		A[idxA....] and B[....idxB] */
-		if (A[idxA] <= B[idxB])
-		{
-			A.assign(A.begin() + idxA, A.end());
-			B.assign(B.begin(), B.begin() + m - idxA);
-			return findMedianSortedArrays(A, B);
-		}
-
-		/* if A[idxA] > B[idxB], then median must exist in
-		A[...idxA] and B[idxB....] */
 		A.assign(A.begin(), A.begin() + n / 2 + 1);
 		B.assign(B.begin() + idxA, B.end());
-		return findMedianSortedArrays(A, B);
-#else
-		double m1 = Median(A);
-		double m2 = Median(B);
-		int diff = 0;
-
-		if (m1 < m2)
-		{
-			if (n & 0x01) diff = n / 2;
-			else diff = n / 2 - 1;
-			
-			A.assign(A.begin() + diff, A.end());
-			B.assign(B.begin(), B.begin() + m - diff);
-		}
-		else 
-		{
-			if (m & 0x01) diff = m / 2;
-			else diff = m / 2 - 1;
-
-			A.assign(A.begin(), A.begin() + n/2+1);
-			B.assign(B.begin() + diff, B.end());
-		}
-
-		return findMedianSortedArrays(A, B);
-#endif
 	}
 
-	return -1;
+	return findMedianSortedArrays(A, B);
 }
 
-double MedianArray(const vector<int> &a, const vector<int> &b)
+double MedianArray(const vector<int> &A, const vector<int> &B)
 {
-	if (a.size() > b.size())
+	if (A.size() > B.size())
 	{
-		return findMedianSortedArrays(b, a);
+		return findMedianSortedArrays(B, A);
 	}
-	return findMedianSortedArrays(a, b);
+	return findMedianSortedArrays(A, B);
 }
 
 #else

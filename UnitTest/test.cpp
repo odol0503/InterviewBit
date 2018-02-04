@@ -204,6 +204,7 @@ TEST(IB, MedianArraySameSize) {
 
 double MedianArray(const vector<int> &A, const vector<int> &B);
 TEST(IB, MediaArray) {
+	EXPECT_EQ(20.0, MedianArray(vector<int>(), vector<int>({ 20 })));
 	EXPECT_EQ(12.5, MedianArray(vector<int>({ -24, -11, -7, 4, 21, 26 }), vector<int>({ 25, 44 })));
 	EXPECT_EQ(-8.5, MedianArray(vector<int>({ -37, -36, -33, -23, 1, 14, 24, 46, 47 }), vector<int>({ -33, -18, 9 })));
 	EXPECT_EQ(18.0, MedianArray(vector<int>({ -48, -43, 46 }), vector<int>({ 18, 29 })));
