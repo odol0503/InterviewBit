@@ -16,16 +16,11 @@
     <Filter Include="level3\BinarySearch">
       <UniqueIdentifier>{6a42f5b9-019a-45cb-983b-ade1d8b28efc}</UniqueIdentifier>
     </Filter>
+	<Filter Include="level3\Strings">
+      <UniqueIdentifier>{d2686bcc-f030-4d49-a217-9f081a192686}</UniqueIdentifier>
+    </Filter>
     <Filter Include="level6">
       <UniqueIdentifier>{7410203f-aa11-4476-9e99-d7ca45de29a1}</UniqueIdentifier>
-    </Filter>
-<<<<<<< HEAD
-    <Filter Include="level3\String">
-      <UniqueIdentifier>{7c47ecf9-5112-4c7f-9999-b7aca3997bb7}</UniqueIdentifier>
-=======
-    <Filter Include="level3\Strings">
-      <UniqueIdentifier>{d2686bcc-f030-4d49-a217-9f081a192686}</UniqueIdentifier>
->>>>>>> f411112439d96aa8b6d96cad58427525ab5e736c
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -185,16 +180,14 @@
     <ClCompile Include="level3\BinarySearch\MedianArraySameSize.cpp">
       <Filter>level3\BinarySearch</Filter>
     </ClCompile>
-<<<<<<< HEAD
-    <ClCompile Include="level3\String\PalindromeString.cpp">
-      <Filter>level3\String</Filter>
-=======
+    <ClCompile Include="level3\Strings\PalindromeString.cpp">
+      <Filter>level3\Strings</Filter>
+    </ClCompile>
     <ClCompile Include="level3\Strings\LongestCommonPrefix.cpp">
       <Filter>level3\Strings</Filter>
     </ClCompile>
     <ClCompile Include="level3\Strings\CountAndSay.cpp">
       <Filter>level3\Strings</Filter>
->>>>>>> f411112439d96aa8b6d96cad58427525ab5e736c
     </ClCompile>
   </ItemGroup>
 </Project>
