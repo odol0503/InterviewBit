@@ -183,5 +183,8 @@
     <ClCompile Include="level3\Strings\LongestCommonPrefix.cpp">
       <Filter>level3\Strings</Filter>
     </ClCompile>
+    <ClCompile Include="level3\Strings\CountAndSay.cpp">
+      <Filter>level3\Strings</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
