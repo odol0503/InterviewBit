@@ -164,7 +164,7 @@ double MedianArray(const vector<int> &A, const vector<int> &B) {
 				else min_value = min(A[i], B[j]);
 
 				if (i == 0) max_value = B[j - 1];
-				else if (j == 0) max_value = A[j - 1];
+				else if (j == 0) max_value = A[i - 1];
 				else max_value = max(A[i - 1], B[j - 1]);
 
 				return (min_value + max_value) / 2.0;
