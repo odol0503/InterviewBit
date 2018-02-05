@@ -221,6 +221,11 @@ TEST(IB, MediaArray) {
 	EXPECT_EQ(3, MedianArray(vector<int>({ 1, 4, 5 }), vector<int>({ 2, 3 })));
 }
 
+string LongestCommonPrefix(vector<string> &A);
+TEST(IB, LongestCommonPrefix) {
+	EXPECT_EQ("a", LongestCommonPrefix(vector<string>({"abcdefgh", "aefghijk", "abcefgh" })));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);
