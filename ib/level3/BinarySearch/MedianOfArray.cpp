@@ -21,7 +21,7 @@ For example, if the array is [1 2 3 4], the median is (2 + 3) / 2.0 = 2.5
 #include <algorithm>
 using namespace std;
 
-#define OWN
+#define OWN2
 
 #ifdef OWN
 static double Median(const vector<int> &A)
@@ -120,7 +120,60 @@ double MedianArray(const vector<int> &A, const vector<int> &B)
 	}
 	return findMedianSortedArrays(A, B);
 }
+#elif defined(OWN2)
+#include <cassert>
+double MedianArray(const vector<int> &A, const vector<int> &B) {
+	int m = (int)A.size();
+	int n = (int)B.size();
 
+	assert(m != 0 || n != 0);
+
+	if (m > n) return MedianArray(B, A);
+
+	int il = 0;
+	int ir = m;
+
+	while (il <= ir)
+	{
+		int i = (il + ir) / 2;
+		int j = (m + n + 1) / 2 - i;
+
+		if (i>0 && j<n && A[i - 1] > B[j])
+		{
+			ir = i - 1;
+		}
+		else if (j>0 && i<m && A[i] < B[j - 1])
+		{
+			il = i + 1;
+		}
+		else
+		{
+			int min_value = 0;
+			int max_value = 0;
+
+			if ((m + n) & 0x1)
+			{
+				if (i == 0) return B[j - 1] * 1.0;
+				else if (j == 0) return A[i - 1] * 1.0;
+				else return max(A[i-1], B[j-1])*1.0;
+			}
+			else
+			{
+				if (i == m) min_value = B[j];
+				else if (j == n) min_value = A[i];
+				else min_value = min(A[i], B[j]);
+
+				if (i == 0) max_value = B[j - 1];
+				else if (j == 0) max_value = A[j - 1];
+				else max_value = max(A[i - 1], B[j - 1]);
+
+				return (min_value + max_value) / 2.0;
+			}
+		}
+	}
+
+	return -1.0;
+}
 #else
 double MedianArray(const vector<int> &A, const vector<int> &B)
 {
