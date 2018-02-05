@@ -221,10 +221,16 @@ TEST(IB, MediaArray) {
 	EXPECT_EQ(3, MedianArray(vector<int>({ 1, 4, 5 }), vector<int>({ 2, 3 })));
 }
 
+<<<<<<< HEAD
 int PalindromeString(string A);
 TEST(IB, PalindromeString) {
 	EXPECT_EQ(1, PalindromeString("A man, a plan, a canal: Panama"));
 	EXPECT_EQ(0, PalindromeString("race a car"));
+=======
+string LongestCommonPrefix(vector<string> &A);
+TEST(IB, LongestCommonPrefix) {
+	EXPECT_EQ("a", LongestCommonPrefix(vector<string>({"abcdefgh", "aefghijk", "abcefgh" })));
+>>>>>>> f411112439d96aa8b6d96cad58427525ab5e736c
 }
 
 int main(int argc, char** argv)

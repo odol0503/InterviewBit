@@ -70,7 +70,12 @@
     <ClCompile Include="level3\BinarySearch\SortedInsertPosition.cpp" />
     <ClCompile Include="level3\BinarySearch\SquareRootInt.cpp" />
     <ClCompile Include="level3\qsort.cpp" />
+<<<<<<< HEAD
     <ClCompile Include="level3\String\PalindromeString.cpp" />
+=======
+    <ClCompile Include="level3\Strings\CountAndSay.cpp" />
+    <ClCompile Include="level3\Strings\LongestCommonPrefix.cpp" />
+>>>>>>> f411112439d96aa8b6d96cad58427525ab5e736c
     <ClCompile Include="level6\VerticalOrderTraversalOfBinaryTree.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
