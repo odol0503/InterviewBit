@@ -192,5 +192,8 @@
     <ClCompile Include="level3\Strings\LengthOfLastWord.cpp">
       <Filter>level3\Strings</Filter>
     </ClCompile>
+    <ClCompile Include="level3\Strings\MinimumCharactersPalindromic.cpp">
+      <Filter>level3\Strings</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

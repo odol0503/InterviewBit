@@ -251,6 +251,12 @@ TEST(IB, LengthOfLastWord) {
 	EXPECT_EQ(1, LengthOfLastWord("d"));
 }
 
+int MinimumCharactersPalindromic(string A);
+TEST(IB, MinimumCharactersPalindromic) {
+	EXPECT_EQ(2, MinimumCharactersPalindromic("ABC"));
+	EXPECT_EQ(2, MinimumCharactersPalindromic("AACECAAAA"));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);
