@@ -233,6 +233,19 @@ TEST(IB, LongestCommonPrefix) {
 	EXPECT_EQ("a", LongestCommonPrefix(vector<string>({"abcdefgh", "aefghijk", "abcefgh" })));
 }
 
+
+string CountAndSay(int A);
+TEST(IB, CountAndSay) {
+	EXPECT_EQ("1", CountAndSay(1));
+	EXPECT_EQ("11", CountAndSay(2));
+	EXPECT_EQ("21", CountAndSay(3));
+	EXPECT_EQ("1211", CountAndSay(4));
+	EXPECT_EQ("111221", CountAndSay(5));
+	EXPECT_EQ("312211", CountAndSay(6));
+	EXPECT_EQ("13112221", CountAndSay(7));
+}
+
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);
