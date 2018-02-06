@@ -56,6 +56,7 @@
     <ClCompile Include="level2\Math\SortedPermutationRank.cpp" />
     <ClCompile Include="level2\Math\SortedPermutationRank2.cpp" />
     <ClCompile Include="level2\Math\TrailingZeros.cpp" />
+    <ClCompile Include="level2\PrettyPrint.cpp" />
     <ClCompile Include="level3\BinarySearch\AllocateBooks.cpp" />
     <ClCompile Include="level3\BinarySearch\CountElementOccurence.cpp" />
     <ClCompile Include="level3\BinarySearch\ImplementPowerFunction.cpp" />
@@ -72,6 +73,7 @@
     <ClCompile Include="level3\qsort.cpp" />
     <ClCompile Include="level3\Strings\ImplementStrStr.cpp" />
     <ClCompile Include="level3\Strings\LengthOfLastWord.cpp" />
+    <ClCompile Include="level3\Strings\LongestPalindromicSubstring.cpp" />
     <ClCompile Include="level3\Strings\MinimumCharactersPalindromic.cpp" />
     <ClCompile Include="level3\Strings\PalindromeString.cpp" />
     <ClCompile Include="level3\Strings\CountAndSay.cpp" />

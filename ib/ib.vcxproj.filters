@@ -198,5 +198,11 @@
     <ClCompile Include="level3\Strings\ImplementStrStr.cpp">
       <Filter>level3\Strings</Filter>
     </ClCompile>
+    <ClCompile Include="level3\Strings\LongestPalindromicSubstring.cpp">
+      <Filter>level3\Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="level2\PrettyPrint.cpp">
+      <Filter>level2</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

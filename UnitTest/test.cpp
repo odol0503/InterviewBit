@@ -87,13 +87,11 @@ TEST(IB, qsort) {
 	EXPECT_EQ(D, E);
 }
 
-/*
 vector<vector<int> > PrettyPrint(int A);
 TEST(IB, PrettyPrint) {
 	vector<vector<int>> ret = { { 3,3,3,3,3 },{ 3,2,2,2,3 },{ 3,2,1,2,3 },{ 3,2,2,2,3 },{ 3,3,3,3,3 } };
 	EXPECT_EQ(ret, PrettyPrint(3));
 }
-*/
 
 int SqrtInt(int A);
 TEST(IB, SqrtInt) {
@@ -233,7 +231,6 @@ TEST(IB, LongestCommonPrefix) {
 	EXPECT_EQ("a", LongestCommonPrefix(vector<string>({"abcdefgh", "aefghijk", "abcefgh" })));
 }
 
-
 string CountAndSay(int A);
 TEST(IB, CountAndSay) {
 	EXPECT_EQ("1", CountAndSay(1));
@@ -257,10 +254,19 @@ TEST(IB, MinimumCharactersPalindromic) {
 	EXPECT_EQ(2, MinimumCharactersPalindromic("AACECAAAA"));
 }
 
-int StrStr(const string A, const string B);
+int StrStr(const string &A, const string &B);
 TEST(IB, StrStr) {
 	EXPECT_EQ(6, StrStr("Hello World", "World"));
 	EXPECT_EQ(2, StrStr("A man, a plan, a canal: Panama", "man"));
+}
+
+string LongestPalindrome(string A);
+TEST(IB, LongestPalindrome) {
+	EXPECT_EQ("a", LongestPalindrome("ac"));
+	EXPECT_EQ("caaccaccaac", LongestPalindrome("caccbcbaabacabaccacaaccaccaaccbbcbcbbaacabccbcccbbacbbacbccaccaacaccbbcc"));
+	EXPECT_EQ("a", LongestPalindrome("a"));
+	EXPECT_EQ("aaabaaa", LongestPalindrome("aaaabaaa"));
+	EXPECT_EQ("bbcccbb", LongestPalindrome("abbcccbbbcaaccbababcbcabca"));
 }
 
 int main(int argc, char** argv)
