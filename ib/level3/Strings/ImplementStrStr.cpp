@@ -36,13 +36,11 @@ int StrStr(const string &A, const string &B) {
 	{
 		if (len2 > len1 - i) return -1;
 
-		int j;
-		for (j = 0; j < len2; j++)
+		for (int j = 0; j < len2; j++)
 		{
-			
 			if (A[i + j] != B[j]) break;
+			if (j == len2-1) return i;
 		}
-		if (j == len2) return i;
 	}
 
 	return -1;
