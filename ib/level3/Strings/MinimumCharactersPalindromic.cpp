@@ -15,7 +15,7 @@ Output: 2
 #include <string>
 using namespace std;
 
-#define OWN6
+#define OWN
 
 #ifdef OWN
 bool IsPalindrome(string A)

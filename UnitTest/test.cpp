@@ -257,6 +257,12 @@ TEST(IB, MinimumCharactersPalindromic) {
 	EXPECT_EQ(2, MinimumCharactersPalindromic("AACECAAAA"));
 }
 
+int StrStr(const string A, const string B);
+TEST(IB, StrStr) {
+	EXPECT_EQ(6, StrStr("Hello World", "World"));
+	EXPECT_EQ(2, StrStr("A man, a plan, a canal: Panama", "man"));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);
