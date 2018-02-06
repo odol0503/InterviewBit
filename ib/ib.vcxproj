@@ -70,6 +70,7 @@
     <ClCompile Include="level3\BinarySearch\SortedInsertPosition.cpp" />
     <ClCompile Include="level3\BinarySearch\SquareRootInt.cpp" />
     <ClCompile Include="level3\qsort.cpp" />
+    <ClCompile Include="level3\Strings\LengthOfLastWord.cpp" />
     <ClCompile Include="level3\Strings\PalindromeString.cpp" />
     <ClCompile Include="level3\Strings\CountAndSay.cpp" />
     <ClCompile Include="level3\Strings\LongestCommonPrefix.cpp" />

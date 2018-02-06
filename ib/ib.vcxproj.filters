@@ -16,7 +16,7 @@
     <Filter Include="level3\BinarySearch">
       <UniqueIdentifier>{6a42f5b9-019a-45cb-983b-ade1d8b28efc}</UniqueIdentifier>
     </Filter>
-	<Filter Include="level3\Strings">
+    <Filter Include="level3\Strings">
       <UniqueIdentifier>{d2686bcc-f030-4d49-a217-9f081a192686}</UniqueIdentifier>
     </Filter>
     <Filter Include="level6">
@@ -187,6 +187,9 @@
       <Filter>level3\Strings</Filter>
     </ClCompile>
     <ClCompile Include="level3\Strings\CountAndSay.cpp">
+      <Filter>level3\Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="level3\Strings\LengthOfLastWord.cpp">
       <Filter>level3\Strings</Filter>
     </ClCompile>
   </ItemGroup>

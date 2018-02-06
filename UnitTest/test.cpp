@@ -245,6 +245,11 @@ TEST(IB, CountAndSay) {
 	EXPECT_EQ("13112221", CountAndSay(7));
 }
 
+int LengthOfLastWord(const string A);
+TEST(IB, LengthOfLastWord) {
+	EXPECT_EQ(5, LengthOfLastWord("Hello World"));
+	EXPECT_EQ(1, LengthOfLastWord("d"));
+}
 
 int main(int argc, char** argv)
 {
