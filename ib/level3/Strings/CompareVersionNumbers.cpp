@@ -22,39 +22,39 @@ using namespace std;
 
 #ifdef OWN
 int CompareVersion(string A, string B) {
-	string::size_type a = 0, b = 0;
+	string::size_type dot1 = 0, dot2 = 0;
 	string::size_type pos1 = 0;
 	string::size_type pos2 = 0;
 	string val1, val2;
 
-	while (a != string::npos || b != string::npos)
+	while (dot1 != string::npos || dot2 != string::npos)
 	{
-		a = A.find(".", pos1);
-		b = B.find(".", pos2);
+		dot1 = A.find(".", pos1);
+		dot2 = B.find(".", pos2);
 
-		if (a == string::npos)
+		if (dot1 == string::npos)
 		{
 			if (pos1 == string::npos) val1 = "0";
 			else val1 = A.substr(pos1, string::npos);
 		}
-		else val1 = A.substr(pos1, a);
+		else val1 = A.substr(pos1, dot1);
 
-		if (b == string::npos)
+		if (dot2 == string::npos)
 		{
 			if (pos2 == string::npos) val2 = "0";
 			else val2 = B.substr(pos2, string::npos);
 		}
-		else val2 = B.substr(pos2, b);
+		else val2 = B.substr(pos2, dot2);
 
-		double temp = stold(val1) - stold(val2);
+		double temp = stod(val1) - stod(val2);
 		if (temp < 0) return -1;
 		else if (temp > 0) return 1;
 
-		if (a != string::npos) pos1 = a + 1;
-		else pos1 = a;
+		if (dot1 != string::npos) pos1 = dot1 + 1;
+		else pos1 = dot1;
 
-		if (b != string::npos) pos2 = b + 1;
-		else pos2 = b;
+		if (dot2 != string::npos) pos2 = dot2 + 1;
+		else pos2 = dot2;
 	}
 
 	return 0;

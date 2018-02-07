@@ -281,6 +281,12 @@ TEST(IB, CompareVersion) {
 	EXPECT_EQ(1, CompareVersion("1.1", "0.1"));
 }
 
+int Atoi(const string A);
+TEST(IB, Atoi) {
+	EXPECT_EQ(-2147483648, Atoi("-54332872018247709407 4 54"));
+	EXPECT_EQ(9, Atoi("9 2704"));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);
