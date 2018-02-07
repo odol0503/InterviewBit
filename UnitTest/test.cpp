@@ -287,6 +287,22 @@ TEST(IB, Atoi) {
 	EXPECT_EQ(9, Atoi("9 2704"));
 }
 
+int ValidNumber(const string A);
+TEST(IB, ValidNumber) {
+	EXPECT_EQ(1, ValidNumber("0"));
+	EXPECT_EQ(1, ValidNumber(" 0.1 "));
+	EXPECT_EQ(0, ValidNumber("abc"));
+	EXPECT_EQ(0, ValidNumber("1 a"));
+	EXPECT_EQ(1, ValidNumber("2e10"));
+	EXPECT_EQ(1, ValidNumber("0.1e10"));
+	EXPECT_EQ(1, ValidNumber("-01.1e-10"));
+	EXPECT_EQ(0, ValidNumber("3e1.1"));
+	EXPECT_EQ(0, ValidNumber("3."));
+	EXPECT_EQ(0, ValidNumber("3.e"));
+	EXPECT_EQ(1, ValidNumber("32467826570812365702673647926314796457921365792637946579269236594265794625762375621765476592146926410592659021465904652.687236478235187653874637824647856428756387264578245676579032657906097542609  "));
+}
+
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);

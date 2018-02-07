@@ -80,6 +80,7 @@
     <ClCompile Include="level3\Strings\PalindromeString.cpp" />
     <ClCompile Include="level3\Strings\CountAndSay.cpp" />
     <ClCompile Include="level3\Strings\LongestCommonPrefix.cpp" />
+    <ClCompile Include="level3\Strings\ValidNumber.cpp" />
     <ClCompile Include="level6\VerticalOrderTraversalOfBinaryTree.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

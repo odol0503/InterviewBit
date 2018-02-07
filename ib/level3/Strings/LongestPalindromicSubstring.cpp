@@ -18,7 +18,7 @@ Output : "aaabaaa"
 #include <string>
 using namespace std;
 
-#define OWN3
+#define OWN
 
 #ifdef OWN
 bool IsParindrome(string &&A)
