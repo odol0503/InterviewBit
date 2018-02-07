@@ -269,6 +269,18 @@ TEST(IB, LongestPalindrome) {
 	EXPECT_EQ("bbcccbb", LongestPalindrome("abbcccbbbcaaccbababcbcabca"));
 }
 
+int CompareVersion(string A, string B);
+TEST(IB, CompareVersion) {
+	EXPECT_EQ(-1, CompareVersion("444444444444444444444444", "4444444444444444444444444"));
+	EXPECT_EQ(1, CompareVersion("4444371174137455", "5.168"));
+	EXPECT_EQ(0, CompareVersion("1.0", "1"));
+	EXPECT_EQ(0, CompareVersion("01", "1"));
+	EXPECT_EQ(-1, CompareVersion("0.1", "1.13"));
+	EXPECT_EQ(1, CompareVersion("1.13.4", "1.13"));
+	EXPECT_EQ(-1, CompareVersion("1.2", "1.13"));
+	EXPECT_EQ(1, CompareVersion("1.1", "0.1"));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);

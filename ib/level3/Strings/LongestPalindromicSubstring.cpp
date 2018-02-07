@@ -18,7 +18,7 @@ Output : "aaabaaa"
 #include <string>
 using namespace std;
 
-#define OWN
+#define OWN3
 
 #ifdef OWN
 bool IsParindrome(string &&A)
@@ -69,7 +69,7 @@ string expandAroundCenter(string s, int c1, int c2) {
 }
 
 string LongestPalindrome(string s) {
-	int n = s.length();
+	int n = s.length(); 
 	if (n == 0) return "";
 	string longest = s.substr(0, 1);  // a single char itself is a palindrome
 	for (int i = 0; i < n - 1; i++) {

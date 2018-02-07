@@ -204,5 +204,8 @@
     <ClCompile Include="level2\PrettyPrint.cpp">
       <Filter>level2</Filter>
     </ClCompile>
+    <ClCompile Include="level3\Strings\CompareVersionNumbers.cpp">
+      <Filter>level3\Strings</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
