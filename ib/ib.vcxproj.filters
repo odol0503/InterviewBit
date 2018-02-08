@@ -222,5 +222,11 @@
     <ClCompile Include="level3\Strings\RomanToInteger.cpp">
       <Filter>level3\Strings</Filter>
     </ClCompile>
+    <ClCompile Include="level3\Strings\IntegerToRoman.cpp">
+      <Filter>level3\Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="level3\Strings\AddBinaryStrings.cpp">
+      <Filter>level3\Strings</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

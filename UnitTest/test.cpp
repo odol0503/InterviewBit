@@ -324,6 +324,25 @@ TEST(IB, RomanToInt) {
 	EXPECT_EQ(1000, RomanToInt(string("M")));
 }
 
+string IntToRoman(int A);
+TEST(IB, IntToRoman) {
+	EXPECT_EQ(string("LXXXIV"), IntToRoman(84));
+	EXPECT_EQ(string("LXIV"), IntToRoman(64));
+	EXPECT_EQ(string("XLV"), IntToRoman(45));
+	EXPECT_EQ(string("LXXIV"), IntToRoman(74));
+	EXPECT_EQ(string("DCLXXXIX"), IntToRoman(689));
+	EXPECT_EQ(string("CMXCIX"), IntToRoman(999));
+	EXPECT_EQ(string("M"), IntToRoman(1000));
+}
+
+string AddBinary(string A, string B);
+TEST(IB, AddBinary) {
+	EXPECT_EQ(string("100"), AddBinary("11", "1"));
+	EXPECT_EQ(string("111"), AddBinary("100", "11"));
+	EXPECT_EQ(string("10"), AddBinary("1", "1"));
+}
+
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);

@@ -19,9 +19,7 @@ C	100
 D	500
 M	1000
 *************************************************************************************************/
-#include <vector>
 #include <string>
-#include <unordered_map>
 using namespace std;
 
 #define OWN

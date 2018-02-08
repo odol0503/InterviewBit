@@ -71,9 +71,11 @@
     <ClCompile Include="level3\BinarySearch\SortedInsertPosition.cpp" />
     <ClCompile Include="level3\BinarySearch\SquareRootInt.cpp" />
     <ClCompile Include="level3\qsort.cpp" />
+    <ClCompile Include="level3\Strings\AddBinaryStrings.cpp" />
     <ClCompile Include="level3\Strings\Atoi.cpp" />
     <ClCompile Include="level3\Strings\CompareVersionNumbers.cpp" />
     <ClCompile Include="level3\Strings\ImplementStrStr.cpp" />
+    <ClCompile Include="level3\Strings\IntegerToRoman.cpp" />
     <ClCompile Include="level3\Strings\LengthOfLastWord.cpp" />
     <ClCompile Include="level3\Strings\LongestPalindromicSubstring.cpp" />
     <ClCompile Include="level3\Strings\MinimumCharactersPalindromic.cpp" />
