@@ -308,6 +308,11 @@ TEST(IB, RestoreIpAddresses) {
 	EXPECT_EQ(vector<string>({ "255.255.11.135", "255.255.111.35" }), RestoreIpAddresses("25525511135"));
 }
 
+string ReverseWords(string &A);
+TEST(IB, ReverseWords) {
+	EXPECT_EQ(string("blue is sky the"), ReverseWords(string("the sky is blue")));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);

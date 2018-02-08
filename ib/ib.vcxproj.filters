@@ -216,5 +216,8 @@
     <ClCompile Include="level3\Strings\ValidIPAddresses.cpp">
       <Filter>level3\Strings</Filter>
     </ClCompile>
+    <ClCompile Include="level3\Strings\ReverseTheString.cpp">
+      <Filter>level3\Strings</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
