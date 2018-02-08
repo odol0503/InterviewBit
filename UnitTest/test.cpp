@@ -342,6 +342,13 @@ TEST(IB, AddBinary) {
 	EXPECT_EQ(string("10"), AddBinary("1", "1"));
 }
 
+int PowerOf2(string A);
+TEST(IB, PowerOf2) {
+	EXPECT_EQ(1, PowerOf2("128"));
+	EXPECT_EQ(0, PowerOf2("129"));
+	EXPECT_EQ(1, PowerOf2("1024"));
+}
+
 
 int main(int argc, char** argv)
 {

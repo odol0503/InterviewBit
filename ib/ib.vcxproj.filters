@@ -228,5 +228,8 @@
     <ClCompile Include="level3\Strings\AddBinaryStrings.cpp">
       <Filter>level3\Strings</Filter>
     </ClCompile>
+    <ClCompile Include="level3\Strings\PowerOf2.cpp">
+      <Filter>level3\Strings</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
