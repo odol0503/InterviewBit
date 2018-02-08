@@ -21,6 +21,7 @@ M	1000
 *************************************************************************************************/
 #include <vector>
 #include <string>
+#include <unordered_map>
 using namespace std;
 
 #define OWN
@@ -28,7 +29,23 @@ using namespace std;
 #ifdef OWN
 int RomanToInt(string A) 
 {
+	int r[256];
+	r['I'] = 1;
+	r['V'] = 5;
+	r['X'] = 10;
+	r['L'] = 50;
+	r['C'] = 100;
+	r['D'] = 500;
+	r['M'] = 1000;
 
+	int ans = 0;
+
+	for (auto a : A)
+	{
+		if (a == r['M']) 
+	}
+
+	return 0;
 }
 #else
 int RomanToInt(string A)
