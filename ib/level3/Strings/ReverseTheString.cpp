@@ -19,7 +19,7 @@ If there are multiple spaces between words, reduce them to a single space in the
 #include <algorithm>
 using namespace std;
 
-#define OWN6
+#define OWN
 
 #ifdef OWN
 string ReverseWords(string &A) {
