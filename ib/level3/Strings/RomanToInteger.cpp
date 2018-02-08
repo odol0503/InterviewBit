@@ -29,27 +29,71 @@ using namespace std;
 #ifdef OWN
 int RomanToInt(string A) 
 {
-	int r[256];
-	r['I'] = 1;
-	r['V'] = 5;
-	r['X'] = 10;
-	r['L'] = 50;
-	r['C'] = 100;
-	r['D'] = 500;
-	r['M'] = 1000;
-
+	int len = (int)A.size();
 	int ans = 0;
 
-	for (auto a : A)
+	for (int i=0; i<len; i++)
 	{
-		if (a == r['M']) 
+		switch (A[i])
+		{
+		case 'M':
+			ans += 1000;
+			break;
+		case 'D':
+			ans += 500;
+			break;
+		case 'C':
+			if (i < len - 1 && A[i + 1] == 'D' || A[i + 1] == 'M') ans -= 100;
+			else ans += 100;
+			break;
+		case 'L':
+			ans += 50;
+			break;
+		case 'X':
+			if (i < len - 1 && A[i + 1] == 'L' || A[i + 1] == 'C') ans -= 10;
+			else ans += 10;
+			break;
+		case 'V':
+			ans += 5;
+			break;
+		case 'I':
+			if (i < len - 1 && A[i + 1] == 'V' || A[i+1] == 'X') ans -= 1;
+			else ans += 1;
+			break;
+		}
+
 	}
 
-	return 0;
+	return ans;
 }
 #else
-int RomanToInt(string A)
-{
+int romanCharToInt(char c) {
+	switch (c) {
+	case 'I':   return 1;
+	case 'V':   return 5;
+	case 'X':   return 10;
+	case 'L':   return 50;
+	case 'C':   return 100;
+	case 'D':   return 500;
+	case 'M':   return 1000;
+	default:    return 0;
+	}
+}
 
+int RomanToInt(string s)
+{
+	int num = 0;
+	int size = s.size();
+
+	for (int i = 0; i < size; i++) {
+		// Does lesser value precede higher value ? 
+		if (i < (size - 1) && romanCharToInt(s[i]) < romanCharToInt(s[i + 1])) {
+			num -= romanCharToInt(s[i]);
+		}
+		else {
+			num += romanCharToInt(s[i]);
+		}
+	}
+	return num;
 }
 #endif

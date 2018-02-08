@@ -313,6 +313,17 @@ TEST(IB, ReverseWords) {
 	EXPECT_EQ(string("blue is sky the"), ReverseWords(string("the sky is blue")));
 }
 
+int RomanToInt(string A);
+TEST(IB, RomanToInt) {
+	EXPECT_EQ(84, RomanToInt(string("LXXXIV")));
+	EXPECT_EQ(64, RomanToInt(string("LXIV")));
+	EXPECT_EQ(45, RomanToInt(string("XLV")));
+	EXPECT_EQ(74, RomanToInt(string("LXXIV")));
+	EXPECT_EQ(689, RomanToInt(string("DCLXXXIX")));
+	EXPECT_EQ(999, RomanToInt(string("CMXCIX")));
+	EXPECT_EQ(1000, RomanToInt(string("M")));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);
