@@ -76,6 +76,7 @@
     <ClCompile Include="level3\Strings\CompareVersionNumbers.cpp" />
     <ClCompile Include="level3\Strings\ImplementStrStr.cpp" />
     <ClCompile Include="level3\Strings\IntegerToRoman.cpp" />
+    <ClCompile Include="level3\Strings\JustifiedText.cpp" />
     <ClCompile Include="level3\Strings\LengthOfLastWord.cpp" />
     <ClCompile Include="level3\Strings\LongestPalindromicSubstring.cpp" />
     <ClCompile Include="level3\Strings\MinimumCharactersPalindromic.cpp" />
