@@ -349,6 +349,13 @@ TEST(IB, PowerOf2) {
 	EXPECT_EQ(1, PowerOf2("1024"));
 }
 
+string MultiplyStrings(string A, string B);
+TEST(IB, MultiplyStrings) {
+	EXPECT_EQ(string("120"), MultiplyStrings("12", "10"));
+	EXPECT_EQ(string("9801"), MultiplyStrings("99", "99"));
+	EXPECT_EQ(string("550"), MultiplyStrings("55", "10"));
+	EXPECT_EQ(string("0"), MultiplyStrings("31243242535342", "0"));
+}
 
 int main(int argc, char** argv)
 {

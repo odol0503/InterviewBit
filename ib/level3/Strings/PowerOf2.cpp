@@ -28,13 +28,14 @@ string Div2(string &A)
 
 	for (int i = 0; i < len; i++)
 	{
-		int val = (A[i] - '0') / 2 + carry;
-		if (val || i!=0) ret.push_back(val + '0');
+		ret.push_back((A[i] - '0') / 2 + carry + '0');
 		if ((A[i] - '0') % 2) carry = 5;
 		else carry = 0;
 	}
 
 	if (carry) return "MOD";
+
+	while (ret[0] == '0') ret.erase(ret.begin());
 
 	return ret;
 }

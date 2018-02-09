@@ -79,6 +79,7 @@
     <ClCompile Include="level3\Strings\LengthOfLastWord.cpp" />
     <ClCompile Include="level3\Strings\LongestPalindromicSubstring.cpp" />
     <ClCompile Include="level3\Strings\MinimumCharactersPalindromic.cpp" />
+    <ClCompile Include="level3\Strings\MultiplyStrings.cpp" />
     <ClCompile Include="level3\Strings\PalindromeString.cpp" />
     <ClCompile Include="level3\Strings\CountAndSay.cpp" />
     <ClCompile Include="level3\Strings\LongestCommonPrefix.cpp" />
