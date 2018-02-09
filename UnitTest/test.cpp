@@ -357,6 +357,14 @@ TEST(IB, MultiplyStrings) {
 	EXPECT_EQ(string("0"), MultiplyStrings("31243242535342", "0"));
 }
 
+vector<string> FullJustify(vector<string> &A, int B);
+TEST(IB, FullJustify) {
+	EXPECT_EQ(vector<string>({ "This    is    an", "example  of text", "justification.  " }),
+		FullJustify(vector<string>({ "This", "is", "an", "example", "of", "text", "justification." }), 16));
+	EXPECT_EQ(vector<string>({ "am    fasgoprn", "lvqsrjylg     ", "rzuslwan xlaui", "tnzegzuzn     ", "kuiwdc        ", "fofjkkkm      ", "ssqjig        ", "tcmejefj      ", "uixgzm        ", "lyuxeaxsg     ", "iqiyip     msv", "uurcazjc      ", "earsrvrq   qlq", "lxrtzkjpg     ", "jkxymjus      ", "mvornwza zty q", "nsecqphjy     " }),
+		FullJustify(vector<string>({ "am", "fasgoprn", "lvqsrjylg", "rzuslwan", "xlaui", "tnzegzuzn", "kuiwdc", "fofjkkkm", "ssqjig", "tcmejefj", "uixgzm", "lyuxeaxsg", "iqiyip", "msv", "uurcazjc", "earsrvrq", "qlq", "lxrtzkjpg", "jkxymjus", "mvornwza", "zty", "q", "nsecqphjy" }), 14));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);

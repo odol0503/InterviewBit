@@ -32,36 +32,87 @@ using namespace std;
 #define OWN
 
 #ifdef OWN
+int GetTotalLen(vector<string> A)
+{
+	int num = (int)A.size();
+	int sum = 0;
+	for (int i = 0; i < num; i++)
+	{
+		sum += (int)A[i].size();
+	}
+	return sum;
+}
+
 vector<string> FullJustify(vector<string> &A, int B) {
-	string temp;
+	vector<string> temp;
 	vector<string> ret;
 	int num = (int)A.size();
-	int len = 0;
+	int sum = 0;
 
 	for (int i = 0; i < num; i++)
 	{
-		len += (int)A[i].size() + 1;
-		
-		if (len > B)
+		sum += (int)A[i].size() + 1;
+		temp.push_back(A[i]);
+
+		if (i < num - 1)
 		{
-			--i;
-			int cnt = (int)temp.size();
-			int spaces = (B % cnt)/(cnt == 1?cnt:(cnt-1));
-			int dummy = (B%cnt) & 0x01;
+			if (sum + (int)A[i+1].size() > B)
+			{
+				int len = GetTotalLen(temp);
+				int sp_len = B - len;
+				int hole_cnt = (int)temp.size() - 1;
+				int even_sp = (hole_cnt == 0 ? sp_len : sp_len / hole_cnt);
+				int remain_sp = (hole_cnt == 0 ? 0 : sp_len % hole_cnt);
+				string str;
+				for (int j = 0; j < (int)temp.size(); j++)
+				{
+					str += temp[j];
+
+					if (temp.size() == 1 || j < temp.size() - 1)
+					{
+						for (int k = 0; k < even_sp; k++) str += " ";
+						if (j < remain_sp) str += " ";
+					}
+				}
+				ret.push_back(str);
+				temp.clear();
+				sum = 0;
+			}
+		}
+		else
+		{
+			int temp_num = (int)temp.size();
 			string str;
-			for (int j = 0; j < cnt; j++)
+			for (int j = 0; j < temp_num-1; j++)
 			{
 				str += temp[j];
-				if (j == 0 && dummy) str += ' ';
-				for (int k = 0; k < spaces; k++) str += ' ';
+				str += " ";
 			}
-
+			str += temp.back();
+			int str_len = (int)str.size();
+			for (int k = 0; k < B - str_len; k++) str += " ";
+			ret.push_back(str);
 		}
-		temp.push_back(A[i]);
 	}
-	
+	return ret;
 }
 #else
-vector<string> FullJustify(vector<string> &A, int B) {
+vector<string> FullJustify(vector<string> &words, int L) {
+	vector<string> res;
+	int k = 0, l = 0;
+	for (int i = 0; i < words.size(); i += k) {
+		for (k = l = 0; i + k < words.size() && l + words[i + k].size() <= L - k; k++) {
+			l += words[i + k].size();
+		}
+		string tmp = words[i];
+		for (int j = 0; j < k - 1; j++) {
+			if (i + k >= words.size()) tmp += " ";
+			else tmp += string((L - l) / (k - 1) + (j < (L - l) % (k - 1)), ' ');
+			tmp += words[i + j + 1];
+		}
+		tmp += string(L - tmp.size(), ' ');
+		res.push_back(tmp);
+	}
+	return res;
 }
 #endif
