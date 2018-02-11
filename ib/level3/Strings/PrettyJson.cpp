@@ -45,6 +45,7 @@ The strings should not have ¡°\n¡± character in them.
 *************************************************************************************************/
 #include <string>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 #define OWN
@@ -98,7 +99,7 @@ vector<string> PrettyJSON(string A) {
 	return ret;
 }
 #else
-vector<string> PrettyJSON(string A) {
+vector<string> PrettyJSON(string json) {
 	vector<string> ans;
 	if (json.length() == 0) return ans;
 	// remove all spaces. 
