@@ -85,12 +85,13 @@
     <ClCompile Include="level3\Strings\CountAndSay.cpp" />
     <ClCompile Include="level3\Strings\LongestCommonPrefix.cpp" />
     <ClCompile Include="level3\Strings\PowerOf2.cpp" />
+    <ClCompile Include="level3\Strings\PrettyJson.cpp" />
     <ClCompile Include="level3\Strings\ReverseTheString.cpp" />
     <ClCompile Include="level3\Strings\RomanToInteger.cpp" />
     <ClCompile Include="level3\Strings\ValidIPAddresses.cpp" />
     <ClCompile Include="level3\Strings\ValidNumber.cpp" />
+    <ClCompile Include="level3\Strings\ZigzagString.cpp" />
     <ClCompile Include="level6\VerticalOrderTraversalOfBinaryTree.cpp" />
-    <ClCompile Include="ZigzagString.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

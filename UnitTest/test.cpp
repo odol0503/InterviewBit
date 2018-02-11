@@ -372,6 +372,12 @@ TEST(IB, ZigzagString) {
 	EXPECT_EQ(string("ACBD"), ZigzagString("ABCD", 2));
 }
 
+vector<string> PrettyJSON(string A);
+TEST(IB, PrettyJSON) {
+	EXPECT_EQ(vector<string>({"{", "\tA:\"B\",", "\tC:", "\t{", "\t\tD:\"E\",", "\t\tF:", "\t\t{", "\t\t\tG:\"H\",", "\t\t\tI:\"J\"", "\t\t}", "\t}", "}" }), PrettyJSON("{A:\"B\",C:{D:\"E\",F:{G:\"H\",I:\"J\"}}}"));
+}
+
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);

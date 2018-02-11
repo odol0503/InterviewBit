@@ -237,7 +237,10 @@
     <ClCompile Include="level3\Strings\JustifiedText.cpp">
       <Filter>level3\Strings</Filter>
     </ClCompile>
-    <ClCompile Include="ZigzagString.cpp">
+    <ClCompile Include="level3\Strings\ZigzagString.cpp">
+      <Filter>level3\Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="level3\Strings\PrettyJson.cpp">
       <Filter>level3\Strings</Filter>
     </ClCompile>
   </ItemGroup>
