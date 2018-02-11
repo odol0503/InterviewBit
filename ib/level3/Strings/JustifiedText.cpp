@@ -32,37 +32,27 @@ using namespace std;
 #define OWN
 
 #ifdef OWN
-int GetTotalLen(vector<string> A)
-{
-	int num = (int)A.size();
-	int sum = 0;
-	for (int i = 0; i < num; i++)
-	{
-		sum += (int)A[i].size();
-	}
-	return sum;
-}
-
 vector<string> FullJustify(vector<string> &A, int B) {
 	vector<string> temp;
 	vector<string> ret;
 	int num = (int)A.size();
 	int sum = 0;
+	int str_len = 0;
 
 	for (int i = 0; i < num; i++)
 	{
 		sum += (int)A[i].size() + 1;
+		str_len += (int)A[i].size();
 		temp.push_back(A[i]);
 
 		if (i < num - 1)
 		{
 			if (sum + (int)A[i+1].size() > B)
 			{
-				int len = GetTotalLen(temp);
-				int sp_len = B - len;
-				int hole_cnt = (int)temp.size() - 1;
-				int even_sp = (hole_cnt == 0 ? sp_len : sp_len / hole_cnt);
-				int remain_sp = (hole_cnt == 0 ? 0 : sp_len % hole_cnt);
+				int sp_len = B - str_len;
+				int hole_cnt = ((int)temp.size() == 1 ? 1 : (int)temp.size() - 1);
+				int even_sp = sp_len / hole_cnt;
+				int remain_sp = sp_len % hole_cnt;
 				string str;
 				for (int j = 0; j < (int)temp.size(); j++)
 				{
@@ -70,13 +60,14 @@ vector<string> FullJustify(vector<string> &A, int B) {
 
 					if (temp.size() == 1 || j < temp.size() - 1)
 					{
-						for (int k = 0; k < even_sp; k++) str += " ";
+						str += string(even_sp, ' ');
 						if (j < remain_sp) str += " ";
 					}
 				}
 				ret.push_back(str);
 				temp.clear();
 				sum = 0;
+				str_len = 0;
 			}
 		}
 		else
@@ -90,7 +81,7 @@ vector<string> FullJustify(vector<string> &A, int B) {
 			}
 			str += temp.back();
 			int str_len = (int)str.size();
-			for (int k = 0; k < B - str_len; k++) str += " ";
+			str += string(B - str_len, ' ');
 			ret.push_back(str);
 		}
 	}

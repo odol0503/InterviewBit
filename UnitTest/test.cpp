@@ -365,6 +365,13 @@ TEST(IB, FullJustify) {
 		FullJustify(vector<string>({ "am", "fasgoprn", "lvqsrjylg", "rzuslwan", "xlaui", "tnzegzuzn", "kuiwdc", "fofjkkkm", "ssqjig", "tcmejefj", "uixgzm", "lyuxeaxsg", "iqiyip", "msv", "uurcazjc", "earsrvrq", "qlq", "lxrtzkjpg", "jkxymjus", "mvornwza", "zty", "q", "nsecqphjy" }), 14));
 }
 
+string ZigzagString(string A, int B);
+TEST(IB, ZigzagString) {
+	EXPECT_EQ(string("AKBJLCIMSDHNREGOQFP"), ZigzagString("ABCDEFGHIJKLMNOPQRS", 6));
+	EXPECT_EQ(string("PAHNAPLSIIGYIR"), ZigzagString("PAYPALISHIRING", 3));
+	EXPECT_EQ(string("ACBD"), ZigzagString("ABCD", 2));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);

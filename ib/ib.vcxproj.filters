@@ -237,5 +237,8 @@
     <ClCompile Include="level3\Strings\JustifiedText.cpp">
       <Filter>level3\Strings</Filter>
     </ClCompile>
+    <ClCompile Include="ZigzagString.cpp">
+      <Filter>level3\Strings</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
