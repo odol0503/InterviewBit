@@ -25,6 +25,9 @@
     <Filter Include="level3\BitManipulation">
       <UniqueIdentifier>{1876824c-ab28-4f4a-b8c7-abc58642f87c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="level3\TwoPointers">
+      <UniqueIdentifier>{687298b0-0d8c-4372-b753-beaee3e3bd94}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="level2\Arrays\AntiDiagonals.cpp">
@@ -266,6 +269,9 @@
     </ClCompile>
     <ClCompile Include="level3\BitManipulation\SingleNumberII.cpp">
       <Filter>level3\BitManipulation</Filter>
+    </ClCompile>
+    <ClCompile Include="level3\TwoPointers\MergeTwoSortedListsII.cpp">
+      <Filter>level3\TwoPointers</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

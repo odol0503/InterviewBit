@@ -12,7 +12,7 @@ Also, consider if there can be overflow cases. For overflow case, return INT_MAX
 #include <algorithm>
 using namespace std;
 
-#define OWN6
+#define OWN
 
 #ifdef OWN
 int DivideIntegers(int A, int B) {

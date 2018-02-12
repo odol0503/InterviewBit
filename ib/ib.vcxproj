@@ -98,6 +98,7 @@
     <ClCompile Include="level3\Strings\ValidIPAddresses.cpp" />
     <ClCompile Include="level3\Strings\ValidNumber.cpp" />
     <ClCompile Include="level3\Strings\ZigzagString.cpp" />
+    <ClCompile Include="level3\TwoPointers\MergeTwoSortedListsII.cpp" />
     <ClCompile Include="level6\VerticalOrderTraversalOfBinaryTree.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
