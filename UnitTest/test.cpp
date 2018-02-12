@@ -396,6 +396,11 @@ TEST(IB, DivideIntegers) {
 	EXPECT_EQ(3, DivideIntegers(16, 5));
 }
 
+int DifferentBitsSumPairwise(vector<int> &A);
+TEST(IB, DifferentBitsSumPairwise) {
+	EXPECT_EQ(8, DifferentBitsSumPairwise(vector<int>({ 1, 3, 5 })));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);

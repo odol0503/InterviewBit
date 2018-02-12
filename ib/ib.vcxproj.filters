@@ -258,5 +258,8 @@
     <ClCompile Include="level3\BitManipulation\DivideIntegers.cpp">
       <Filter>level3\BitManipulation</Filter>
     </ClCompile>
+    <ClCompile Include="level3\BitManipulation\DifferentBitsSumPairwise.cpp">
+      <Filter>level3\BitManipulation</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
