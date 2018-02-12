@@ -389,6 +389,13 @@ TEST(IB, ReverseBits) {
 	EXPECT_EQ(3221225472, ReverseBits(3));
 }
 
+int DivideIntegers(int A, int B);
+TEST(IB, DivideIntegers) {
+	EXPECT_EQ(2147483647, DivideIntegers(-2147483648, -1));
+	EXPECT_EQ(1, DivideIntegers(5, 3));
+	EXPECT_EQ(3, DivideIntegers(16, 5));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);
