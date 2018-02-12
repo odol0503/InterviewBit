@@ -76,6 +76,7 @@
     <ClCompile Include="level3\BitManipulation\NumberOf1Bits.cpp" />
     <ClCompile Include="level3\BitManipulation\ReverseBits.cpp" />
     <ClCompile Include="level3\BitManipulation\SingleNumber.cpp" />
+    <ClCompile Include="level3\BitManipulation\SingleNumberII.cpp" />
     <ClCompile Include="level3\qsort.cpp" />
     <ClCompile Include="level3\Strings\AddBinaryStrings.cpp" />
     <ClCompile Include="level3\Strings\Atoi.cpp" />
