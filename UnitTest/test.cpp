@@ -377,6 +377,11 @@ TEST(IB, PrettyJSON) {
 	EXPECT_EQ(vector<string>({"{", "\tA:\"B\",", "\tC:", "\t{", "\t\tD:\"E\",", "\t\tF:", "\t\t{", "\t\t\tG:\"H\",", "\t\t\tI:\"J\"", "\t\t}", "\t}", "}" }), PrettyJSON("{A:\"B\",C:{D:\"E\",F:{G:\"H\",I:\"J\"}}}"));
 }
 
+int FindMinXor(vector<int> &A);
+TEST(IB, FindMinXor) {
+	EXPECT_EQ(2, FindMinXor(vector<int>({ 0, 2, 5, 7 })));
+	EXPECT_EQ(3, FindMinXor(vector<int>({ 0, 4, 7, 9 })));
+}
 
 int main(int argc, char** argv)
 {

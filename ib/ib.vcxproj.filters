@@ -22,6 +22,9 @@
     <Filter Include="level6">
       <UniqueIdentifier>{7410203f-aa11-4476-9e99-d7ca45de29a1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="level3\BitManipulation">
+      <UniqueIdentifier>{1876824c-ab28-4f4a-b8c7-abc58642f87c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="level2\Arrays\AntiDiagonals.cpp">
@@ -242,6 +245,9 @@
     </ClCompile>
     <ClCompile Include="level3\Strings\PrettyJson.cpp">
       <Filter>level3\Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="level3\BitManipulation\MinXORValue.cpp">
+      <Filter>level3\BitManipulation</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

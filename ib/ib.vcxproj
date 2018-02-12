@@ -70,6 +70,7 @@
     <ClCompile Include="level3\BinarySearch\SearchRange.cpp" />
     <ClCompile Include="level3\BinarySearch\SortedInsertPosition.cpp" />
     <ClCompile Include="level3\BinarySearch\SquareRootInt.cpp" />
+    <ClCompile Include="level3\BitManipulation\MinXORValue.cpp" />
     <ClCompile Include="level3\qsort.cpp" />
     <ClCompile Include="level3\Strings\AddBinaryStrings.cpp" />
     <ClCompile Include="level3\Strings\Atoi.cpp" />
