@@ -401,6 +401,11 @@ TEST(IB, DifferentBitsSumPairwise) {
 	EXPECT_EQ(8, DifferentBitsSumPairwise(vector<int>({ 1, 3, 5 })));
 }
 
+int SingleNumber(const vector<int> &A);
+TEST(IB, SingleNumber) {
+	EXPECT_EQ(3, SingleNumber(vector<int>({ 1, 2, 2, 3, 1 })));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);
