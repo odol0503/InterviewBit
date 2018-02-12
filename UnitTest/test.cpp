@@ -383,6 +383,12 @@ TEST(IB, FindMinXor) {
 	EXPECT_EQ(3, FindMinXor(vector<int>({ 0, 4, 7, 9 })));
 }
 
+unsigned int ReverseBits(unsigned int A);
+TEST(IB, ReverseBits) {
+	EXPECT_EQ(0xFFFFFFFF, ReverseBits(0xFFFFFFFF));
+	EXPECT_EQ(3221225472, ReverseBits(3));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);

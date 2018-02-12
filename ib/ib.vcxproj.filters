@@ -249,5 +249,11 @@
     <ClCompile Include="level3\BitManipulation\MinXORValue.cpp">
       <Filter>level3\BitManipulation</Filter>
     </ClCompile>
+    <ClCompile Include="level3\BitManipulation\NumberOf1Bits.cpp">
+      <Filter>level3\BitManipulation</Filter>
+    </ClCompile>
+    <ClCompile Include="level3\BitManipulation\ReverseBits.cpp">
+      <Filter>level3\BitManipulation</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
