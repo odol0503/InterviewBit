@@ -279,5 +279,8 @@
     <ClCompile Include="level3\TwoPointers\MinimizeTheAbsoluteDifference.cpp">
       <Filter>level3\TwoPointers</Filter>
     </ClCompile>
+    <ClCompile Include="level3\TwoPointers\3Sum.cpp">
+      <Filter>level3\TwoPointers</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

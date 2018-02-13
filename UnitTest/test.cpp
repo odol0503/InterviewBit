@@ -428,6 +428,14 @@ TEST(IB, MinimizeAbsoluteDiff) {
 	EXPECT_EQ(1, MinimizeAbsoluteDiff(vector<int>({ 1, 4, 5, 8, 10 }), vector<int>({ 6, 9, 15 }), vector<int>({ 2, 3, 6, 6 })));
 }
 
+int ThreeSumClosest(vector<int> &A, int B);
+TEST(IB, ThreeSumClosest) {
+	EXPECT_EQ(5, ThreeSumClosest(vector<int>({ 5, -2, -1, -10, 10 }), 5));
+	EXPECT_EQ(2, ThreeSumClosest(vector<int>({ 5, 2, -2, -5, 10, -1, -6, -3, 5, -8, -7, 2, 5, 4, -1, -5, 0, 5, 0, 2, -5, 1, 4, -10, 2, -1, 4, 1, 6, 0, -10, 8, 4, 5, 5, -7, -3, 6, 10, 6, -5, 5, -1, -3, -2, -7, 8, 3, 10, -5, 10, -2, 0, 9, 7, -1, -2, -8, -1, 2, -8, 10, 4, 0, -10, 0, 4, -5, -4, 2, -1, -8, 10, -2, -1, -6, 0, -1, -2, -7, 3, 7, -9, -2, 4, 7, 0, 2, 10, 2 }), 2));
+	EXPECT_EQ(0, ThreeSumClosest(vector<int>({ -4, -8, -10, -9, -1, 1, -2, 0, -8, -2 }), 0));
+	EXPECT_EQ(-1, ThreeSumClosest(vector<int>({ -5, 1, 4, -7, 10, -7, 0, 7, 3, 0, -2, -5, -3, -6, 4, -7, -8, 0, 4, 9, 4, 1, -8, -6, -6, 0, -9, 5, 3, -9, -5, -9, 6, 3, 8, -10, 1, -2, 2, 1, -9, 2, -3, 9, 9, -10, 0, -9, -2, 7, 0, -4, -3, 1, 6, -3 }), -1));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);
