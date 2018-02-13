@@ -441,6 +441,14 @@ TEST(IB, ThreeSumZero) {
 	EXPECT_EQ(vector<vector<int>>({ { -5, 0, 5 }, {-5, 1, 4}, {-4, -1, 5}, {-4, 0, 4}, {-4, 1, 3}, {-3, -2, 5}, {-3, -1, 4}, {-3, 0, 3}, {-2, -1, 3}, {-2, 1, 1}, {-1, 0, 1}, {0, 0, 0} }), ThreeSumZero(vector<int>({ 1, -4, 0, 0, 5, -5, 1, 0, -2, 4, -4, 1, -1, -4, 3, 4, -1, -1, -3 })));
 }
 
+int CountingTriangles(vector<int> &A);
+TEST(IB, CountingTriangles) {
+	EXPECT_EQ(4, CountingTriangles(vector<int>({ 1, 1, 1, 2, 2 })));
+	EXPECT_EQ(1, CountingTriangles(vector<int>({ 1, 1, 1 })));
+	EXPECT_EQ(12, CountingTriangles(vector<int>({ 4, 6, 13, 16, 20, 3, 1, 12 })));
+	EXPECT_EQ(341, CountingTriangles(vector<int>({ 11, 18, 13, 1, 19, 14, 8, 15, 16, 20, 12, 6, 10, 5, 17, 2, 4 })));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);

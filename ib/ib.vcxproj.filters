@@ -285,5 +285,8 @@
     <ClCompile Include="level3\TwoPointers\3SumZero.cpp">
       <Filter>level3\TwoPointers</Filter>
     </ClCompile>
+    <ClCompile Include="level3\TwoPointers\CountingTriangles.cpp">
+      <Filter>level3\TwoPointers</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
