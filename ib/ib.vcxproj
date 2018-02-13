@@ -99,6 +99,7 @@
     <ClCompile Include="level3\Strings\ValidNumber.cpp" />
     <ClCompile Include="level3\Strings\ZigzagString.cpp" />
     <ClCompile Include="level3\TwoPointers\3Sum.cpp" />
+    <ClCompile Include="level3\TwoPointers\3SumZero.cpp" />
     <ClCompile Include="level3\TwoPointers\IntersectionOfSortedArrays.cpp" />
     <ClCompile Include="level3\TwoPointers\MergeTwoSortedListsII.cpp" />
     <ClCompile Include="level3\TwoPointers\MinimizeTheAbsoluteDifference.cpp" />
