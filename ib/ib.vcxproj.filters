@@ -273,5 +273,8 @@
     <ClCompile Include="level3\TwoPointers\MergeTwoSortedListsII.cpp">
       <Filter>level3\TwoPointers</Filter>
     </ClCompile>
+    <ClCompile Include="level3\TwoPointers\IntersectionOfSortedArrays.cpp">
+      <Filter>level3\TwoPointers</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
