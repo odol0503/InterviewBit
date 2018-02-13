@@ -100,6 +100,7 @@
     <ClCompile Include="level3\Strings\ZigzagString.cpp" />
     <ClCompile Include="level3\TwoPointers\IntersectionOfSortedArrays.cpp" />
     <ClCompile Include="level3\TwoPointers\MergeTwoSortedListsII.cpp" />
+    <ClCompile Include="level3\TwoPointers\MinimizeTheAbsoluteDifference.cpp" />
     <ClCompile Include="level6\VerticalOrderTraversalOfBinaryTree.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

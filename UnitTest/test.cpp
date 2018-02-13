@@ -423,6 +423,11 @@ TEST(IB, Intersect) {
 	EXPECT_EQ(vector<int>({ 67 }), Intersect(vector<int>({ 12, 30, 41, 51, 56, 58, 63, 67, 82, 90, 93 }), vector<int>({ 7, 9, 17, 17, 19, 21, 26, 34, 65, 65, 67, 68, 71, 75, 92 })));
 }
 
+int MinimizeAbsoluteDiff(vector<int> &A, vector<int> &B, vector<int> &C);
+TEST(IB, MinimizeAbsoluteDiff) {
+	EXPECT_EQ(1, MinimizeAbsoluteDiff(vector<int>({ 1, 4, 5, 8, 10 }), vector<int>({ 6, 9, 15 }), vector<int>({ 2, 3, 6, 6 })));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);
