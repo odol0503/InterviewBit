@@ -456,6 +456,11 @@ TEST(IB, DiffPossible) {
 	EXPECT_EQ(1, DiffPossible(vector<int>({ 1, 13, 43, 46, 49, 53, 56, 70, 76, 81, 83, 94, 95 }), 28));
 }
 
+int RemoveDuplicates(vector<int> &A);
+TEST(IB, RemoveDuplicates) {
+	EXPECT_EQ(4, RemoveDuplicates(vector<int>({ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3 })));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);
