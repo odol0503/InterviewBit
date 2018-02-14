@@ -107,6 +107,7 @@
     <ClCompile Include="level3\TwoPointers\MinimizeTheAbsoluteDifference.cpp" />
     <ClCompile Include="level3\TwoPointers\RemoveDuplicatesfromSortedArray.cpp" />
     <ClCompile Include="level3\TwoPointers\RemoveDuplicatesfromSortedArray2.cpp" />
+    <ClCompile Include="level3\TwoPointers\RemoveElementFromArray.cpp" />
     <ClCompile Include="level6\VerticalOrderTraversalOfBinaryTree.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
