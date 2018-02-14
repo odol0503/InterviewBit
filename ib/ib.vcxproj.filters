@@ -294,5 +294,8 @@
     <ClCompile Include="level3\TwoPointers\RemoveDuplicatesfromSortedArray.cpp">
       <Filter>level3\TwoPointers</Filter>
     </ClCompile>
+    <ClCompile Include="level3\TwoPointers\RemoveDuplicatesfromSortedArray2.cpp">
+      <Filter>level3\TwoPointers</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
