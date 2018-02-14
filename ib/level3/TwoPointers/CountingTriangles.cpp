@@ -19,6 +19,7 @@ Return: 4
 *************************************************************************************************/
 #include <vector>
 #include <algorithm>
+#include <functional>
 using namespace std;
 
 #define OWN
@@ -32,32 +33,32 @@ int CountingTriangles(vector<int> &A) {
 
 	sort(A.begin(), A.end());
 
-	for (int i = len-1; i >= 2; i--)
+	for (int i = 0; i <len - 2; i++)
 	{
-		int j = i-1;
-		int k = 0;
-		while (k < j)
+		int k = i + 2;
+		for (int j = i + 1; j < len - 1; j++)
 		{
-			if (A[i] < A[j] + A[k])
-			{
-				ans = (ans + 1) % MOD;
-				while (k + 1 < j && A[k] == A[k + 1])
-				{
-					k++;
-					ans = (ans + 1) % MOD;
-				}
-				j--;
-			}
-			else
-			{
-				k++;
-			}
+			while (k < len && A[i] + A[j] > A[k]) k++;
+			ans = (ans + (k - j - 1)) % MOD;
 		}
 	}
-	return (int)((ans) % MOD);
+	return (int)ans;
 }
 #else
 int CountingTriangles(vector<int> &A) {
+	int N = A.size();
+	if (N <= 2) return 0;
+	sort(A.begin(), A.end());
+	int ans = 0;
+	for (int i = 0; i < N; i++) {    // first side
+		int k = i + 2;
+		for (int j = i + 1; j < N; j++) {    // second side
+			for (; (k < N) && (A[i] + A[j] > A[k]); k++);
+			ans = ans + (k - 1 - j);    // all indices of between j to k are possible
+			if (ans >= 1000000007) ans = ans % 1000000007;
+		}
+	}
+	return ans;
 }
 //First we sort the array of side lengths.So since Ai < Aj < Ak where i < j < k, 
 //therefore it is sufficient to check Ai + Aj > Ak to prove they form a triangle.

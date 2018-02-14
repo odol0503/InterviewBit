@@ -449,6 +449,13 @@ TEST(IB, CountingTriangles) {
 	EXPECT_EQ(341, CountingTriangles(vector<int>({ 11, 18, 13, 1, 19, 14, 8, 15, 16, 20, 12, 6, 10, 5, 17, 2, 4 })));
 }
 
+int DiffPossible(vector<int> &A, int B);
+TEST(IB, DiffPossible) {
+	EXPECT_EQ(0, DiffPossible(vector<int>({ 1, 2, 3 }), 0));
+	EXPECT_EQ(1, DiffPossible(vector<int>({ 1, 2, 2, 3, 4 }), 0));
+	EXPECT_EQ(1, DiffPossible(vector<int>({ 1, 13, 43, 46, 49, 53, 56, 70, 76, 81, 83, 94, 95 }), 28));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);
