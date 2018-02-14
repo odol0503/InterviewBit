@@ -300,5 +300,8 @@
     <ClCompile Include="level3\TwoPointers\RemoveElementFromArray.cpp">
       <Filter>level3\TwoPointers</Filter>
     </ClCompile>
+    <ClCompile Include="level3\TwoPointers\SortByColor.cpp">
+      <Filter>level3\TwoPointers</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
