@@ -303,5 +303,8 @@
     <ClCompile Include="level3\TwoPointers\SortByColor.cpp">
       <Filter>level3\TwoPointers</Filter>
     </ClCompile>
+    <ClCompile Include="level3\TwoPointers\MaxContinuousSeriesOf1s.cpp">
+      <Filter>level3\TwoPointers</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

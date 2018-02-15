@@ -103,6 +103,7 @@
     <ClCompile Include="level3\TwoPointers\CountingTriangles.cpp" />
     <ClCompile Include="level3\TwoPointers\Diffk.cpp" />
     <ClCompile Include="level3\TwoPointers\IntersectionOfSortedArrays.cpp" />
+    <ClCompile Include="level3\TwoPointers\MaxContinuousSeriesOf1s.cpp" />
     <ClCompile Include="level3\TwoPointers\MergeTwoSortedListsII.cpp" />
     <ClCompile Include="level3\TwoPointers\MinimizeTheAbsoluteDifference.cpp" />
     <ClCompile Include="level3\TwoPointers\RemoveDuplicatesfromSortedArray.cpp" />
