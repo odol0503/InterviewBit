@@ -55,6 +55,7 @@ vector<int> MaxOne(vector<int> &A, int B) {
 				ret.clear();
 				for (int k = i; k < j; k++) ret.push_back(k);
 			}
+			i = j;
 		}
 
 		if (x + B < pos0.size() && B > 0)

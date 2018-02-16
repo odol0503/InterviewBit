@@ -100,6 +100,7 @@
     <ClCompile Include="level3\Strings\ZigzagString.cpp" />
     <ClCompile Include="level3\TwoPointers\3Sum.cpp" />
     <ClCompile Include="level3\TwoPointers\3SumZero.cpp" />
+    <ClCompile Include="level3\TwoPointers\Array3Pointers.cpp" />
     <ClCompile Include="level3\TwoPointers\CountingTriangles.cpp" />
     <ClCompile Include="level3\TwoPointers\Diffk.cpp" />
     <ClCompile Include="level3\TwoPointers\IntersectionOfSortedArrays.cpp" />
