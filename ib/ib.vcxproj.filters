@@ -309,5 +309,8 @@
     <ClCompile Include="level3\TwoPointers\Array3Pointers.cpp">
       <Filter>level3\TwoPointers</Filter>
     </ClCompile>
+    <ClCompile Include="ContainerWithMostWater.cpp">
+      <Filter>level3\TwoPointers</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

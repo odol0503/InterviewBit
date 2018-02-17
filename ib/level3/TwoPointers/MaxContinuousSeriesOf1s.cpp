@@ -68,7 +68,7 @@ vector<int> MaxOne(vector<int> &A, int B) {
 	return ret;
 }
 #else
-vector<int> MaxOne(vector<int> &A, int B) {
+vector<int> MaxOne(vector<int> &Vec, int M) {
 	int N = Vec.size();
 	int i = 0;
 	int j = 0;
