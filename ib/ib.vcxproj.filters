@@ -309,7 +309,10 @@
     <ClCompile Include="level3\TwoPointers\Array3Pointers.cpp">
       <Filter>level3\TwoPointers</Filter>
     </ClCompile>
-    <ClCompile Include="ContainerWithMostWater.cpp">
+    <ClCompile Include="level3\KthSmallestElementInTheArray.cpp">
+      <Filter>level3</Filter>
+    </ClCompile>
+    <ClCompile Include="level3\TwoPointers\ContainerWithMostWater.cpp">
       <Filter>level3\TwoPointers</Filter>
     </ClCompile>
   </ItemGroup>

@@ -19,7 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ContainerWithMostWater.cpp" />
     <ClCompile Include="level2\Arrays\AntiDiagonals.cpp" />
     <ClCompile Include="level2\Arrays\FindDuplicate.cpp" />
     <ClCompile Include="level2\Arrays\FindPermutation.cpp" />
@@ -78,6 +77,7 @@
     <ClCompile Include="level3\BitManipulation\ReverseBits.cpp" />
     <ClCompile Include="level3\BitManipulation\SingleNumber.cpp" />
     <ClCompile Include="level3\BitManipulation\SingleNumberII.cpp" />
+    <ClCompile Include="level3\KthSmallestElementInTheArray.cpp" />
     <ClCompile Include="level3\qsort.cpp" />
     <ClCompile Include="level3\Strings\AddBinaryStrings.cpp" />
     <ClCompile Include="level3\Strings\Atoi.cpp" />
@@ -102,6 +102,7 @@
     <ClCompile Include="level3\TwoPointers\3Sum.cpp" />
     <ClCompile Include="level3\TwoPointers\3SumZero.cpp" />
     <ClCompile Include="level3\TwoPointers\Array3Pointers.cpp" />
+    <ClCompile Include="level3\TwoPointers\ContainerWithMostWater.cpp" />
     <ClCompile Include="level3\TwoPointers\CountingTriangles.cpp" />
     <ClCompile Include="level3\TwoPointers\Diffk.cpp" />
     <ClCompile Include="level3\TwoPointers\IntersectionOfSortedArrays.cpp" />
