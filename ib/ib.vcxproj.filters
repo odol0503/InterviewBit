@@ -315,5 +315,8 @@
     <ClCompile Include="level3\TwoPointers\ContainerWithMostWater.cpp">
       <Filter>level3\TwoPointers</Filter>
     </ClCompile>
+    <ClCompile Include="level3\NumRange.cpp">
+      <Filter>level3</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

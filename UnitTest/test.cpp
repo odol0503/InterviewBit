@@ -492,6 +492,11 @@ TEST(IB, Kthsmallest) {
 	EXPECT_EQ(17, Kthsmallest(vector<int>({ 8, 16, 80, 55, 32, 8, 38, 40, 65, 18, 15, 45, 50, 38, 54, 52, 23, 74, 81, 42, 28, 16, 66, 35, 91, 36, 44, 9, 85, 58, 59, 49, 75, 20, 87, 60, 17, 11, 39, 62, 20, 17, 46, 26, 81, 92 }), 9));
 }
 
+int NumRange(vector<int> &A, int B, int C);
+TEST(IB, NumRange) {
+	EXPECT_EQ(58, NumRange(vector<int>({ 80, 97, 78, 45, 23, 38, 38, 93, 83, 16, 91, 69, 18, 82, 60, 50, 61, 70, 15, 6, 52, 90 }), 99, 269));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);
