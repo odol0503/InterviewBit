@@ -497,6 +497,25 @@ TEST(IB, NumRange) {
 	EXPECT_EQ(58, NumRange(vector<int>({ 80, 97, 78, 45, 23, 38, 38, 93, 83, 16, 91, 69, 18, 82, 60, 50, 61, 70, 15, 6, 52, 90 }), 99, 269));
 }
 
+struct ListNode {
+	int val;
+	ListNode *next;
+	ListNode(int x) : val(x), next(NULL) {}
+};
+ListNode* GetIntersectionNode(ListNode* A, ListNode* B);
+TEST(IB, GetIntersectionNode) {
+	ListNode A1(1);
+	ListNode C1(5);
+	ListNode C2(2);
+	ListNode C3(3);
+	ListNode *B1 = &C1;
+	A1.next = &C1;
+	C1.next = &C2;
+	C2.next = &C3;
+
+	EXPECT_EQ(&C1, GetIntersectionNode(&A1, B1));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);

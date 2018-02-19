@@ -28,6 +28,12 @@
     <Filter Include="level3\TwoPointers">
       <UniqueIdentifier>{687298b0-0d8c-4372-b753-beaee3e3bd94}</UniqueIdentifier>
     </Filter>
+    <Filter Include="level4">
+      <UniqueIdentifier>{7991e775-1487-4b41-adb9-3e4302096f39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="level4\LinkedLists">
+      <UniqueIdentifier>{b60df63b-360a-4e0d-8f71-d7b3b9ae814b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="level2\Arrays\AntiDiagonals.cpp">
@@ -317,6 +323,9 @@
     </ClCompile>
     <ClCompile Include="level3\NumRange.cpp">
       <Filter>level3</Filter>
+    </ClCompile>
+    <ClCompile Include="level4\LinkedLists\IntersectionOfLinkedLists.cpp">
+      <Filter>level4\LinkedLists</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
