@@ -586,6 +586,16 @@ TEST(IB, PalindromeList) {
 	FreeList(&B);
 }
 
+ListNode* DeleteDuplicates(ListNode* A);
+TEST(IB, DeleteDuplicates) {
+	ListNode *A = MakeList({ 1,1,1,2,2,3,3,3,4,4,4,4,4,4,5 });
+	A = DeleteDuplicates(A);
+	vector<int> B = List2Vec(A);
+	vector<int> C({ 1,2,3,4,5 });
+	EXPECT_EQ(B, C);
+	FreeList(&A);
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);
