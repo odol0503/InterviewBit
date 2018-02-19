@@ -596,6 +596,16 @@ TEST(IB, DeleteDuplicates) {
 	FreeList(&A);
 }
 
+ListNode* DeleteDuplicates2(ListNode* A);
+TEST(IB, DeleteDuplicates2) {
+	ListNode *A = MakeList({ 1,1,1,2,2,3,3,3,4,4,4,4,4,4,5 });
+	A = DeleteDuplicates2(A);
+	vector<int> B = List2Vec(A);
+	vector<int> C({ 5 });
+	EXPECT_EQ(B, C);
+	FreeList(&A);
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);
