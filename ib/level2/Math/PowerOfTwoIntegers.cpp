@@ -62,7 +62,7 @@ int IsPower(int A)
 
 	for (auto p : primes)
 	{
-		int bPower = true;
+		bool bPower = true;
 		for (auto c : cnts)
 		{
 			if (c%p != 0)

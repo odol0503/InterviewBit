@@ -33,7 +33,7 @@ Return the following  :
 using namespace std;
 
 vector<vector<int> > AntiDiagonal(vector<vector<int> > &A) {
-	int n = A.size();
+	int n = (int)A.size();
 	vector<vector<int>> ans(2 * n - 1);
 	for (int y = 0; y < n; y++)
 	{

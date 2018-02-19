@@ -36,7 +36,7 @@ static int GetLen(ListNode *A)
 
 ListNode *ReverseList(ListNode* A) {
 	if (A == nullptr) return nullptr;
-	ListNode *ret;
+	ListNode *ret = nullptr;
 	int len = GetLen(A);
 	ListNode *pA = A;
 	vector<ListNode*> addr(len, 0);

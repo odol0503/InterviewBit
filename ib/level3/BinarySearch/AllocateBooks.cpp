@@ -35,7 +35,7 @@ Of the 3 cases, Option 3 has the minimum pages = 113.
 #include <algorithm>
 using namespace std;
 
-#define OWN76
+#define OWN
 
 #ifdef OWN
 static bool isPossible(vector<int> &A, int B, int page)
@@ -109,7 +109,7 @@ static bool isPossible(vector<int> &V, int M, int curMin) {
 int AllocateBooks(vector<int> &Vec, int M) 
 {
 	long long sum = 0;
-	int N = Vec.size();
+	int N = (int)Vec.size();
 
 	if (N < M)
 		return -1;

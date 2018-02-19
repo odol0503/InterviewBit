@@ -21,12 +21,12 @@ void RearrangeArray(vector<int> &A)
 	for (int i = 0; i < A.size(); i++)
 	{
 		int new_value = A[A[i]] % A.size();
-		A[i] += new_value * A.size();
+		A[i] += new_value * (int)A.size();
 	}
 
 	for (int j = 0; j < A.size(); j++)
 	{
-		A[j] /= A.size();
+		A[j] /= (int)A.size();
 	}
 }
 #else

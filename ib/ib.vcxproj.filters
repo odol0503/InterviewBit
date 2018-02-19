@@ -330,5 +330,8 @@
     <ClCompile Include="level4\LinkedLists\ReverseLinkedList.cpp">
       <Filter>level4\LinkedLists</Filter>
     </ClCompile>
+    <ClCompile Include="level4\LinkedLists\K-ReverseLinkedList.cpp">
+      <Filter>level4\LinkedLists</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

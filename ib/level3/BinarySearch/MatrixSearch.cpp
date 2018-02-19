@@ -51,8 +51,8 @@ int MatrixSearch(vector<vector<int> > &A, int B)
 }
 #else
 int MatrixSearch(vector<vector<int> > &matrix, int target) {
-	int n = matrix.size();
-	int m = matrix[0].size();
+	int n = (int)matrix.size();
+	int m = (int)matrix[0].size();
 	int l = 0, r = m * n - 1;
 	while (l != r) {
 		int mid = (l + r - 1) >> 1;

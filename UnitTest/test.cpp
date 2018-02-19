@@ -502,18 +502,77 @@ struct ListNode {
 	ListNode *next;
 	ListNode(int x) : val(x), next(NULL) {}
 };
+
+ListNode* MakeList(vector<int> A)
+{
+	int len = (int)A.size();
+	if (len == 0) return nullptr;
+
+	ListNode *ret = new ListNode(A[0]);
+	ListNode *pCur = ret;
+	for (int i = 1; i < len; i++)
+	{
+		pCur->next = new ListNode(A[i]);
+		pCur = pCur->next;
+	}
+
+	return ret;
+}
+
+void FreeList(ListNode **A)
+{
+	ListNode *pCur = *A;
+
+	while (pCur)
+	{
+		ListNode *pNext = pCur->next;
+		delete pCur;
+		pCur = pNext;
+	}
+}
+
+vector<int> List2Vec(ListNode *A)
+{
+	vector<int> ret;
+	while (A)
+	{
+		ret.push_back(A->val);
+		A = A->next;
+	}
+
+	return ret;
+}
+
+ListNode* GetTail(ListNode *A)
+{
+	ListNode *pPrev = nullptr;
+	while (A)
+	{
+		pPrev = A;
+		A = A->next;
+	}
+
+	return pPrev;
+}
+
 ListNode* GetIntersectionNode(ListNode* A, ListNode* B);
 TEST(IB, GetIntersectionNode) {
-	ListNode A1(1);
-	ListNode C1(5);
-	ListNode C2(2);
-	ListNode C3(3);
-	ListNode *B1 = &C1;
-	A1.next = &C1;
-	C1.next = &C2;
-	C2.next = &C3;
+	ListNode *A = MakeList(vector<int>({ 1 }));
+	ListNode *B = MakeList(vector<int>());
+	ListNode *C = MakeList(vector<int>({ 5, 2, 3 }));
+	GetTail(A)->next = C;
+	B = C;
+	EXPECT_EQ(C, GetIntersectionNode(A, B));
+}
 
-	EXPECT_EQ(&C1, GetIntersectionNode(&A1, B1));
+ListNode* KReverseList(ListNode* A, int B);
+TEST(IB, KReverseList) {
+	ListNode *A = MakeList({ 1,2,3,4,5,6 });
+	vector<int> B({ 2,1,4,3,6,5 });
+	ListNode *C = KReverseList(A, 2);
+	vector<int> D = List2Vec(C);
+	EXPECT_EQ(B, D);
+	FreeList(&C);
 }
 
 int main(int argc, char** argv)

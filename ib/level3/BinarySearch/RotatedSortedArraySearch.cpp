@@ -17,7 +17,7 @@ How does the time complexity change?*
 #include <vector>
 using namespace std;
 
-#define OWN7
+#define OWN
 
 #ifdef OWN
 int RotatedSortedArraySearch(const vector<int> &A, int B) 
@@ -99,7 +99,7 @@ int binarySearch(const vector<int> &A, int start, int end, int target) {
 }
 
 int RotatedSortedArraySearch(const vector<int> &A, int target) {
-	int n = A.size();
+	int n = (int)A.size();
 	int index = findMin(A, 0, n - 1);
 	int index1 = binarySearch(A, 0, index, target);
 	if (index1 != -1) return index1;

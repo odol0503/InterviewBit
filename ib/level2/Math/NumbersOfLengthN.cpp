@@ -33,7 +33,7 @@ using namespace std;
 int NumbersOfLengthN(vector<int> &A, int B, int C)
 {
 	int ret = 0;
-	int n = A.size();
+	int n = (int)A.size();
 	vector<int> CVec;
 	int temp = C;
 	if (A.size() == 0 || C == 0) return 0;
