@@ -22,7 +22,7 @@ Your code should preferably run in O(n) time and use only O(1) memory.
 #include <algorithm>
 using namespace std;
 
-#define OWN6
+#define OWN
 
 struct ListNode {
 	int val;
@@ -31,7 +31,7 @@ struct ListNode {
 };
 
 #ifdef OWN
-int GetLen(ListNode *A)
+static int GetLen(ListNode *A)
 {
 	int len = 0;
 	while (A)
