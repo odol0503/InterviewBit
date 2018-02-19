@@ -575,6 +575,17 @@ TEST(IB, KReverseList) {
 	FreeList(&C);
 }
 
+int PalindromeList(ListNode* A);
+TEST(IB, PalindromeList) {
+	ListNode *A = MakeList({ 1,2,3,2,1 });
+	EXPECT_EQ(1, PalindromeList(A));
+	FreeList(&A);
+
+	ListNode *B = MakeList({ 1,2,3,4,5,7 });
+	EXPECT_EQ(0, PalindromeList(B));
+	FreeList(&B);
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);

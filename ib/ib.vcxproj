@@ -116,6 +116,7 @@
     <ClCompile Include="level3\TwoPointers\SortByColor.cpp" />
     <ClCompile Include="level4\LinkedLists\IntersectionOfLinkedLists.cpp" />
     <ClCompile Include="level4\LinkedLists\K-ReverseLinkedList.cpp" />
+    <ClCompile Include="level4\LinkedLists\PalindromeList.cpp" />
     <ClCompile Include="level4\LinkedLists\ReverseLinkedList.cpp" />
     <ClCompile Include="level6\VerticalOrderTraversalOfBinaryTree.cpp" />
   </ItemGroup>
