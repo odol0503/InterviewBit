@@ -351,5 +351,8 @@
     <ClCompile Include="level4\LinkedLists\RotateList.cpp">
       <Filter>level4\LinkedLists</Filter>
     </ClCompile>
+    <ClCompile Include="level4\LinkedLists\ReverseLinkList2.cpp">
+      <Filter>level4\LinkedLists</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

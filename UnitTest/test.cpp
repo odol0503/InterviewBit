@@ -637,6 +637,16 @@ TEST(IB, RotateRight) {
 	FreeList(&C);
 }
 
+ListNode* ReverseBetween(ListNode* A, int B, int C);
+TEST(IB, ReverseBetween) {
+	ListNode *A = MakeList({ 1,2,3,4,5 });
+	ListNode *C = ReverseBetween(A, 2, 4);
+	vector<int> D = List2Vec(C);
+	vector<int> E({ 1,4,3,2,5 });
+	EXPECT_EQ(D, E);
+	FreeList(&C);
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);
