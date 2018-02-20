@@ -647,6 +647,16 @@ TEST(IB, ReverseBetween) {
 	FreeList(&C);
 }
 
+ListNode* SwapPairs(ListNode* A);
+TEST(IB, SwapPairs) {
+	ListNode *A = MakeList({ 1,2,3,4,5 });
+	ListNode *C = SwapPairs(A);
+	vector<int> D = List2Vec(C);
+	vector<int> E({ 2,1,4,3,5 });
+	EXPECT_EQ(D, E);
+	FreeList(&C);
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);
