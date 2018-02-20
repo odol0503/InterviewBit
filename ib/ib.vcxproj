@@ -122,6 +122,7 @@
     <ClCompile Include="level4\LinkedLists\RemoveDuplicatesFromSortedList2.cpp" />
     <ClCompile Include="level4\LinkedLists\RemoveNthNodeFromListEnd.cpp" />
     <ClCompile Include="level4\LinkedLists\ReverseLinkedList.cpp" />
+    <ClCompile Include="level4\LinkedLists\RotateList.cpp" />
     <ClCompile Include="level6\VerticalOrderTraversalOfBinaryTree.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

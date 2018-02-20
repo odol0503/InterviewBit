@@ -627,6 +627,16 @@ TEST(IB, RemoveNthFromEnd) {
 	FreeList(&C);
 }
 
+ListNode* RotateRight(ListNode* A, int B);
+TEST(IB, RotateRight) {
+	ListNode *A = MakeList({ 1,2,3,4,5 });
+	ListNode *C = RotateRight(A, 2);
+	vector<int> D = List2Vec(C);
+	vector<int> E({ 4,5,1,2,3 });
+	EXPECT_EQ(D, E);
+	FreeList(&C);
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);
