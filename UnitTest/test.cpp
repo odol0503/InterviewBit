@@ -617,6 +617,16 @@ TEST(IB, MergeTwoLists) {
 	FreeList(&C);
 }
 
+ListNode* RemoveNthFromEnd(ListNode* A, int B);
+TEST(IB, RemoveNthFromEnd) {
+	ListNode *A = MakeList({ 1,2,3,4,5 });
+	ListNode *C = RemoveNthFromEnd(A, 2);
+	vector<int> D = List2Vec(C);
+	vector<int> E({ 1,2,3,5 });
+	EXPECT_EQ(D, E);
+	FreeList(&C);
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);

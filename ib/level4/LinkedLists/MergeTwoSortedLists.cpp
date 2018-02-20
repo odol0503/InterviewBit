@@ -27,11 +27,23 @@ struct ListNode {
 
 #ifdef OWN
 ListNode* MergeTwoLists(ListNode* A, ListNode* B) {
-	ListNode *ret = new ListNode(0);
-	ListNode *pCur = ret;
+	ListNode *ret;
+	ListNode *pCur;
 
 	if (A == nullptr && B) return B;
 	if (A && B == nullptr) return A;
+
+	if (A->val < B->val)
+	{
+		ret = A;
+		A = A->next;
+	}
+	else
+	{
+		ret = B;
+		B = B->next;
+	}
+	pCur = ret;
 
 	while (A && B)
 	{
@@ -52,7 +64,7 @@ ListNode* MergeTwoLists(ListNode* A, ListNode* B) {
 	if (A) pCur->next = A;
 	else if (B) pCur->next = B;
 
-	return ret->next;
+	return ret;
 }
 #else
 ListNode* MergeTwoLists(ListNode* l1, ListNode* l2) {
