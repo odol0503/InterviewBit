@@ -342,5 +342,8 @@
     <ClCompile Include="level4\LinkedLists\RemoveDuplicatesFromSortedList2.cpp">
       <Filter>level4\LinkedLists</Filter>
     </ClCompile>
+    <ClCompile Include="level4\LinkedLists\MergeTwoSortedLists.cpp">
+      <Filter>level4\LinkedLists</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

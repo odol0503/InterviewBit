@@ -606,6 +606,17 @@ TEST(IB, DeleteDuplicates2) {
 	FreeList(&A);
 }
 
+ListNode* MergeTwoLists(ListNode* A, ListNode* B);
+TEST(IB, MergeTwoLists) {
+	ListNode *A = MakeList({ 5, 8, 20 });
+	ListNode *B = MakeList({ 4, 11, 15 });
+	ListNode *C = MergeTwoLists(A, B);
+	vector<int> D = List2Vec(C);
+	vector<int> E({ 4, 5, 8, 11, 15, 20 });
+	EXPECT_EQ(D, E);
+	FreeList(&C);
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);
