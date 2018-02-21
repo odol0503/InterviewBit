@@ -657,6 +657,16 @@ TEST(IB, SwapPairs) {
 	FreeList(&C);
 }
 
+ListNode* ReorderList(ListNode* A);
+TEST(IB, ReorderList) {
+	ListNode *A = MakeList({ 1,2,3,4,5 });
+	ListNode *C = ReorderList(A);
+	vector<int> D = List2Vec(C);
+	vector<int> E({ 1,5,2,4,3 });
+	EXPECT_EQ(D, E);
+	FreeList(&C);
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);
