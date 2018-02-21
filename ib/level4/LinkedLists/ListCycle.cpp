@@ -27,16 +27,31 @@ struct ListNode {
 
 #ifdef OWN
 ListNode* DetectCycle(ListNode* A) {
-	unordered_set<ListNode*> addrs;
+	ListNode *p1 = A;
+	ListNode *p2 = A;
+	bool bCycle = false;
 
-	while (A)
+	while (p1 && p2 && p2->next)
 	{
-		if (addrs.count(A)) return A;
-		addrs.insert(A);
-		A = A->next;
+		p1 = p1->next;
+		p2 = p2->next->next;
+		if (p1 == p2)
+		{
+			bCycle = true;
+			break;
+		}
 	}
 
-	return nullptr;
+	if (!bCycle) return nullptr;
+
+	p2 = A;
+	while (p1 != p2)
+	{
+		p1 = p1->next;
+		p2 = p2->next;
+	}
+
+	return p1;
 }
 #else
 ListNode *DetectCycle(ListNode *head) {
