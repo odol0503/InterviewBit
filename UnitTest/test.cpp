@@ -690,6 +690,16 @@ TEST(IB, DetectCycle) {
 	FreeList(&A);
 }
 
+ListNode* PartitionList(ListNode* A, int B);
+TEST(IB, PartitionList) {
+	ListNode *A = MakeList({ 886, 364, 608, 806, 257, 519, 722, 824, 701, 837, 137, 182, 309, 18, 316, 765 });
+	ListNode *B = PartitionList(A, 55);
+	vector<int> C = List2Vec(B);
+	EXPECT_EQ(vector<int>({ 18, 886, 364, 608, 806, 257, 519, 722, 824, 701, 837, 137, 182, 309, 316, 765 }), C);
+	B->next = nullptr;
+	FreeList(&A);
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);

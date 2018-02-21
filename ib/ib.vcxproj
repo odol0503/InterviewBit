@@ -120,6 +120,7 @@
     <ClCompile Include="level4\LinkedLists\ListCycle.cpp" />
     <ClCompile Include="level4\LinkedLists\MergeTwoSortedLists.cpp" />
     <ClCompile Include="level4\LinkedLists\PalindromeList.cpp" />
+    <ClCompile Include="level4\LinkedLists\PartitionList.cpp" />
     <ClCompile Include="level4\LinkedLists\RemoveDuplicatesFromSortedList.cpp" />
     <ClCompile Include="level4\LinkedLists\RemoveDuplicatesFromSortedList2.cpp" />
     <ClCompile Include="level4\LinkedLists\RemoveNthNodeFromListEnd.cpp" />

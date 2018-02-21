@@ -366,5 +366,8 @@
     <ClCompile Include="level4\LinkedLists\ListCycle.cpp">
       <Filter>level4\LinkedLists</Filter>
     </ClCompile>
+    <ClCompile Include="level4\LinkedLists\PartitionList.cpp">
+      <Filter>level4\LinkedLists</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
