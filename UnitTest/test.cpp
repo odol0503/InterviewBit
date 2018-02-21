@@ -680,6 +680,16 @@ TEST(IB, AddTwoNumbers) {
 	FreeList(&C);
 }
 
+ListNode* DetectCycle(ListNode* A);
+TEST(IB, DetectCycle) {
+	ListNode *A = MakeList({ 1,2,3,4,5 });
+	ListNode *B = GetTail(A);
+	B->next = A;
+	EXPECT_EQ(A, DetectCycle(A));
+	B->next = nullptr;
+	FreeList(&A);
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);

@@ -16,7 +16,7 @@ So, 7 -> 0 -> 8 -> 0 is not a valid response even though the value is still 807.
 #include <algorithm>
 using namespace std;
 
-#define OWN4
+#define OWN
 
 struct ListNode {
 	int val;
@@ -59,7 +59,10 @@ ListNode* AddTwoNumbers(ListNode* A, ListNode* B) {
 
 	if (carry) pCur->next = new ListNode(carry);
 
-	return dummy->next;
+	ListNode *pHead = dummy->next;
+	delete dummy;
+
+	return pHead;
 }
 #else
 ListNode *AddTwoNumbers(ListNode *l1, ListNode *l2) {

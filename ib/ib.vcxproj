@@ -117,6 +117,7 @@
     <ClCompile Include="level4\LinkedLists\AddTwoNumbersAsLists.cpp" />
     <ClCompile Include="level4\LinkedLists\IntersectionOfLinkedLists.cpp" />
     <ClCompile Include="level4\LinkedLists\K-ReverseLinkedList.cpp" />
+    <ClCompile Include="level4\LinkedLists\ListCycle.cpp" />
     <ClCompile Include="level4\LinkedLists\MergeTwoSortedLists.cpp" />
     <ClCompile Include="level4\LinkedLists\PalindromeList.cpp" />
     <ClCompile Include="level4\LinkedLists\RemoveDuplicatesFromSortedList.cpp" />
