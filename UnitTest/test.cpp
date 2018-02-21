@@ -700,6 +700,16 @@ TEST(IB, PartitionList) {
 	FreeList(&A);
 }
 
+ListNode* InsertionSortList(ListNode* A);
+TEST(IB, InsertionSortList) {
+	ListNode *A = MakeList({ 1, 10, 2, 9, 3, 11, 8, 7, 12, 6, 13, 14, 5, 16, 15, 4 });
+	ListNode *B = InsertionSortList(A);
+	vector<int> C = List2Vec(B);
+	EXPECT_EQ(vector<int>({ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 }), C);
+	B->next = nullptr;
+	FreeList(&A);
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);
