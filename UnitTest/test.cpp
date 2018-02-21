@@ -667,6 +667,19 @@ TEST(IB, ReorderList) {
 	FreeList(&C);
 }
 
+ListNode* AddTwoNumbers(ListNode* A, ListNode* B);
+TEST(IB, AddTwoNumbers) {
+	ListNode *A = MakeList({ 1,2,3,4,5 });
+	ListNode *B = MakeList({ 8,9,4,9,7 });
+	ListNode *C = AddTwoNumbers(A, B);
+	vector<int> D = List2Vec(C);
+	vector<int> E({ 9,1,8,3,3,1 });
+	EXPECT_EQ(D, E);
+	FreeList(&A);
+	FreeList(&B);
+	FreeList(&C);
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);

@@ -14,7 +14,7 @@ Complete solution code in the hints
 #include <algorithm>
 using namespace std;
 
-#define OWN3
+#define OWN
 
 struct ListNode {
 	int val;
