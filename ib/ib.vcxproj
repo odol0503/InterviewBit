@@ -132,6 +132,7 @@
     <ClCompile Include="level4\LinkedLists\SortList.cpp" />
     <ClCompile Include="level4\LinkedLists\SwapListNodesInPairs.cpp" />
     <ClCompile Include="level4\StacksAndQueues\GenerateAllParentheses.cpp" />
+    <ClCompile Include="level4\StacksAndQueues\NearestSmallerElement.cpp" />
     <ClCompile Include="level4\StacksAndQueues\RedundantBraces.cpp" />
     <ClCompile Include="level4\StacksAndQueues\ReverseString.cpp" />
     <ClCompile Include="level4\StacksAndQueues\SimplifyDirectoryPath.cpp" />

@@ -18,7 +18,7 @@ Example:
 #include <stack>
 using namespace std;
 
-#define OWN5
+#define OWN
 
 #ifdef OWN
 int RedundantBraces(string A) {

@@ -743,6 +743,12 @@ TEST(IB, RedundantBraces)
 	EXPECT_EQ(0, RedundantBraces("(a+(a+b))"));
 }
 
+vector<int> NearestSmallerElement(vector<int> &A);
+TEST(IB, NearestSmallerElement)
+{
+	EXPECT_EQ(vector<int>({ -1, 4, -1, 2, 2 }), NearestSmallerElement(vector<int>({ 4, 5, 2, 10, 8 })));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);
