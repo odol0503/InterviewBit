@@ -731,6 +731,12 @@ TEST(IB, ReverseString)
 	EXPECT_EQ(string("gfedcba"), ReverseString("abcdefg"));
 }
 
+string SimplifyPath(string A);
+TEST(IB, SimplifyPath)
+{
+	EXPECT_EQ(string("/home/abc/xyz"), SimplifyPath("/home/abc/def/../xyz"));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);

@@ -133,6 +133,7 @@
     <ClCompile Include="level4\LinkedLists\SwapListNodesInPairs.cpp" />
     <ClCompile Include="level4\StacksAndQueues\GenerateAllParentheses.cpp" />
     <ClCompile Include="level4\StacksAndQueues\ReverseString.cpp" />
+    <ClCompile Include="level4\StacksAndQueues\SimplifyDirectoryPath.cpp" />
     <ClCompile Include="level6\VerticalOrderTraversalOfBinaryTree.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
