@@ -34,6 +34,9 @@
     <Filter Include="level4\LinkedLists">
       <UniqueIdentifier>{b60df63b-360a-4e0d-8f71-d7b3b9ae814b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="level4\StacksAndQueues">
+      <UniqueIdentifier>{ad442426-3c49-4378-8462-5a9074ba3eca}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="level2\Arrays\AntiDiagonals.cpp">
@@ -374,6 +377,9 @@
     </ClCompile>
     <ClCompile Include="level4\LinkedLists\SortList.cpp">
       <Filter>level4\LinkedLists</Filter>
+    </ClCompile>
+    <ClCompile Include="level4\StacksAndQueues\GenerateAllParentheses.cpp">
+      <Filter>level4\StacksAndQueues</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

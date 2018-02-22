@@ -718,6 +718,13 @@ TEST(IB, SortList) {
 	FreeList(&A);
 }
 
+int GenerateAllParentheses(string A);
+TEST(IB, GenerateAllParentheses)
+{
+	EXPECT_EQ(1, GenerateAllParentheses("[11(33)]"));
+	EXPECT_EQ(0, GenerateAllParentheses("[{"));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);
