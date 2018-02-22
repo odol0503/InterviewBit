@@ -65,10 +65,10 @@ string SimplifyPath(string A) {
 
 	reverse(temp.begin(), temp.end());
 
-	for (int i=0; i<(int)temp.size(); i++)
+	for (int i = 0; i<(int)temp.size(); i++)
 	{
 		ret += temp[i];
-		if (i < (int)temp.size()-1) ret += '/';
+		if (i < (int)temp.size() - 1) ret += '/';
 	}
 
 	return ret;

@@ -737,6 +737,12 @@ TEST(IB, SimplifyPath)
 	EXPECT_EQ(string("/home/abc/xyz"), SimplifyPath("/home/abc/def/../xyz"));
 }
 
+int RedundantBraces(string A);
+TEST(IB, RedundantBraces)
+{
+	EXPECT_EQ(0, RedundantBraces("(a+(a+b))"));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);

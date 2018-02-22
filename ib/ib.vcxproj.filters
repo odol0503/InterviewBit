@@ -387,5 +387,8 @@
     <ClCompile Include="level4\StacksAndQueues\SimplifyDirectoryPath.cpp">
       <Filter>level4\StacksAndQueues</Filter>
     </ClCompile>
+    <ClCompile Include="level4\StacksAndQueues\RedundantBraces.cpp">
+      <Filter>level4\StacksAndQueues</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
