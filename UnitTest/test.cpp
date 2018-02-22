@@ -725,6 +725,12 @@ TEST(IB, GenerateAllParentheses)
 	EXPECT_EQ(0, GenerateAllParentheses("[{"));
 }
 
+string ReverseString(string A);
+TEST(IB, ReverseString)
+{
+	EXPECT_EQ(string("gfedcba"), ReverseString("abcdefg"));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);

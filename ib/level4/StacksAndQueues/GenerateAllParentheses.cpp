@@ -8,9 +8,6 @@ The brackets must close in the correct order, "()" and "()[]{}" are all valid
 but "(]" and "([)]" are not.
 
 Return 0 / 1 ( 0 for false, 1 for true ) for this problem
-
-PROBLEM APPROACH :
-Complete solution in hints.
 *************************************************************************************************/
 #include <vector>
 #include <stack>
@@ -24,7 +21,6 @@ int GenerateAllParentheses(string A)
 {
 	int len = (int)A.size();
 	vector<char> stacks;
-	int ret = 0;
 
 	for (int i = 0; i < len; i++)
 	{
@@ -50,10 +46,12 @@ int GenerateAllParentheses(string A)
 				if (stacks.back() != '(') return 0;
 			}
 			stacks.pop_back();
-			ret = 1;
 		}
 	}
-	return ret;
+
+	if (!stacks.empty()) return 0;
+
+	return 1;
 }
 #else
 int GenerateAllParentheses(string s) {
