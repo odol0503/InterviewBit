@@ -749,6 +749,12 @@ TEST(IB, NearestSmallerElement)
 	EXPECT_EQ(vector<int>({ -1, 4, -1, 2, 2 }), NearestSmallerElement(vector<int>({ 4, 5, 2, 10, 8 })));
 }
 
+int LargestRectangleArea(vector<int> &A);
+TEST(IB, LargestRectangleArea)
+{
+	EXPECT_EQ(10, LargestRectangleArea(vector<int>({ 2,1,5,6,2,3 })));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);

@@ -393,5 +393,8 @@
     <ClCompile Include="level4\StacksAndQueues\NearestSmallerElement.cpp">
       <Filter>level4\StacksAndQueues</Filter>
     </ClCompile>
+    <ClCompile Include="level4\StacksAndQueues\LargestRectangleInHistogram.cpp">
+      <Filter>level4\StacksAndQueues</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
