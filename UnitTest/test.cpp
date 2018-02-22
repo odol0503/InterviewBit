@@ -706,7 +706,15 @@ TEST(IB, InsertionSortList) {
 	ListNode *B = InsertionSortList(A);
 	vector<int> C = List2Vec(B);
 	EXPECT_EQ(vector<int>({ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 }), C);
-	B->next = nullptr;
+	FreeList(&A);
+}
+
+ListNode* SortList(ListNode* A);
+TEST(IB, SortList) {
+	ListNode *A = MakeList({ 1, 10, 2, 9, 3, 11, 8, 7, 12, 6, 13, 14, 5, 16, 15, 4 });
+	ListNode *B = SortList(A);
+	vector<int> C = List2Vec(B);
+	EXPECT_EQ(vector<int>({ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 }), C);
 	FreeList(&A);
 }
 

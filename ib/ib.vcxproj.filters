@@ -372,5 +372,8 @@
     <ClCompile Include="level4\LinkedLists\InsertionSortList.cpp">
       <Filter>level4\LinkedLists</Filter>
     </ClCompile>
+    <ClCompile Include="level4\LinkedLists\SortList.cpp">
+      <Filter>level4\LinkedLists</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
