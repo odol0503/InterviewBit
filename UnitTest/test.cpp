@@ -761,6 +761,12 @@ TEST(IB, SlidingWindowMax)
 	EXPECT_EQ(vector<int>({ 745, 745, 775, 775, 876, 876, 876, 876, 876, 876, 876, 951, 951, 951, 951, 951, 951, 951, 951, 951, 882, 882, 882, 882, 935, 935, 935, 935, 935, 935, 935, 935, 935, 892, 892, 892, 900, 900, 900, 937, 937, 937 }), SlidingWindowMax(vector<int>({ 648, 614, 490, 138, 657, 544, 745, 582, 738, 229, 775, 665, 876, 448, 4, 81, 807, 578, 712, 951, 867, 328, 308, 440, 542, 178, 637, 446, 882, 760, 354, 523, 935, 277, 158, 698, 536, 165, 892, 327, 574, 516, 36, 705, 900, 482, 558, 937, 207, 368 }), 9));
 }
 
+int EvaluateExpression(vector<string> &A);
+TEST(IB, EvaluateExpression)
+{
+	EXPECT_EQ(9, EvaluateExpression(vector<string>({ "2", "1", "+", "3", "*" })));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);

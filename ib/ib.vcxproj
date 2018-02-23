@@ -131,6 +131,7 @@
     <ClCompile Include="level4\LinkedLists\RotateList.cpp" />
     <ClCompile Include="level4\LinkedLists\SortList.cpp" />
     <ClCompile Include="level4\LinkedLists\SwapListNodesInPairs.cpp" />
+    <ClCompile Include="level4\StacksAndQueues\EvaluateExpression.cpp" />
     <ClCompile Include="level4\StacksAndQueues\GenerateAllParentheses.cpp" />
     <ClCompile Include="level4\StacksAndQueues\LargestRectangleInHistogram.cpp" />
     <ClCompile Include="level4\StacksAndQueues\NearestSmallerElement.cpp" />
