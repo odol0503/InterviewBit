@@ -135,6 +135,7 @@
     <ClCompile Include="level4\StacksAndQueues\GenerateAllParentheses.cpp" />
     <ClCompile Include="level4\StacksAndQueues\LargestRectangleInHistogram.cpp" />
     <ClCompile Include="level4\StacksAndQueues\NearestSmallerElement.cpp" />
+    <ClCompile Include="level4\StacksAndQueues\RainWaterTrapped.cpp" />
     <ClCompile Include="level4\StacksAndQueues\RedundantBraces.cpp" />
     <ClCompile Include="level4\StacksAndQueues\ReverseString.cpp" />
     <ClCompile Include="level4\StacksAndQueues\SimplifyDirectoryPath.cpp" />

@@ -767,6 +767,12 @@ TEST(IB, EvaluateExpression)
 	EXPECT_EQ(9, EvaluateExpression(vector<string>({ "2", "1", "+", "3", "*" })));
 }
 
+int RainWaterTrapped(const vector<int> &A);
+TEST(IB, RainWaterTrapped)
+{
+	EXPECT_EQ(6, RainWaterTrapped(vector<int>({ 0,1,0,2,1,0,1,3,2,1,2,1 })));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);

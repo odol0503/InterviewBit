@@ -402,5 +402,8 @@
     <ClCompile Include="level4\StacksAndQueues\EvaluateExpression.cpp">
       <Filter>level4\StacksAndQueues</Filter>
     </ClCompile>
+    <ClCompile Include="level4\StacksAndQueues\RainWaterTrapped.cpp">
+      <Filter>level4\StacksAndQueues</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
