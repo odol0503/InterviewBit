@@ -24,7 +24,7 @@ The answer might not fit in an integer, so return your answer % 1000003
 #include <iostream>
 using namespace std;
 
-#define OWN4
+#define OWN
 
 #ifdef OWN
 long long Factorial(int a)

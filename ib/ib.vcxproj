@@ -134,6 +134,7 @@
     <ClCompile Include="level4\StacksAndQueues\EvaluateExpression.cpp" />
     <ClCompile Include="level4\StacksAndQueues\GenerateAllParentheses.cpp" />
     <ClCompile Include="level4\StacksAndQueues\LargestRectangleInHistogram.cpp" />
+    <ClCompile Include="level4\StacksAndQueues\MinStack.cpp" />
     <ClCompile Include="level4\StacksAndQueues\NearestSmallerElement.cpp" />
     <ClCompile Include="level4\StacksAndQueues\RainWaterTrapped.cpp" />
     <ClCompile Include="level4\StacksAndQueues\RedundantBraces.cpp" />
@@ -207,6 +208,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
