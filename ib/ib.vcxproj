@@ -137,6 +137,7 @@
     <ClCompile Include="level4\StacksAndQueues\RedundantBraces.cpp" />
     <ClCompile Include="level4\StacksAndQueues\ReverseString.cpp" />
     <ClCompile Include="level4\StacksAndQueues\SimplifyDirectoryPath.cpp" />
+    <ClCompile Include="level4\StacksAndQueues\SlidingWindowMax.cpp" />
     <ClCompile Include="level6\VerticalOrderTraversalOfBinaryTree.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
