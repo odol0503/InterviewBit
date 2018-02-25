@@ -435,5 +435,11 @@
     <ClCompile Include="level4\Nextgreater.cpp">
       <Filter>level4</Filter>
     </ClCompile>
+    <ClCompile Include="level5\Backtracking\CombinationSum2.cpp">
+      <Filter>level5\Backtracking</Filter>
+    </ClCompile>
+    <ClCompile Include="level5\Backtracking\Subsets2.cpp">
+      <Filter>level5\Backtracking</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
