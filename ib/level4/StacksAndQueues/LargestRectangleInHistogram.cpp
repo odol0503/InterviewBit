@@ -27,7 +27,7 @@ int LargestRectangleArea(vector<int> &A) {
 	unordered_set<int> h;
 	int max_value = 0;
 
-	for (auto a : A) h.insert(a);
+	for (auto &a : A) h.insert(a);
 
 	for (auto it = h.begin(); it != h.end(); it++)
 	{

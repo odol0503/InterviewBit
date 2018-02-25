@@ -773,6 +773,56 @@ TEST(IB, RainWaterTrapped)
 	EXPECT_EQ(6, RainWaterTrapped(vector<int>({ 0,1,0,2,1,0,1,3,2,1,2,1 })));
 }
 
+ListNode* Subtract(ListNode* A);
+TEST(IB, Subtract)
+{
+	ListNode *A = MakeList({ 1, 2, 3, 4, 5 });
+	vector<int> B = List2Vec(Subtract(A));
+	ListNode *C = MakeList({ 4, 2, 3, 4, 5 });
+	vector<int> D = List2Vec(C);
+	EXPECT_EQ(B, D);
+}
+
+vector<int> NextGreater(vector<int> &A);
+TEST(IB, NextGreater)
+{
+	EXPECT_EQ(vector<int>({ 5, 10, 10, -1 }), NextGreater(vector<int>({ 4, 5, 2, 10 })));
+}
+
+int Mod(int A, int B, int C);
+TEST(IB, Mod)
+{
+	EXPECT_EQ(2, Mod(2, 3, 3));
+}
+
+ListNode* ReverseLinkedList(ListNode* A);
+TEST(IB, ReverseLinkedList)
+{
+	ListNode *A = MakeList({ 1, 2, 3 });
+	vector<int> B = List2Vec(ReverseLinkedList(A));
+	ListNode *C = MakeList({ 3, 2, 1 });
+	vector<int> D = List2Vec(C);
+	EXPECT_EQ(B, D);
+}
+
+vector<vector<int> > Subset(vector<int> &A);
+TEST(IB, Subset)
+{
+	EXPECT_EQ(vector<vector<int>>({ {}, {1}, {1, 2}, {1, 2, 3}, {1, 3}, {2}, {2, 3}, {3} }), Subset(vector<int>({ 1,2,3 })));
+}
+
+vector<vector<int> > Combinations(int A, int B);
+TEST(IB, Combinations)
+{
+	EXPECT_EQ(vector<vector<int>>({ {1, 2}, {1, 3}, {1, 4}, {2, 3}, {2, 4}, {3, 4} }), Combinations(4, 2));
+}
+
+vector<vector<int> > CombinationSum(vector<int> &A, int B);
+TEST(IB, CombinationSum)
+{
+	EXPECT_EQ(vector<vector<int> >({{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, }, { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 6, }, { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 8, }, { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 10, }, { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 11, }, { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 6, 6, }, { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 6, 8, }, { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 6, 10, }, { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 8, 8, }, { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 16, }, { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 6, 11, }, { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 6, 6, 6, }, { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 8, 10, }, { 1, 1, 1, 1, 1, 1, 1, 1, 1, 8, 11, }, { 1, 1, 1, 1, 1, 1, 1, 1, 6, 6, 8, }, { 1, 1, 1, 1, 1, 1, 1, 1, 10, 10, }, { 1, 1, 1, 1, 1, 1, 1, 10, 11, }, { 1, 1, 1, 1, 1, 1, 6, 6, 10, }, { 1, 1, 1, 1, 1, 1, 6, 8, 8, }, { 1, 1, 1, 1, 1, 1, 6, 16, }, { 1, 1, 1, 1, 1, 1, 11, 11, }, { 1, 1, 1, 1, 1, 6, 6, 11, }, { 1, 1, 1, 1, 6, 6, 6, 6, }, { 1, 1, 1, 1, 6, 8, 10, }, { 1, 1, 1, 1, 8, 8, 8, }, { 1, 1, 1, 1, 8, 16, }, { 1, 1, 1, 6, 8, 11, }, { 1, 1, 6, 6, 6, 8, }, { 1, 1, 6, 10, 10, }, { 1, 1, 8, 8, 10, }, { 1, 1, 10, 16, }, { 1, 6, 10, 11, }, { 1, 8, 8, 11, }, { 1, 11, 16, }, { 6, 6, 6, 10, }, { 6, 6, 8, 8, }, { 6, 6, 16, }, { 6, 11, 11, }, { 8, 10, 10, }}), CombinationSum(vector<int>({ 8, 10, 6, 11, 1, 16, 8 }), 28));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);

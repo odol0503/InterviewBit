@@ -37,6 +37,12 @@
     <Filter Include="level4\StacksAndQueues">
       <UniqueIdentifier>{ad442426-3c49-4378-8462-5a9074ba3eca}</UniqueIdentifier>
     </Filter>
+    <Filter Include="level5">
+      <UniqueIdentifier>{e3844656-976d-4bdc-b04e-7263b908acd3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="level5\Backtracking">
+      <UniqueIdentifier>{0c588c20-dac7-45bd-9c01-a9afe3bd4d8a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="level2\Arrays\AntiDiagonals.cpp">
@@ -407,6 +413,27 @@
     </ClCompile>
     <ClCompile Include="level4\StacksAndQueues\MinStack.cpp">
       <Filter>level4\StacksAndQueues</Filter>
+    </ClCompile>
+    <ClCompile Include="level5\Backtracking\CombinationSum.cpp">
+      <Filter>level5\Backtracking</Filter>
+    </ClCompile>
+    <ClCompile Include="level5\Backtracking\Combinations.cpp">
+      <Filter>level5\Backtracking</Filter>
+    </ClCompile>
+    <ClCompile Include="level5\Backtracking\Subset.cpp">
+      <Filter>level5\Backtracking</Filter>
+    </ClCompile>
+    <ClCompile Include="level5\Backtracking\ReverseLinkListRecursion.cpp">
+      <Filter>level5\Backtracking</Filter>
+    </ClCompile>
+    <ClCompile Include="level5\Backtracking\ModularExpression.cpp">
+      <Filter>level5\Backtracking</Filter>
+    </ClCompile>
+    <ClCompile Include="level4\Subtract.cpp">
+      <Filter>level4</Filter>
+    </ClCompile>
+    <ClCompile Include="level4\Nextgreater.cpp">
+      <Filter>level4</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
