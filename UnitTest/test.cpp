@@ -835,6 +835,24 @@ TEST(IB, SubsetsWithDup)
 	EXPECT_EQ(vector<vector<int> >({ {}, {1}, {1,2}, {1,2,2}, {2}, {2, 2} }), SubsetsWithDup(vector<int>({ 1,2,2 })));
 }
 
+vector<string> LetterCombinations(string A);
+TEST(IB, LetterCombinations)
+{
+	EXPECT_EQ(vector<string>({ "ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf" }), LetterCombinations("23"));
+}
+
+vector<vector<string> > PalindromePartitioning(string A);
+TEST(IB, PalindromePartitioning)
+{
+	EXPECT_EQ(vector<vector<string> >({ {"a", "a", "b"}, { "aa", "b" } }), PalindromePartitioning("aab"));
+}
+
+vector<string> GenerateParenthesis(int A);
+TEST(IB, GenerateParenthesis)
+{
+	EXPECT_EQ(vector<string>({ "((()))", "(()())", "(())()", "()(())", "()()()" }), GenerateParenthesis(3));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);
