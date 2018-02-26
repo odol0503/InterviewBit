@@ -438,5 +438,8 @@
     <ClCompile Include="level5\Backtracking\LetterPhone.cpp">
       <Filter>level5\Backtracking</Filter>
     </ClCompile>
+    <ClCompile Include="level5\Backtracking\PalindromePartitioning.cpp">
+      <Filter>level5\Backtracking</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

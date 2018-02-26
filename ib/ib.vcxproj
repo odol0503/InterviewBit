@@ -147,6 +147,7 @@
     <ClCompile Include="level5\Backtracking\CombinationSum.cpp" />
     <ClCompile Include="level5\Backtracking\LetterPhone.cpp" />
     <ClCompile Include="level5\Backtracking\ModularExpression.cpp" />
+    <ClCompile Include="level5\Backtracking\PalindromePartitioning.cpp" />
     <ClCompile Include="level5\Backtracking\ReverseLinkListRecursion.cpp" />
     <ClCompile Include="level5\Backtracking\Subset.cpp" />
     <ClCompile Include="level6\VerticalOrderTraversalOfBinaryTree.cpp" />

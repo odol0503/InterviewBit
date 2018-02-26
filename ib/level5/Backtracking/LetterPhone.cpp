@@ -15,7 +15,7 @@ Make sure the returned strings are lexicographically sorted.
 #include <algorithm>
 using namespace std;
 
-#define OWN6
+#define OWN
 
 #ifdef OWN
 static vector<vector<char>> button = { { '1' },               //1

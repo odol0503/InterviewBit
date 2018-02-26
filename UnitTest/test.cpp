@@ -829,6 +829,12 @@ TEST(IB, LetterCombinations)
 	EXPECT_EQ(vector<string>({ "ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf" }), LetterCombinations("23"));
 }
 
+vector<vector<string> > PalindromePartitioning(string A);
+TEST(IB, PalindromePartitioning)
+{
+	EXPECT_EQ(vector<vector<string> >({ {"a", "a", "b"}, { "aa", "b" } }), PalindromePartitioning("aab"));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);
