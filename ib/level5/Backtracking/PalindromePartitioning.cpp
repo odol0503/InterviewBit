@@ -77,7 +77,7 @@ bool isPalindrome(string &str, int s, int e) {
 		e--;
 	}
 	return true;
-				}
+}
 
 void partitionHelper(int i, vector<string> &current, string &s, vector<vector<string> > &ans) {
 

@@ -835,6 +835,12 @@ TEST(IB, PalindromePartitioning)
 	EXPECT_EQ(vector<vector<string> >({ {"a", "a", "b"}, { "aa", "b" } }), PalindromePartitioning("aab"));
 }
 
+vector<string> GenerateParenthesis(int A);
+TEST(IB, GenerateParenthesis)
+{
+	EXPECT_EQ(vector<string>({ "((()))", "(()())", "(())()", "()(())", "()()()" }), GenerateParenthesis(3));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);
