@@ -826,7 +826,7 @@ TEST(IB, CombinationSum)
 vector<vector<int> > CombinationSum2(vector<int> &A, int B);
 TEST(IB, CombinationSum2)
 {
-	EXPECT_EQ(vector<vector<int> >({ {1, 7}, {1, 2, 5}, {2, 6}, {1, 1, 6} }), CombinationSum2(vector<int>({ 10, 1, 2, 7, 6, 1, 5 }), 8));
+	EXPECT_EQ(vector<vector<int> >({ { 1, 1, 6 },{ 1, 2, 5 },{ 1, 7 },{ 2, 6 } }), CombinationSum2(vector<int>({ 10, 1, 2, 7, 6, 1, 5 }), 8));
 }
 
 vector<vector<int> > SubsetsWithDup(vector<int> &A);
@@ -851,6 +851,12 @@ vector<string> GenerateParenthesis(int A);
 TEST(IB, GenerateParenthesis)
 {
 	EXPECT_EQ(vector<string>({ "((()))", "(()())", "(())()", "()(())", "()()()" }), GenerateParenthesis(3));
+}
+
+vector<vector<string> > NQueens(int A);
+TEST(IB, NQueens)
+{
+	EXPECT_EQ(vector<vector<string>>({ {".Q..", "...Q", "Q...", "..Q."}, {"..Q.", "Q...", "...Q", ".Q.."} }), NQueens(4));
 }
 
 int main(int argc, char** argv)
