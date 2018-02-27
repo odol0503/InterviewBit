@@ -93,7 +93,7 @@ void generateHelper(string &current, int numOpenBrackets, int numClosedBrackets,
 		generateHelper(current, numOpenBrackets, numClosedBrackets + 1, n, ans);
 		current.pop_back();
 	}
-		}
+}
 
 vector<string> GenerateParenthesis(int n) {
 	vector<string> ans;

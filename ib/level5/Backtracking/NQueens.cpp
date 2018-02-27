@@ -27,7 +27,7 @@ There exist two distinct solutions to the 4-queens puzzle:
 #include <algorithm>
 using namespace std;
 
-#define OWN5
+#define OWN
 
 #ifdef OWN
 bool CheckQueen(int A, int row, int col, vector<string> &subset)
