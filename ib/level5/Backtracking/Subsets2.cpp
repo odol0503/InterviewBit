@@ -23,7 +23,7 @@ If S = [1,2,2], the solution is:
 #include <algorithm>
 using namespace std;
 
-#define OWN3
+#define OWN
 
 #ifdef OWN
 void SubSet2(vector<int> &A, int idx, vector<vector<int>> &comb)

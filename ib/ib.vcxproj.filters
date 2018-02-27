@@ -456,5 +456,8 @@
     <ClCompile Include="level5\Backtracking\Sudoku.cpp">
       <Filter>level5\Backtracking</Filter>
     </ClCompile>
+    <ClCompile Include="level5\Backtracking\Permutations.cpp">
+      <Filter>level5\Backtracking</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

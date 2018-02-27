@@ -868,6 +868,12 @@ TEST(IB, SolveSudoku)
 	EXPECT_EQ(B, A);
 }
 
+vector<vector<int> > GetAllPermute(vector<int> &A);
+TEST(IB, GetAllPermute)
+{
+	EXPECT_EQ(vector<vector<int>>({ { 1, 2, 3 },{ 1, 3, 2 },{ 2, 1, 3 },{ 2, 3, 1 },{ 3, 1, 2 },{ 3, 2, 1 } }), GetAllPermute(vector<int>({ 1,2,3 })));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);
