@@ -47,10 +47,9 @@ static bool CheckValid(vector<vector<char>> &A, int row, int col, char num)
 
 bool GetEmptyPos(vector<vector<char>> &A, int &row, int &col)
 {
-	int i = 0, j = 0;
-	for (; i < (int)A.size(); i++)
+	for (int i = 0; i < (int)A.size(); i++)
 	{
-		for (; j < (int)A.size(); j++)
+		for (int j = 0; j < (int)A.size(); j++)
 		{
 			if (A[i][j] == '.')
 			{
@@ -64,25 +63,71 @@ bool GetEmptyPos(vector<vector<char>> &A, int &row, int &col)
 	return false;
 }
 
-void Sudoku(vector<vector<char>> &A)
+bool Sudoku(vector<vector<char>> &A)
 {
+	int i = 0, j = 0;
+	if (!GetEmptyPos(A, i, j)) return true;
+
 	for (int y = 1; y <= 9; y++)
 	{
-		int i = 0, j = 0;
-		if (!GetEmptyPos(A, i, j)) return;
-
 		char value = (char)(y + '0');
 		if (CheckValid(A, i, j, value))
 		{
 			A[i][j] = value;
-			Sudoku(A);
+			if (Sudoku(A)) return true;
+			A[i][j] = '.';
 		}
 	}
+
+	return false;
 }
 
 void SolveSudoku(vector<vector<char> > &A) {
 	Sudoku(A);
 }
 #else
+int rowhash[9][9], colhash[9][9], blockhash[3][3][9];
 
+bool solveSudoku(vector<vector<char> > &board, int position) {
+	if (position >= 9 * 9) {
+		return true;
+	}
+	int row = position / 9, col = position % 9;
+	if (board[row][col] != '.') {
+		return solveSudoku(board, position + 1);
+	}
+	for (int num = 0; num < 9; num++) {
+		if (rowhash[row][num] != 1 && colhash[col][num] != 1 && blockhash[row / 3][col / 3][num] != 1) {
+			// Include num in the solution 
+			board[row][col] = '1' + num;
+			rowhash[row][num] = 1;
+			colhash[col][num] = 1;
+			blockhash[row / 3][col / 3][num] = 1;
+			if (solveSudoku(board, position + 1)) return true;
+			// Reset
+			board[row][col] = '.';
+			rowhash[row][num] = 0;
+			colhash[col][num] = 0;
+			blockhash[row / 3][col / 3][num] = 0;
+		}
+	}
+	return false;
+}
+
+void SolveSudoku(vector<vector<char> > &board) {
+	memset(rowhash, 0, sizeof(rowhash));
+	memset(colhash, 0, sizeof(colhash));
+	memset(blockhash, 0, sizeof(blockhash));
+	for (int i = 0; i < 9; i++) {
+		for (int j = 0; j < 9; j++) {
+			if (board[i][j] != '.') {
+				int num = board[i][j] - '1';
+				rowhash[i][num] = 1;
+				colhash[j][num] = 1;
+				blockhash[i / 3][j / 3][num] = 1;
+			}
+		}
+	}
+	solveSudoku(board, 0);
+}
 #endif
