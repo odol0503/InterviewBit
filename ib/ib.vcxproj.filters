@@ -462,5 +462,8 @@
     <ClCompile Include="level5\Backtracking\GrayCode.cpp">
       <Filter>level5\Backtracking</Filter>
     </ClCompile>
+    <ClCompile Include="level5\Backtracking\KthPermutationSequence.cpp">
+      <Filter>level5\Backtracking</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

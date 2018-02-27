@@ -22,7 +22,17 @@ using namespace std;
 #define OWN
 
 #ifdef OWN
-void GenerateGrayCode(int A, bool up, vector<int> &cur, vector<vector<int>> &comb)
+bool CheckUp(vector<int> &A)
+{
+	int cnt = 0;
+	for (int i = 0; i < (int)A.size(); i++)
+	{
+		if (A[i] == 1) cnt++;
+	}
+	return cnt & 0x01 ? false : true;
+}
+
+void GenerateGrayCode(int A, vector<int> &cur, vector<vector<int>> &comb)
 {
 	if (0 == A)
 	{
@@ -30,12 +40,12 @@ void GenerateGrayCode(int A, bool up, vector<int> &cur, vector<vector<int>> &com
 		return;
 	}
 
-	if (up)
+	if (CheckUp(cur))
 	{
 		for (int i = 0; i < 2; i++)
 		{
 			cur.push_back(i);
-			GenerateGrayCode(A - 1, i == 1 ? false : true, cur, comb);
+			GenerateGrayCode(A - 1, cur, comb);
 			cur.pop_back();
 		}
 	}
@@ -44,7 +54,7 @@ void GenerateGrayCode(int A, bool up, vector<int> &cur, vector<vector<int>> &com
 		for (int i = 1; i >= 0; i--)
 		{
 			cur.push_back(i);
-			GenerateGrayCode(A - 1, i == 0 ? false : true, cur, comb);
+			GenerateGrayCode(A - 1, cur, comb);
 			cur.pop_back();
 		}
 	}
@@ -67,7 +77,7 @@ vector<int> GrayCode(int A) {
 	vector<vector<int>> comb;
 	vector<int> cur;
 
-	GenerateGrayCode(A, true, cur, comb);
+	GenerateGrayCode(A, cur, comb);
 
 	for (int i = 0; i<(int)comb.size(); i++)
 	{

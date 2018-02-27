@@ -882,6 +882,12 @@ TEST(IB, GrayCode)
 	EXPECT_EQ(vector<int>({ 0,1,3,2,6,7,5,4 }), GrayCode(3));
 }
 
+string GetPermutation(int A, int B);
+TEST(IB, GetPermutation)
+{
+	EXPECT_EQ("23451", GetPermutation(5, 34));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);
