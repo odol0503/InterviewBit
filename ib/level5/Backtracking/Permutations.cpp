@@ -26,7 +26,7 @@ using namespace std;
 #define OWN
 
 #ifdef OWN
-int Factorial(int A)
+static int Factorial(int A)
 {
 	int ans = 1;
 	for (int i = 2; i <= A; i++)
@@ -34,23 +34,23 @@ int Factorial(int A)
 	return ans;
 }
 
-vector<int> NextPermute(vector<int> &A)
+static vector<int> NextPermute(vector<int> &A)
 {
 	int len = (int)A.size();
 
-	for (int i = len - 1; i>0; i--)
+	int i = len - 1;
+	while (i>0)
 	{
 		if (A[i - 1] < A[i])
 		{
 			int j = len - 1;
 			while (A[i - 1] >= A[j]) j--;
 			swap(A[i - 1], A[j]);
-			sort(A.begin() + i, A.end());
-			return A;
+			break;
 		}
-
-		if (i == 1) sort(A.begin(), A.end());
+		i--;
 	}
+	reverse(A.begin() + i, A.end());
 	return A;
 }
 
@@ -78,7 +78,7 @@ void permute(vector<int> &num, int start, vector<vector<int> > &result) {
 		permute(num, start + 1, result);
 		swap(num[start], num[i]);
 	}
-	}
+}
 
 vector<vector<int> > GetAllPermute(vector<int> &num) {
 	vector<vector<int> > result;
