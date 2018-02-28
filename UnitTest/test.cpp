@@ -888,6 +888,14 @@ TEST(IB, GetPermutation)
 	EXPECT_EQ("23451", GetPermutation(5, 34));
 }
 
+int Colorful(int A);
+TEST(IB, Colorful)
+{
+	EXPECT_EQ(1, Colorful(234));
+	EXPECT_EQ(1, Colorful(23));
+	EXPECT_EQ(0, Colorful(123));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);

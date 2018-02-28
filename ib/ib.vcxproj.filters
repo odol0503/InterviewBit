@@ -43,6 +43,9 @@
     <Filter Include="level5\Backtracking">
       <UniqueIdentifier>{0c588c20-dac7-45bd-9c01-a9afe3bd4d8a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="level5\Hashing">
+      <UniqueIdentifier>{532d32e2-ec4d-4827-8cb1-22ecdffb3a14}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="level2\Arrays\AntiDiagonals.cpp">
@@ -464,6 +467,9 @@
     </ClCompile>
     <ClCompile Include="level5\Backtracking\KthPermutationSequence.cpp">
       <Filter>level5\Backtracking</Filter>
+    </ClCompile>
+    <ClCompile Include="level5\Hashing\ColorfulNumber.cpp">
+      <Filter>level5\Hashing</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
