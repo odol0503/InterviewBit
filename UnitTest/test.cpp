@@ -896,6 +896,14 @@ TEST(IB, Colorful)
 	EXPECT_EQ(0, Colorful(123));
 }
 
+vector<int> LargeSequenceZero(vector<int> &A);
+TEST(IB, LargeSequenceZero)
+{
+	EXPECT_EQ(vector<int>({0}), LargeSequenceZero(vector<int>({ 0, 22, 7, 21, -11, -6, -7, -16, -2 })));
+	EXPECT_EQ(vector<int>({ }), LargeSequenceZero(vector<int>({ -19, 8, 2, -8, 19, 5, -2, -23 })));
+	EXPECT_EQ(vector<int>({ 1,2,-3 }), LargeSequenceZero(vector<int>({ 1, 2, -3, 3 })));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);
