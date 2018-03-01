@@ -30,37 +30,34 @@ using namespace std;
 
 #ifdef OWN
 vector<vector<int> > FourSum(vector<int> &A, int B) {
-	map<int, int> M;
+	multimap<int, int> M;
 	int len = (int)A.size();
 	vector<vector<int>> ret;
 
+	if (len < 4) return ret;
+
 	sort(A.begin(), A.end());
+	for (int i = 3; i<len; i++) M.insert({ A[i], i });
 
 	for (int i = 0; i<len - 3; i++)
 	{
 		for (int j = i + 1; j<len - 2; j++)
 		{
-			int l = j + 1;
-			int r = len - 1;
-
-			while (l<r)
+			for (int k = j + 1; k<len - 1; k++)
 			{
-				int sum = A[i] + A[j] + A[l] + A[r];
-				if (sum == B)
+				int r = B - A[i] - A[j] - A[k];
+				auto range = M.equal_range(r);
+				for (auto it = range.first; it != range.second; it++)
 				{
-					vector<int> temp({ A[i], A[j], A[l], A[r] });
-					if (find(ret.begin(), ret.end(), temp) == ret.end())
+					if (k < it->second)
 					{
-						ret.push_back(temp);
+						vector<int> tmp({ A[i], A[j], A[k], it->first });
+						if (find(ret.begin(), ret.end(), tmp) == ret.end())
+						{
+							ret.push_back(tmp);
+						}
 					}
-					l++;
-					r--;
 				}
-				else if (sum < B)
-				{
-					l++;
-				}
-				else r--;
 			}
 		}
 	}
