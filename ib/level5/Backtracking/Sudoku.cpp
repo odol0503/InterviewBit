@@ -20,36 +20,22 @@ using namespace std;
 #define OWN
 
 #ifdef OWN
-static bool CheckValid(vector<vector<char>> &A, int row, int col, char num)
+static int RowHash[9][9];
+static int ColHash[9][9];
+static int BlockHash[3][3][9];
+
+static bool CheckValid(int row, int col, char val)
 {
-	for (int i = 0; i<(int)A.size(); i++)
-	{
-		if (A[i][col] == num) return false;
-	}
-
-	for (int j = 0; j<(int)A.size(); j++)
-	{
-		if (A[row][j] == num) return false;
-	}
-
-	int row_start = row / 3 * 3;
-	int col_start = col / 3 * 3;
-	for (int i = row_start; i<row_start + 3; i++)
-	{
-		for (int j = col_start; j<col_start + 3; j++)
-		{
-			if (A[i][j] == num) return false;
-		}
-	}
-
+	if (RowHash[row][val - '1'] || ColHash[col][val - '1'] || BlockHash[row / 3][col / 3][val - '1']) return false;
 	return true;
 }
 
-bool GetEmptyPos(vector<vector<char>> &A, int &row, int &col)
+static bool GetEmptyPos(const vector<vector<char> > &A, int &row, int &col)
 {
-	for (int i = 0; i < (int)A.size(); i++)
+	int len = (int)A.size();
+	for (int i = 0; i<len; i++)
 	{
-		for (int j = 0; j < (int)A.size(); j++)
+		for (int j = 0; j<len; j++)
 		{
 			if (A[i][j] == '.')
 			{
@@ -59,30 +45,54 @@ bool GetEmptyPos(vector<vector<char>> &A, int &row, int &col)
 			}
 		}
 	}
-
 	return false;
 }
 
-bool Sudoku(vector<vector<char>> &A)
+static int Sudoku(vector<vector<char> > &A)
 {
-	int i = 0, j = 0;
-	if (!GetEmptyPos(A, i, j)) return true;
-
-	for (int y = 1; y <= 9; y++)
+	int row, col;
+	if (GetEmptyPos(A, row, col) == false)
 	{
-		char value = (char)(y + '0');
-		if (CheckValid(A, i, j, value))
-		{
-			A[i][j] = value;
-			if (Sudoku(A)) return true;
-			A[i][j] = '.';
-		}
+		return 1;
 	}
 
-	return false;
+	for (char i = '1'; i <= '9'; i++)
+	{
+		if (CheckValid(row, col, i))
+		{
+			A[row][col] = i;
+			RowHash[row][i - '1'] = 1;
+			ColHash[col][i - '1'] = 1;
+			BlockHash[row / 3][col / 3][i - '1'] = 1;
+			if (Sudoku(A)) return 1;
+			A[row][col] = '.';
+			RowHash[row][i - '1'] = 0;
+			ColHash[col][i - '1'] = 0;
+			BlockHash[row / 3][col / 3][i - '1'] = 0;
+		}
+	}
+	return 0;
 }
 
 void SolveSudoku(vector<vector<char> > &A) {
+
+	memset(RowHash, 0x00, sizeof(RowHash));
+	memset(ColHash, 0x00, sizeof(ColHash));
+	memset(BlockHash, 0x00, sizeof(BlockHash));
+
+	for (int i = 0; i < (int)A.size(); i++)
+	{
+		for (int j = 0; j < (int)A.size(); j++)
+		{
+			if (A[i][j] != '.')
+			{
+				RowHash[i][A[i][j] - '1'] = 1;
+				ColHash[j][A[i][j] - '1'] = 1;
+				BlockHash[i / 3][j / 3][A[i][j] - '1'] = 1;
+			}
+		}
+	}
+
 	Sudoku(A);
 }
 #else

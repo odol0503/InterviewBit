@@ -480,5 +480,8 @@
     <ClCompile Include="level5\Hashing\4Sum.cpp">
       <Filter>level5\Hashing</Filter>
     </ClCompile>
+    <ClCompile Include="level5\Hashing\ValidSudoku.cpp">
+      <Filter>level5\Hashing</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

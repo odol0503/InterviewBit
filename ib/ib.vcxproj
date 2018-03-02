@@ -162,6 +162,7 @@
     <ClCompile Include="level5\Hashing\4Sum.cpp" />
     <ClCompile Include="level5\Hashing\ColorfulNumber.cpp" />
     <ClCompile Include="level5\Hashing\LargestContinuousSequenceZeroSum.cpp" />
+    <ClCompile Include="level5\Hashing\ValidSudoku.cpp" />
     <ClCompile Include="level6\VerticalOrderTraversalOfBinaryTree.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
