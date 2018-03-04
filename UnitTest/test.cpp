@@ -944,46 +944,7 @@ struct RandomListNode {
 	RandomListNode(int x) : label(x), next(NULL), random(NULL) {}
 };
 
-RandomListNode* MakeRandomList(vector<int> A, vector<int> B)
-{
-	int len = (int)A.size();
-	if (len == 0) return nullptr;
-
-	RandomListNode *ret = new RandomListNode(A[0]);
-	RandomListNode *pCur = ret;
-	for (int i = 1; i < len; i++)
-	{
-		pCur->next = new RandomListNode(A[i]);
-		pCur = pCur->next;
-	}
-
-	return ret;
-}
-
-void FreeRandomList(RandomListNode **A)
-{
-	RandomListNode *pCur = *A;
-
-	while (pCur)
-	{
-		RandomListNode *pNext = pCur->next;
-		delete pCur;
-		pCur = pNext;
-	}
-}
-
-vector<int> RandomList2Vec(RandomListNode *A)
-{
-	vector<int> ret;
-	while (A)
-	{
-		ret.push_back(A->label);
-		A = A->next;
-	}
-
-	return ret;
-}
-
+/*
 RandomListNode* CopyRandomList(RandomListNode* A);
 TEST(IB, Equal)
 {
@@ -991,10 +952,14 @@ TEST(IB, Equal)
 
 	EXPECT_EQ(vector<int>({ 0, 2, 3, 5 }), CopyRandomList(vector<int>({ 3, 4, 7, 1, 2, 9, 8 })));
 }
-Line 1: The first number N is the number of nodes in the list.
-Then N numbers follow each corresponding to label of the nodes in order.
-Then N more numbers follow corresponding to the index of the random node.
-If index > N, index %= (N + 1); if index == N, then random pointer points to NULL.
+*/
+
+int LongestSubstringWithoutRepeating(string A);
+TEST(IB, LongestSubstringWithoutRepeating)
+{
+	EXPECT_EQ(3, LongestSubstringWithoutRepeating("abcabcbb"));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);
