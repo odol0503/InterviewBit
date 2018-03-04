@@ -926,6 +926,18 @@ TEST(IB, IsValidSudoku)
 	EXPECT_EQ(1, IsValidSudoku(vector<string>({ "..5.....6", "....14...", ".........", ".....92..", "5....2...", ".......3.", "...54....", "3.....42.", "...27.6.." })));
 }
 
+vector<vector<int> > Anagrams(const vector<string> &A);
+TEST(IB, Anagrams)
+{
+	EXPECT_EQ(vector<vector<int> >({ {1, 4},{2, 3} }), Anagrams(vector<string>({ "cat", "dog", "god", "tca" })));
+}
+
+vector<int> Equal(vector<int> &A);
+TEST(IB, Equal)
+{
+	EXPECT_EQ(vector<int>({ 0, 2, 3, 5 }), Equal(vector<int>({ 3, 4, 7, 1, 2, 9, 8 })));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);
