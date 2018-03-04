@@ -489,5 +489,8 @@
     <ClCompile Include="level5\Hashing\Equal.cpp">
       <Filter>level5\Hashing</Filter>
     </ClCompile>
+    <ClCompile Include="level5\Hashing\CopyList.cpp">
+      <Filter>level5\Hashing</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
