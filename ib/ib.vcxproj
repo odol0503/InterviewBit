@@ -167,6 +167,7 @@
     <ClCompile Include="level5\Hashing\LargestContinuousSequenceZeroSum.cpp" />
     <ClCompile Include="level5\Hashing\LongestSubstringWithoutRepeat.cpp" />
     <ClCompile Include="level5\Hashing\ValidSudoku.cpp" />
+    <ClCompile Include="level5\Hashing\WindowString.cpp" />
     <ClCompile Include="level6\VerticalOrderTraversalOfBinaryTree.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

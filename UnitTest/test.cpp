@@ -960,6 +960,12 @@ TEST(IB, LongestSubstringWithoutRepeating)
 	EXPECT_EQ(3, LongestSubstringWithoutRepeating("abcabcbb"));
 }
 
+string MinWindow(string A, string B);
+TEST(IB, MinWindow)
+{
+	EXPECT_EQ("BANC", MinWindow("ADOBECODEBANC", "ABC"));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);

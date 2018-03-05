@@ -495,5 +495,8 @@
     <ClCompile Include="level5\Hashing\LongestSubstringWithoutRepeat.cpp">
       <Filter>level5\Hashing</Filter>
     </ClCompile>
+    <ClCompile Include="level5\Hashing\WindowString.cpp">
+      <Filter>level5\Hashing</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
