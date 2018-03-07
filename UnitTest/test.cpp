@@ -981,6 +981,7 @@ TEST(IB, FractionToDecimal)
 int MaxPoints(vector<int> &A, vector<int> &B);
 TEST(IB, MaxPoints)
 {
+	EXPECT_EQ(3, MaxPoints(vector<int>({ 0, 1, -1 }), vector<int>({ 0, 1, -1 })));
 	EXPECT_EQ(3, MaxPoints(vector<int>({ 1, 1, 1 }), vector<int>({ 0, 4, -1 })));
 }
 
