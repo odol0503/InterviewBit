@@ -967,6 +967,17 @@ TEST(IB, MinWindow)
 	EXPECT_EQ("BANC", MinWindow("ADOBECODEBANC", "ABC"));
 }
 
+string FractionToDecimal(int A, int B);
+TEST(IB, FractionToDecimal)
+{
+	EXPECT_EQ("-0.5", FractionToDecimal(1, -2));
+	EXPECT_EQ("0.(82329317269076305220883534136546184738955)", FractionToDecimal(205, 249));
+	EXPECT_EQ("6.738(63)", FractionToDecimal(593, 88));
+	EXPECT_EQ("3.9(54)", FractionToDecimal(87, 22));
+	EXPECT_EQ("0.(6)", FractionToDecimal(2, 3));
+	EXPECT_EQ("2147483648", FractionToDecimal(-2147483648, -1));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);
