@@ -978,6 +978,12 @@ TEST(IB, FractionToDecimal)
 	EXPECT_EQ("2147483648", FractionToDecimal(-2147483648, -1));
 }
 
+int MaxPoints(vector<int> &A, vector<int> &B);
+TEST(IB, MaxPoints)
+{
+	EXPECT_EQ(3, MaxPoints(vector<int>({ 1, 1, 1 }), vector<int>({ 0, 4, -1 })));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);
