@@ -504,5 +504,8 @@
     <ClCompile Include="level5\Hashing\PointsOnTheStraightLine.cpp">
       <Filter>level5\Hashing</Filter>
     </ClCompile>
+    <ClCompile Include="level5\Hashing\SubstringConcatenation.cpp">
+      <Filter>level5\Hashing</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
