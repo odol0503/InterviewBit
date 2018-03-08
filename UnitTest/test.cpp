@@ -994,6 +994,12 @@ TEST(IB, FindSubstring)
 	EXPECT_EQ(vector<int>({ 0, 9 }), FindSubstring("barfoothefoobarman", vector<string>({ "foo", "bar" })));
 }
 
+vector<vector<int> > AllUniquePermutations(vector<int> &A);
+TEST(IB, AllUniquePermutations)
+{
+	EXPECT_EQ(vector<vector<int>>({ { 1, 1, 2 }, { 1, 2, 1 }, { 2, 1, 1 } }), AllUniquePermutations(vector<int>({ 1, 1, 2 })));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);

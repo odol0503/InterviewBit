@@ -507,5 +507,8 @@
     <ClCompile Include="level5\Hashing\SubstringConcatenation.cpp">
       <Filter>level5\Hashing</Filter>
     </ClCompile>
+    <ClCompile Include="level5\AllUniquePermutations.cpp">
+      <Filter>level5</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

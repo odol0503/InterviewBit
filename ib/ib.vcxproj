@@ -143,6 +143,7 @@
     <ClCompile Include="level4\StacksAndQueues\SimplifyDirectoryPath.cpp" />
     <ClCompile Include="level4\StacksAndQueues\SlidingWindowMax.cpp" />
     <ClCompile Include="level4\Subtract.cpp" />
+    <ClCompile Include="level5\AllUniquePermutations.cpp" />
     <ClCompile Include="level5\Backtracking\Combinations.cpp" />
     <ClCompile Include="level5\Backtracking\CombinationSum.cpp" />
     <ClCompile Include="level5\Backtracking\CombinationSum2.cpp" />
