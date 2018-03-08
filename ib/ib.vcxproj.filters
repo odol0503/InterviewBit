@@ -510,5 +510,8 @@
     <ClCompile Include="level5\AllUniquePermutations.cpp">
       <Filter>level5</Filter>
     </ClCompile>
+    <ClCompile Include="level5\LongestConsecutiveSequence.cpp">
+      <Filter>level5</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

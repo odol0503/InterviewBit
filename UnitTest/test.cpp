@@ -1000,6 +1000,13 @@ TEST(IB, AllUniquePermutations)
 	EXPECT_EQ(vector<vector<int>>({ { 1, 1, 2 }, { 1, 2, 1 }, { 2, 1, 1 } }), AllUniquePermutations(vector<int>({ 1, 1, 2 })));
 }
 
+int LongestConsecutive(const vector<int> &A);
+TEST(IB, LongestConsecutive)
+{
+	EXPECT_EQ(13, LongestConsecutive(vector<int>({ 4, 5, 7, 6, 8, 1, 3, 2, 100, 200, 9, 10, 13, 11, 12 })));
+	EXPECT_EQ(4, LongestConsecutive(vector<int>({ 100, 4, 200, 1, 3, 2 })));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);
