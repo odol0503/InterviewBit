@@ -46,6 +46,12 @@
     <Filter Include="level5\Hashing">
       <UniqueIdentifier>{532d32e2-ec4d-4827-8cb1-22ecdffb3a14}</UniqueIdentifier>
     </Filter>
+    <Filter Include="level6\HeapsAndMaps">
+      <UniqueIdentifier>{50289d5b-861c-4204-9363-3f9e3378b2fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="level6\Trees">
+      <UniqueIdentifier>{8abe5f41-1b14-4323-9245-d3ef95cfd7c1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="level2\Arrays\AntiDiagonals.cpp">
@@ -197,9 +203,6 @@
     </ClCompile>
     <ClCompile Include="level3\BinarySearch\RotatedArray.cpp">
       <Filter>level3\BinarySearch</Filter>
-    </ClCompile>
-    <ClCompile Include="level6\VerticalOrderTraversalOfBinaryTree.cpp">
-      <Filter>level6</Filter>
     </ClCompile>
     <ClCompile Include="level3\BinarySearch\MedianArraySameSize.cpp">
       <Filter>level3\BinarySearch</Filter>
@@ -512,6 +515,12 @@
     </ClCompile>
     <ClCompile Include="level5\LongestConsecutiveSequence.cpp">
       <Filter>level5</Filter>
+    </ClCompile>
+    <ClCompile Include="level6\Trees\VerticalOrderTraversalOfBinaryTree.cpp">
+      <Filter>level6\Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="level6\HeapsAndMaps\NMaxPairCombinations.cpp">
+      <Filter>level6\HeapsAndMaps</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
