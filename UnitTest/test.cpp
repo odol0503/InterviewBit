@@ -1020,6 +1020,20 @@ TEST(IB, MagicianAndChocolates)
 	EXPECT_EQ(14, MagicianAndChocolates(3, vector<int>({ 6, 5 })));
 }
 
+/*
+ListNode* MergeKSortedLists(vector<ListNode*> &A);
+TEST(IB, MergeKSortedLists)
+{
+	1 -> 10 -> 20
+		4 -> 11 -> 13
+		3 -> 8 -> 9
+		will result in
+
+		1 -> 3 -> 4 -> 8 -> 9 -> 10 -> 11 -> 13 -> 20
+	EXPECT_EQ(14, MergeKSortedLists(3, vector<int>({ 6, 5 })));
+}
+*/
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);
