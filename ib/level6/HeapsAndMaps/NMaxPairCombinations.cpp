@@ -23,6 +23,8 @@ Maximum 4 elements of combinations sum are
 #include <utility>
 #include <algorithm>
 #include <map>
+#include <queue>
+#include <set>
 #include <functional>
 #include <iostream>
 using namespace std;
@@ -32,53 +34,74 @@ using namespace std;
 #ifdef OWN
 vector<int> NMaxPairCombinations(vector<int> &A, vector<int> &B) {
 	int len = (int)A.size();
-	if (len == 1) return vector<int>(A[0] + B[0]);
-	
-	vector<int> sum;
+	if (len == 1) return vector<int>({ A[0] + B[0] });
+
+	int i = len - 1;
+	int j = len - 1;
+
+	priority_queue<pair<int, pair<int, int>>> pq;
+	set<pair<int, int>> s;
 	vector<int> ret;
 
 	sort(A.begin(), A.end());
 	sort(B.begin(), B.end());
 
-	int maxA = A[len-1];
-	int maxB = B[len-1];
-	
-	int i = len - 2;
-	int j = len - 2;
+	pq.push({ A[i] + B[j],{ i, j } });
 
-	ret.push_back(maxA + maxB);
-
-	for (int n = 1; n<len; n++)
+	for (int k = 0; k<len; k++)
 	{
-		if (maxA + maxB == A[i] + B[i])
+		pair<int, pair<int, int>> temp = pq.top();
+		pq.pop();
+
+		ret.push_back(temp.first);
+
+		i = temp.second.first;
+		j = temp.second.second;
+
+		if (s.count({ i, j - 1 }) == 0)
 		{
-			ret.push_back(maxA + maxB);
-			ret.push_back(maxA + maxB);
-			ret.push_back(maxA + maxB);
-			n+=3;
-			i--;
-			j--;
+			pq.push({ A[i] + B[j - 1],{ i, j - 1 } });
+			s.insert({ i, j - 1 });
 		}
-		else if (maxA + B[j] > A[i] + maxB)
+
+		if (s.count({ i - 1, j }) == 0)
 		{
-			ret.push_back(maxA + B[j]);
-			j--;
-		}
-		else
-		{
-			ret.push_back(A[i] + maxB);
-			i--;
+			pq.push({ A[i - 1] + B[j],{ i - 1, j } });
+			s.insert({ i - 1, j });
 		}
 	}
 
 	return ret;
 }
 #else
-//Sort both the arrays in ascending order.
-//Let us take priority queue(heap).
-//First max element is going to be the sum of the last two elements of array A and B i.e. (A[n - 1] + B[n - 1]).
-//Insert that in heap with indices of both array i.e(n - 1, n - 1).
-//Start popping from heap(n - iterations).
-//And insert the sum(A[L - 1] + A[R]) and (A[L] + B[R - 1]).
-//Take care that repeating indices should not be there in the heap(use map for that).
+vector<int> NMaxPairCombinations(vector<int> &A, vector<int> &B) {
+	priority_queue<pair<int, pair<int, int> > > hp;
+	set<pair<int, int> > S;
+	int n = A.size();
+	sort(A.begin(), A.end());
+	sort(B.begin(), B.end());
+
+	hp.push(make_pair(A[n - 1] + B[n - 1], make_pair(n - 1, n - 1)));
+	S.insert(make_pair(n - 1, n - 1));
+
+	vector<int> ans;
+	int k = n;
+	while (k--) {
+		pair<int, pair<int, int> > top = hp.top();
+		hp.pop();
+		ans.push_back(top.first);
+		int L = top.second.first;
+		int R = top.second.second;
+
+		if (R>0 && L >= 0 && S.find(make_pair(L, R - 1)) == S.end()) {
+			hp.push(make_pair(A[L] + B[R - 1], make_pair(L, R - 1)));
+			S.insert(make_pair(L, R - 1));
+		}
+		if (R >= 0 && L>0 && S.find(make_pair(L - 1, R)) == S.end()) {
+			hp.push(make_pair(A[L - 1] + B[R], make_pair(L - 1, R)));
+			S.insert(make_pair(L - 1, R));
+		}
+	}
+	return ans;
+}
 #endif
