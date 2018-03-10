@@ -522,5 +522,8 @@
     <ClCompile Include="level6\HeapsAndMaps\NMaxPairCombinations.cpp">
       <Filter>level6\HeapsAndMaps</Filter>
     </ClCompile>
+    <ClCompile Include="level6\HeapsAndMaps\MagicianAndChocolates.cpp">
+      <Filter>level6\HeapsAndMaps</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

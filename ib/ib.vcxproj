@@ -173,6 +173,7 @@
     <ClCompile Include="level5\Hashing\ValidSudoku.cpp" />
     <ClCompile Include="level5\Hashing\WindowString.cpp" />
     <ClCompile Include="level5\LongestConsecutiveSequence.cpp" />
+    <ClCompile Include="level6\HeapsAndMaps\MagicianAndChocolates.cpp" />
     <ClCompile Include="level6\HeapsAndMaps\NMaxPairCombinations.cpp" />
     <ClCompile Include="level6\Trees\VerticalOrderTraversalOfBinaryTree.cpp" />
   </ItemGroup>
