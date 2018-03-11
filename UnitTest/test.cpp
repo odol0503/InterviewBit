@@ -1034,6 +1034,12 @@ TEST(IB, MergeKSortedLists)
 }
 */
 
+vector<int> DistinctNumbersInWindow(vector<int> &A, int B);
+TEST(IB, DistinctNumbersInWindow)
+{
+	EXPECT_EQ(vector<int>({ 2, 3, 3, 2 }), DistinctNumbersInWindow(vector<int>({ 1, 2, 1, 3, 4, 3 }), 3));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);

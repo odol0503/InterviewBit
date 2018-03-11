@@ -30,7 +30,7 @@ Note: Return your answer modulo 10^9+7
 #include <iostream>
 using namespace std;
 
-#define OWN6
+#define OWN
 
 #ifdef OWN
 #define MOD (int)(1e9+7)

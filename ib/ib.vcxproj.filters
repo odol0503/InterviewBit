@@ -528,5 +528,8 @@
     <ClCompile Include="level6\HeapsAndMaps\MergeKSortedLists.cpp">
       <Filter>level6\HeapsAndMaps</Filter>
     </ClCompile>
+    <ClCompile Include="level6\HeapsAndMaps\DistinctNumbersInWindow.cpp">
+      <Filter>level6\HeapsAndMaps</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
