@@ -174,10 +174,14 @@
     <ClCompile Include="level5\Hashing\WindowString.cpp" />
     <ClCompile Include="level5\LongestConsecutiveSequence.cpp" />
     <ClCompile Include="level6\HeapsAndMaps\DistinctNumbersInWindow.cpp" />
+    <ClCompile Include="level6\HeapsAndMaps\LRUCache.cpp" />
     <ClCompile Include="level6\HeapsAndMaps\MagicianAndChocolates.cpp" />
     <ClCompile Include="level6\HeapsAndMaps\MergeKSortedLists.cpp" />
     <ClCompile Include="level6\HeapsAndMaps\NMaxPairCombinations.cpp" />
     <ClCompile Include="level6\Trees\VerticalOrderTraversalOfBinaryTree.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="level6\HeapsAndMaps\LRUCache.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

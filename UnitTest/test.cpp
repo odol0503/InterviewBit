@@ -1040,6 +1040,56 @@ TEST(IB, DistinctNumbersInWindow)
 	EXPECT_EQ(vector<int>({ 2, 3, 3, 2 }), DistinctNumbersInWindow(vector<int>({ 1, 2, 1, 3, 4, 3 }), 3));
 }
 
+#include "LRUCache.h"
+TEST(IB, LRUCache)
+{
+	vector<int> ans;
+	LRUCache L(11);
+	L.set(1, 1);
+	ans.push_back(L.get(11));
+	ans.push_back(L.get(11));
+	L.set(3, 10);
+	ans.push_back(L.get(10));
+	L.set(3, 12);
+	L.set(1, 15);
+	L.set(4, 12);
+	ans.push_back(L.get(15));
+	L.set(8, 6);
+	L.set(5, 3);
+	ans.push_back(L.get(2));
+	ans.push_back(L.get(12));
+	ans.push_back(L.get(10));
+	L.set(11, 5);
+	ans.push_back(L.get(7));
+	L.set(5, 1);
+	L.set(15, 5);
+	ans.push_back(L.get(2));
+	L.set(13, 8);
+	ans.push_back(L.get(3));
+	L.set(14, 2);
+	L.set(12, 11);
+	L.set(7, 10);
+	L.set(5, 4);
+	ans.push_back(L.get(9));
+	ans.push_back(L.get(2));
+	L.set(13, 5);
+	L.set(10, 14);
+	L.set(9, 11);
+	ans.push_back(L.get(5));
+	L.set(13, 11);
+	L.set(8, 12);
+	ans.push_back(L.get(10));
+	L.set(5, 12);
+	ans.push_back(L.get(8));
+	ans.push_back(L.get(11));
+	ans.push_back(L.get(8));
+	L.set(9, 11);
+	L.set(10, 6);
+	//S 7 12 S 1 7 G 10 G 9 G 15 G 15 G 3 S 15 4 G 10 G 14 G 10 G 12 G 12 S 14 7 G 11 S 9 10 S 6 12 S 14 11 G 3 S 7 5 S 1 14 S 2 8 S 11 12 S 8 4 G 3 S 13 15 S 1 4 S 5 3 G 3 G 9 G 14 G 9 S 13 10 G 14 S 3 9 G 8 S 3 5 S 6 4 S 10 3 S 11 13 G 8 G 4 S 2 11 G 2 G 9 S 15 1 G 9 S 7 8 S 4 3 G 3 G 1 S 8 4 G 13 S 1 2 G 3
+	
+	//EXPECT_EQ(vector<int>({ 2, 3, 3, 2 }), DistinctNumbersInWindow(vector<int>({ 1, 2, 1, 3, 4, 3 }), 3));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);

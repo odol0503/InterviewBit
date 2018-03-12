@@ -531,5 +531,13 @@
     <ClCompile Include="level6\HeapsAndMaps\DistinctNumbersInWindow.cpp">
       <Filter>level6\HeapsAndMaps</Filter>
     </ClCompile>
+    <ClCompile Include="level6\HeapsAndMaps\LRUCache.cpp">
+      <Filter>level6\HeapsAndMaps</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="level6\HeapsAndMaps\LRUCache.h">
+      <Filter>level6\HeapsAndMaps</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
