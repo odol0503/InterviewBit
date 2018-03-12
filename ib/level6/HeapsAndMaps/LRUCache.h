@@ -1,8 +1,8 @@
 #ifndef LRUCACHE
 #define LRUCACHE
 
-#include <map>
-#include <vector>
+#include <unordered_map>
+#include <deque>
 
 using namespace std;
 
@@ -14,7 +14,7 @@ public:
 	void LRUCache::set(int key, int value);
 
 	int m_nCapacity;
-	map<int, int> M;
-	vector<int> C;
+	unordered_map<int, int> M;
+	deque<int> C;
 };
 #endif

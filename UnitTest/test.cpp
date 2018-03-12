@@ -1085,9 +1085,62 @@ TEST(IB, LRUCache)
 	ans.push_back(L.get(8));
 	L.set(9, 11);
 	L.set(10, 6);
-	//S 7 12 S 1 7 G 10 G 9 G 15 G 15 G 3 S 15 4 G 10 G 14 G 10 G 12 G 12 S 14 7 G 11 S 9 10 S 6 12 S 14 11 G 3 S 7 5 S 1 14 S 2 8 S 11 12 S 8 4 G 3 S 13 15 S 1 4 S 5 3 G 3 G 9 G 14 G 9 S 13 10 G 14 S 3 9 G 8 S 3 5 S 6 4 S 10 3 S 11 13 G 8 G 4 S 2 11 G 2 G 9 S 15 1 G 9 S 7 8 S 4 3 G 3 G 1 S 8 4 G 13 S 1 2 G 3
-	
-	//EXPECT_EQ(vector<int>({ 2, 3, 3, 2 }), DistinctNumbersInWindow(vector<int>({ 1, 2, 1, 3, 4, 3 }), 3));
+	L.set(7, 12);
+	L.set(1, 7);
+	ans.push_back(L.get(10));
+	ans.push_back(L.get(9));
+	ans.push_back(L.get(15));
+	ans.push_back(L.get(15));
+	ans.push_back(L.get(3));
+	L.set(15, 4);
+	ans.push_back(L.get(10));
+	ans.push_back(L.get(14));
+	ans.push_back(L.get(10));
+	ans.push_back(L.get(12));
+	ans.push_back(L.get(12));
+	L.set(14, 7);
+	ans.push_back(L.get(11));
+	L.set(9, 10);
+	L.set(6, 12);
+	L.set(14, 11);
+	ans.push_back(L.get(3));
+	L.set(7, 5);
+	L.set(1, 14);
+	L.set(2, 8);
+	L.set(11, 12);
+	L.set(8, 4);
+	ans.push_back(L.get(3));
+	L.set(13, 15);
+	L.set(1, 4);
+	L.set(5, 3);
+	ans.push_back(L.get(3));
+	ans.push_back(L.get(9)); 
+	ans.push_back(L.get(14));
+	ans.push_back(L.get(9));
+	L.set(13, 10);
+	ans.push_back(L.get(14));
+	L.set(3, 9);
+	ans.push_back(L.get(8));
+	L.set(3, 5);
+	L.set(6, 4);
+	L.set(10, 3);
+	L.set(11, 13);
+	ans.push_back(L.get(8));
+	ans.push_back(L.get(4));
+	L.set(2, 11);
+	ans.push_back(L.get(2));
+	ans.push_back(L.get(9));
+	L.set(15, 1);
+	ans.push_back(L.get(9));
+	L.set(7, 8);
+	L.set(4, 3);
+	ans.push_back(L.get(3));
+	ans.push_back(L.get(1));
+	L.set(8, 4);
+	ans.push_back(L.get(13));
+	L.set(1, 2);
+	ans.push_back(L.get(3));
+	EXPECT_EQ(vector<int>({ -1, -1, -1, -1, -1, -1, -1, -1, -1, 12, -1, -1, 4, 14, 12, 5, 12, 6, 11, -1, -1, 12, 6, -1, 6, 11, 11, 5, 12, 12, 12, 10, 11, 10, 11, 4, 4, -1, 11, 10, 10, 5, -1, -1, 5 }), ans);
 }
 
 int main(int argc, char** argv)
