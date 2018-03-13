@@ -1143,6 +1143,21 @@ TEST(IB, LRUCache)
 	EXPECT_EQ(vector<int>({ -1, -1, -1, -1, -1, -1, -1, -1, -1, 12, -1, -1, 4, 14, 12, 5, 12, 6, 11, -1, -1, 12, 6, -1, 6, 11, 11, 5, 12, 12, 12, 10, 11, 10, 11, 4, 4, -1, 11, 10, 10, 5, -1, -1, 5 }), ans);
 }
 
+/*
+struct TreeNode {
+	int val;
+	TreeNode *left;
+	TreeNode *right;
+	TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
+
+vector<int> InorderTraversal(TreeNode* A);
+TEST(IB, InorderTraversal)
+{
+	EXPECT_EQ(vector<int>({ 2, 3, 3, 2 }), InorderTraversal(vector<int>({ 1, 2, 1, 3, 4, 3 }), 3));
+}
+*/
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);

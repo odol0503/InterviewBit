@@ -534,6 +534,9 @@
     <ClCompile Include="level6\HeapsAndMaps\LRUCache.cpp">
       <Filter>level6\HeapsAndMaps</Filter>
     </ClCompile>
+    <ClCompile Include="level6\Trees\InorderTraversal.cpp">
+      <Filter>level6\Trees</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="level6\HeapsAndMaps\LRUCache.h">
