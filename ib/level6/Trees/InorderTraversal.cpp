@@ -11,7 +11,6 @@ Given binary tree
  /
 3
 return [1,3,2].
-
 Using recursion is not allowed.
 *************************************************************************************************/
 #include <vector>
