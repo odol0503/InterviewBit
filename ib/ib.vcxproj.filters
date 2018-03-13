@@ -540,6 +540,12 @@
     <ClCompile Include="level6\Trees\PostorderTraversal.cpp">
       <Filter>level6\Trees</Filter>
     </ClCompile>
+    <ClCompile Include="level6\Trees\BalancedBinaryTree.cpp">
+      <Filter>level6\Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="level6\Trees\PreorderTraversal.cpp">
+      <Filter>level6\Trees</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="level6\HeapsAndMaps\LRUCache.h">
