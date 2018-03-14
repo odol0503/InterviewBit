@@ -61,11 +61,6 @@ int IsBalanced(TreeNode* A) {
 	return 0;
 }
 #else
-bool isBalanced(TreeNode *root) {
-	if (root == NULL) return true;
-	return isBalancedWithDepth(root).second;
-	}
-
 pair<int, bool> isBalancedWithDepth(TreeNode *root) {
 	if (root == NULL) return make_pair(0, true);
 	pair<int, bool> left = isBalancedWithDepth(root->left);
@@ -75,5 +70,10 @@ pair<int, bool> isBalancedWithDepth(TreeNode *root) {
 	// and the depth difference is less than 1. 
 	bool isbalanced = right.second && left.second && (abs(right.first - left.first) < 2);
 	return make_pair(depth, isbalanced);
+}
+
+bool IsBalanced(TreeNode *root) {
+	if (root == NULL) return true;
+	return isBalancedWithDepth(root).second;
 }
 #endif

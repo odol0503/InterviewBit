@@ -179,6 +179,7 @@
     <ClCompile Include="level6\HeapsAndMaps\MergeKSortedLists.cpp" />
     <ClCompile Include="level6\HeapsAndMaps\NMaxPairCombinations.cpp" />
     <ClCompile Include="level6\Trees\BalancedBinaryTree.cpp" />
+    <ClCompile Include="level6\Trees\IdenticalBinaryTrees.cpp" />
     <ClCompile Include="level6\Trees\InorderTraversal.cpp" />
     <ClCompile Include="level6\Trees\PostorderTraversal.cpp" />
     <ClCompile Include="level6\Trees\PreorderTraversal.cpp" />
