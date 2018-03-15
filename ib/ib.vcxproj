@@ -184,6 +184,7 @@
     <ClCompile Include="level6\Trees\InorderTraversal.cpp" />
     <ClCompile Include="level6\Trees\PostorderTraversal.cpp" />
     <ClCompile Include="level6\Trees\PreorderTraversal.cpp" />
+    <ClCompile Include="level6\Trees\SymmetricBinaryTree.cpp" />
     <ClCompile Include="level6\Trees\VerticalOrderTraversalOfBinaryTree.cpp" />
   </ItemGroup>
   <ItemGroup>
