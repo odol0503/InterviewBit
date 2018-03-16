@@ -1160,7 +1160,7 @@ TEST(IB, InorderTraversal)
 vector<int> HotelReviews(string A, vector<string> &B);
 TEST(IB, HotelReviews)
 {
-	EXPECT_EQ(vector<int>({ 2, 0, 1 }), HotelReviews("qghu_eay_nl_dxfi_cvsc_gg_wk_nqdu_wf_fozv_rtk_pr_p_g_rp_rvys_mwcy_y_c_pev_kef_mz_imkk_svw_r_nzk_cxf_tl_gyp_fad_oo_fxz_co_juv_vabo_gpo_ylf_bnpl_vrvi_ya_yeh_q_qrqp_x_j_loov_o_u_wh_s_cb_coks_zkva_xdkn_yj_h_ixjs_nkk_f_ux_zr_bmnm_q_oke_ly_nk_aug_qrcd_iute_ojw_yyz_vs_m_sa_lfvg_b_aaov_zy_nt_kdcp_s_te_j_hdi_co_zc_fw_qi_tv_wvxh", vector<string>({ "water_is_cool", "cold_ice_drink", "cool_wifi_speed" })));
+	EXPECT_EQ(vector<int>({ 2, 0, 1 }), HotelReviews("cool_ice_wifi", vector<string>({ "water_is_cool", "cold_ice_drink", "cool_wifi_speed" })));
 }
 
 int main(int argc, char** argv)

@@ -46,6 +46,10 @@ using namespace std;
 #ifdef OWN
 static int comp(pair<int, int> A, pair<int, int> B)
 {
+	if (A.first == B.first)
+	{
+		return A.second < B.second;
+	}
 	return A.first > B.first;
 }
 
@@ -75,7 +79,7 @@ vector<int> HotelReviews(string A, vector<string> &B) {
 	unordered_map<string, int> Rates;
 	for (int i = 0; i<(int)GoodWords.size(); i++)
 	{
-		Rates[GoodWords[i]] = (int)GoodWords.size() - i;
+		Rates[GoodWords[i]] = 1; //(int)GoodWords.size()-i;
 	}
 
 	vector<pair<int, int>> sums;
@@ -98,5 +102,72 @@ vector<int> HotelReviews(string A, vector<string> &B) {
 	return ret;
 }
 #else
+#define F first
+#define S second
 
+
+bool cmp(const pair<int, int>& a, const pair<int, int>& b) {
+	if (a.F == b.F) return a.S < b.S;
+	return a.F > b.F;
+}
+
+//Trie node
+struct node {
+	bool exist;
+	node* arr[26];
+	node(bool bul = false) {
+		exist = bul;
+		for (int i = 0; i<26; i++)	arr[i] = NULL;
+	}
+};
+
+void add(string s, node* trie) {
+	//add a node to the trie
+	int n = s.size();
+	for (int i = 0; i<n; i++) {
+		if (trie->arr[s[i] - 'a'] == NULL)	trie->arr[s[i] - 'a'] = new node();
+		trie = trie->arr[s[i] - 'a'];
+	}
+	trie->exist = true;
+	return;
+}
+
+bool search(string s, node* trie) {
+	//search for a node in the trie
+	for (int i = 0; i<s.size(); i++) {
+		if (trie->arr[s[i] - 'a'] == NULL)	return false;
+		trie = trie->arr[s[i] - 'a'];
+	}
+	return trie->exist;
+}
+
+void convert(string &str) {
+	//Convert _ to spaces
+	for (int i = 0; i<str.size(); i++)	if (str[i] == '_')	str[i] = ' ';
+	return;
+}
+
+vector<int> HotelReviews(string good, vector<string>& review) {
+	convert(good);
+	node* trie = new node();
+	string word;
+	stringstream ss;
+	ss << good;
+	while (ss >> word)	add(word, trie);
+	int n = review.size();
+	int k;
+	vector<pair<int, int> > rating(n);
+	for (int i = 0; i<n; i++) {
+		convert(review[i]);
+		ss.clear();
+		ss << review[i];
+		k = 0;
+		while (ss >> word)	if (search(word, trie))	k++;
+		rating[i].first = k;	rating[i].second = i;
+	}
+	sort(rating.begin(), rating.end(), cmp);
+	vector<int> ans(n);
+	for (int i = 0; i<n; i++)	ans[i] = rating[i].second;
+	return ans;
+}
 #endif
