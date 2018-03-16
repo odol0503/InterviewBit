@@ -561,6 +561,9 @@
     <ClCompile Include="level6\Trees\SortedArrayToBalancedBST.cpp">
       <Filter>level6\Trees</Filter>
     </ClCompile>
+    <ClCompile Include="level6\Trees\BinaryTreeFromInorderAndPostorder.cpp">
+      <Filter>level6\Trees</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="level6\HeapsAndMaps\LRUCache.h">
