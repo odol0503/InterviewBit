@@ -182,6 +182,7 @@
     <ClCompile Include="level6\Trees\HotelReviews.cpp" />
     <ClCompile Include="level6\Trees\IdenticalBinaryTrees.cpp" />
     <ClCompile Include="level6\Trees\InorderTraversal.cpp" />
+    <ClCompile Include="level6\Trees\InorderTraversalOfCartesianTree.cpp" />
     <ClCompile Include="level6\Trees\PostorderTraversal.cpp" />
     <ClCompile Include="level6\Trees\PreorderTraversal.cpp" />
     <ClCompile Include="level6\Trees\SymmetricBinaryTree.cpp" />
