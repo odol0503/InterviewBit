@@ -180,6 +180,7 @@
     <ClCompile Include="level6\HeapsAndMaps\NMaxPairCombinations.cpp" />
     <ClCompile Include="level6\Trees\BalancedBinaryTree.cpp" />
     <ClCompile Include="level6\Trees\BinaryTreeFromInorderAndPostorder.cpp" />
+    <ClCompile Include="level6\Trees\ConstructBinaryTreeFromInorderAndPreorder.cpp" />
     <ClCompile Include="level6\Trees\HotelReviews.cpp" />
     <ClCompile Include="level6\Trees\IdenticalBinaryTrees.cpp" />
     <ClCompile Include="level6\Trees\InorderTraversal.cpp" />
