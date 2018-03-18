@@ -187,6 +187,7 @@
     <ClCompile Include="level6\Trees\IdenticalBinaryTrees.cpp" />
     <ClCompile Include="level6\Trees\InorderTraversal.cpp" />
     <ClCompile Include="level6\Trees\InorderTraversalOfCartesianTree.cpp" />
+    <ClCompile Include="level6\Trees\InvertTheBinaryTree.cpp" />
     <ClCompile Include="level6\Trees\KthSmallestElementInTree.cpp" />
     <ClCompile Include="level6\Trees\NextGreaterNumBST.cpp" />
     <ClCompile Include="level6\Trees\PostorderTraversal.cpp" />
