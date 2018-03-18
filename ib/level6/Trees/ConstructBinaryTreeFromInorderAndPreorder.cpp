@@ -62,7 +62,7 @@ static TreeNode* BuildTree(vector<int> &A, vector<int> &B)
 	return pNode;
 }
 
-TreeNode* BinaryTreeFromInorderAndPostorder(vector<int> &A, vector<int> &B) {
+TreeNode* ConstructBinaryTreeFromInorderAndPreorder(vector<int> &A, vector<int> &B) {
 	return BuildTree(A, B);
 }
 #else
@@ -83,7 +83,7 @@ TreeNode *buildTreeTmp(vector<int>::iterator prel, vector<int>::iterator prer,
 	return root;
 }
 
-TreeNode *BinaryTreeFromInorderAndPostorder(vector<int> &preorder, vector<int> &inorder) {
+TreeNode *ConstructBinaryTreeFromInorderAndPreorder(vector<int> &preorder, vector<int> &inorder) {
 	return preorder.size() == 0 ? NULL : buildTreeTmp(preorder.begin(), preorder.end(), inorder.begin(), inorder.end());
 }
 #endif

@@ -567,6 +567,21 @@
     <ClCompile Include="level6\Trees\ConstructBinaryTreeFromInorderAndPreorder.cpp">
       <Filter>level6\Trees</Filter>
     </ClCompile>
+    <ClCompile Include="level6\Trees\NextGreaterNumBST.cpp">
+      <Filter>level6\Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="level6\Trees\ValidBinarySearchTree.cpp">
+      <Filter>level6\Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="level6\Trees\KthSmallestElementInTree.cpp">
+      <Filter>level6\Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="level6\Trees\2SumBinaryTree.cpp">
+      <Filter>level6\Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="level6\Trees\BSTIterator.cpp">
+      <Filter>level6\Trees</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="level6\HeapsAndMaps\LRUCache.h">
