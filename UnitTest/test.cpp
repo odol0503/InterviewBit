@@ -1163,6 +1163,12 @@ TEST(IB, HotelReviews)
 	EXPECT_EQ(vector<int>({ 2, 0, 1 }), HotelReviews("cool_ice_wifi", vector<string>({ "water_is_cool", "cold_ice_drink", "cool_wifi_speed" })));
 }
 
+TreeNode* BinaryTreeFromInorderAndPostorder(vector<int> &A, vector<int> &B);
+TEST(IB, BinaryTreeFromInorderAndPostorder)
+{
+	EXPECT_EQ(nullptr, BinaryTreeFromInorderAndPostorder(vector<int>({ 1, 2, 3 }), vector<int>({ 2, 1, 3 })));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);

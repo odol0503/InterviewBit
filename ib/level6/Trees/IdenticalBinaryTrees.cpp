@@ -9,8 +9,8 @@ Return 0 / 1 ( 0 for false, 1 for true ) for this problem
 
 Example :
 Input :
-1       1
-/ \     / \
+  1       1
+ / \     / \
 2   3   2   3
 
 Output :
