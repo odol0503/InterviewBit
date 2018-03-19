@@ -197,6 +197,7 @@
     <ClCompile Include="level6\Trees\SymmetricBinaryTree.cpp" />
     <ClCompile Include="level6\Trees\ValidBinarySearchTree.cpp" />
     <ClCompile Include="level6\Trees\VerticalOrderTraversalOfBinaryTree.cpp" />
+    <ClCompile Include="level6\Trees\ZigZagLevelOrderTraversalBT.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="level6\HeapsAndMaps\LRUCache.h" />
