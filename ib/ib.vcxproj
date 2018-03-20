@@ -190,6 +190,7 @@
     <ClCompile Include="level6\Trees\InvertTheBinaryTree.cpp" />
     <ClCompile Include="level6\Trees\KthSmallestElementInTree.cpp" />
     <ClCompile Include="level6\Trees\MaxDepthOfBinaryTree.cpp" />
+    <ClCompile Include="level6\Trees\MinDepthOfBinaryTree.cpp" />
     <ClCompile Include="level6\Trees\NextGreaterNumBST.cpp" />
     <ClCompile Include="level6\Trees\PathSum.cpp" />
     <ClCompile Include="level6\Trees\PopulateNextRightPointersTree.cpp" />
