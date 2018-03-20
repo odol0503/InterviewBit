@@ -591,6 +591,9 @@
     <ClCompile Include="level6\Trees\ZigZagLevelOrderTraversalBT.cpp">
       <Filter>level6\Trees</Filter>
     </ClCompile>
+    <ClCompile Include="level6\Trees\PathSum.cpp">
+      <Filter>level6\Trees</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="level6\HeapsAndMaps\LRUCache.h">
