@@ -199,6 +199,7 @@
     <ClCompile Include="level6\Trees\RecoverBinarySearchTree.cpp" />
     <ClCompile Include="level6\Trees\RootToLeafPathsWithSum.cpp" />
     <ClCompile Include="level6\Trees\SortedArrayToBalancedBST.cpp" />
+    <ClCompile Include="level6\Trees\SumRootToLeafNumbers.cpp" />
     <ClCompile Include="level6\Trees\SymmetricBinaryTree.cpp" />
     <ClCompile Include="level6\Trees\ValidBinarySearchTree.cpp" />
     <ClCompile Include="level6\Trees\VerticalOrderTraversalOfBinaryTree.cpp" />
