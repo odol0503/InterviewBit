@@ -183,6 +183,7 @@
     <ClCompile Include="level6\Trees\BinaryTreeFromInorderAndPostorder.cpp" />
     <ClCompile Include="level6\Trees\BSTIterator.cpp" />
     <ClCompile Include="level6\Trees\ConstructBinaryTreeFromInorderAndPreorder.cpp" />
+    <ClCompile Include="level6\Trees\FlattenBinaryTreeToLinkedList.cpp" />
     <ClCompile Include="level6\Trees\HotelReviews.cpp" />
     <ClCompile Include="level6\Trees\IdenticalBinaryTrees.cpp" />
     <ClCompile Include="level6\Trees\InorderTraversal.cpp" />
