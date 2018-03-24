@@ -630,6 +630,9 @@
     <ClCompile Include="level7\DynamicProgramming\Stairs.cpp">
       <Filter>level7\DynamicProgramming</Filter>
     </ClCompile>
+    <ClCompile Include="level6\Trees\OrderOfPeopleHeights.cpp">
+      <Filter>level6\Trees</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="level6\HeapsAndMaps\LRUCache.h">
