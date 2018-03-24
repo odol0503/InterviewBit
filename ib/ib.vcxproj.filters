@@ -52,6 +52,15 @@
     <Filter Include="level6\Trees">
       <UniqueIdentifier>{8abe5f41-1b14-4323-9245-d3ef95cfd7c1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="level7">
+      <UniqueIdentifier>{a403d647-710d-4519-a14d-f0303c7550a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="level7\DynamicProgramming">
+      <UniqueIdentifier>{5e6b18a6-9220-48af-a4a0-fb9055250e68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="level7\Greedy">
+      <UniqueIdentifier>{2497964b-99f2-477c-b3d4-503e203772d0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="level2\Arrays\AntiDiagonals.cpp">
@@ -617,6 +626,9 @@
     </ClCompile>
     <ClCompile Include="level6\Trees\FlattenBinaryTreeToLinkedList.cpp">
       <Filter>level6\Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="level7\DynamicProgramming\Stairs.cpp">
+      <Filter>level7\DynamicProgramming</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
