@@ -209,6 +209,7 @@
     <ClCompile Include="level6\Trees\VerticalOrderTraversalOfBinaryTree.cpp" />
     <ClCompile Include="level6\Trees\ZigZagLevelOrderTraversalBT.cpp" />
     <ClCompile Include="level7\DynamicProgramming\Stairs.cpp" />
+    <ClCompile Include="level7\DynamicProgramming\WaysToDecode.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="level6\HeapsAndMaps\LRUCache.h" />
