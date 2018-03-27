@@ -21,21 +21,15 @@ using namespace std;
 #define OWN
 
 #ifdef OWN
-static bool IsValid(string A, int &ret)
+static bool IsValid(char A, char B, int &ret)
 {
-	int len = (int)A.size();
-
-	if (A[0] > '2' && A[1] == '0')
+	if (A > '2' && B == '0')
 	{
 		return false;
 	}
-	else if (A[0] <= '2' && A[0] != '0' && A[1] <= '6' && A[1] != '0')
+	else if (('1' <= A && A <= '2') && ('1' <= B && B <= '6'))
 	{
 		ret += 2;
-	}
-	else if (A[0] == '0')
-	{
-		return true;
 	}
 
 	return true;
@@ -48,10 +42,9 @@ int WaysToDecode(string A) {
 	if (len == 0 || A[0] == '0') return 0;
 	if (len == 1) return 1;
 
-	int i = 0;
-	for (; i<len - 1; i++)
+	for (int i = 0; i<len - 1; i++)
 	{
-		if (!IsValid({ A[i], A[i + 1] }, ret)) return 0;
+		if (!IsValid(A[i], A[i + 1], ret)) return 0;
 	}
 
 	if (ret == 0) ret++;

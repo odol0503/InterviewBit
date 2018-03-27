@@ -50,7 +50,7 @@ static TreeNode* Preorder(TreeNode *A, TreeNode *pPrev)
 	delete A;
 
 	TreeNode *pTemp = Preorder(left, pPrev->right);
-	Preorder(right, pTemp);
+	return Preorder(right, pTemp);
 }
 
 TreeNode* FlattenBinaryTreeToLinkedList(TreeNode* A) {

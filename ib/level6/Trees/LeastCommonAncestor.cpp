@@ -112,7 +112,7 @@ TreeNode *LCA(TreeNode *root, int val1, int val2) {
 	TreeNode *R = LCA(root->right, val1, val2);
 	if (L && R) return root; // If val1, val2 are on both sides 
 	return L ? L : R; // either one of val1, val2 is on one side OR val1, val2 is not in L&R subtrees
-		}
+}
 
 bool find(TreeNode *root, int val1) {
 	if (!root) return false;
