@@ -178,6 +178,7 @@
     <ClCompile Include="level6\HeapsAndMaps\MagicianAndChocolates.cpp" />
     <ClCompile Include="level6\HeapsAndMaps\MergeKSortedLists.cpp" />
     <ClCompile Include="level6\HeapsAndMaps\NMaxPairCombinations.cpp" />
+    <ClCompile Include="level6\HeapsAndMaps\WaysToFormMaxHeap.cpp" />
     <ClCompile Include="level6\Trees\2SumBinaryTree.cpp" />
     <ClCompile Include="level6\Trees\BalancedBinaryTree.cpp" />
     <ClCompile Include="level6\Trees\BinaryTreeFromInorderAndPostorder.cpp" />
