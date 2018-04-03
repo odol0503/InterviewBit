@@ -92,12 +92,12 @@ long long Fact(int A)
 
 long long Combination(int A, int B)
 {
-	return Fact(A) / ((Fact(A - B) * Fact(B)) % MOD);
+	return (Fact(A) * Pow(((Fact(A - B) * Fact(B)) % MOD), MOD-2, MOD)) % MOD;
 }
 
 int WaysToFormMaxHeap(int A) {
 	int h = 0;
-	if (A < 2) return 1;
+	if (A < 3) return 1;
 	int temp = A;
 	while (temp > 1)
 	{
@@ -105,7 +105,7 @@ int WaysToFormMaxHeap(int A) {
 		h++;
 	}
 
-	int m = pow(2, h);
+	int m = 1 << h;
 	int p = A - (m - 1);
 	int L = 0;
 
@@ -118,10 +118,7 @@ int WaysToFormMaxHeap(int A) {
 		L = m - 1;
 	}
 
-	long long recur = ((long long)WaysToFormMaxHeap(L)*WaysToFormMaxHeap(A - 1 - L)) % MOD;
-	long long denom = Pow((Fact(L) * Fact(A - 1 - L)) % MOD, MOD-2, MOD);
-
-	return (int)((((Fact(A - 1) * denom) % MOD) * recur) % MOD);
+	return (int)(Combination(A-1, L) * (((long long)WaysToFormMaxHeap(L)*WaysToFormMaxHeap(A - 1 - L)) % MOD)%MOD);
 }
 #else
 #define MAXN 105
