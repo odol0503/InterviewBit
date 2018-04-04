@@ -648,6 +648,9 @@
     <ClCompile Include="level6\Checkpoint\Inversions.cpp">
       <Filter>level6\Checkpoint</Filter>
     </ClCompile>
+    <ClCompile Include="level6\Checkpoint\NextPointerBinaryTree.cpp">
+      <Filter>level6\Checkpoint</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="level6\HeapsAndMaps\LRUCache.h">
