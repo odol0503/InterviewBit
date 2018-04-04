@@ -61,6 +61,9 @@
     <Filter Include="level7\Greedy">
       <UniqueIdentifier>{2497964b-99f2-477c-b3d4-503e203772d0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="level6\Checkpoint">
+      <UniqueIdentifier>{472659e8-c62d-4278-84ac-8daddd8a19ce}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="level2\Arrays\AntiDiagonals.cpp">
@@ -641,6 +644,9 @@
     </ClCompile>
     <ClCompile Include="level6\HeapsAndMaps\WaysToFormMaxHeap.cpp">
       <Filter>level6\HeapsAndMaps</Filter>
+    </ClCompile>
+    <ClCompile Include="level6\Checkpoint\Inversions.cpp">
+      <Filter>level6\Checkpoint</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
