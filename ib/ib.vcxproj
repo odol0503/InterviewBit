@@ -211,6 +211,7 @@
     <ClCompile Include="level6\Trees\ValidBinarySearchTree.cpp" />
     <ClCompile Include="level6\Trees\VerticalOrderTraversalOfBinaryTree.cpp" />
     <ClCompile Include="level6\Trees\ZigZagLevelOrderTraversalBT.cpp" />
+    <ClCompile Include="level7\DynamicProgramming\LargestAreaOfRectangleWithPermutations.cpp" />
     <ClCompile Include="level7\DynamicProgramming\LengthOfLongestSubsequence.cpp" />
     <ClCompile Include="level7\DynamicProgramming\Stairs.cpp" />
     <ClCompile Include="level7\DynamicProgramming\WaysToDecode.cpp" />

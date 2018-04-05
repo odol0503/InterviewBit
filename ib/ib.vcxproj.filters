@@ -651,6 +651,9 @@
     <ClCompile Include="level6\Checkpoint\NextPointerBinaryTree.cpp">
       <Filter>level6\Checkpoint</Filter>
     </ClCompile>
+    <ClCompile Include="level7\DynamicProgramming\LargestAreaOfRectangleWithPermutations.cpp">
+      <Filter>level7\DynamicProgramming</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="level6\HeapsAndMaps\LRUCache.h">

@@ -1194,6 +1194,12 @@ TEST(IB, Inversions)
 	EXPECT_EQ(290, Inversions(vector<int>({ 84, 2, 37, 3, 67, 82, 19, 97, 91, 63, 27, 6, 13, 90, 63, 89, 100, 60, 47, 96, 54, 26, 64, 50, 71, 16, 6, 40, 84, 93, 67, 85, 16, 22, 60 })));
 }
 
+int LargestAreaOfRectangleWithPermutations(vector<vector<int> > &A);
+TEST(IB, LargestAreaOfRectangleWithPermutations)
+{
+	EXPECT_EQ(9, LargestAreaOfRectangleWithPermutations(vector<vector<int>>({ { 0, 1, 0, 1, 0 }, { 0, 1, 1, 1, 1 }, { 1, 1, 1, 0, 1 }, { 1, 1, 1, 1, 1 } })));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);
