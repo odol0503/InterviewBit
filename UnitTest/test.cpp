@@ -1207,6 +1207,12 @@ TEST(IB, TusharsBirthdayBombs)
 	EXPECT_EQ(vector<int>({ 2, 4, 4 }), TusharsBirthdayBombs(14, vector<int>({ 8, 7, 6, 5, 4 })));
 }
 
+int LongestArithmeticProgression(const vector<int> &A);
+TEST(IB, LongestArithmeticProgression)
+{
+	EXPECT_EQ(13, LongestArithmeticProgression(vector<int>({ 761198, 209418925, 554828206, 1068091, 1374984, 825324995, 1681877, 1988770, 560652391, 777503245, 312360070, 168725557, 491218253, 66418591, 465069232, 2295663, 227714994, 829548434, 2602556, 7108071, 2909449, 150603757, 167370201, 290975441, 3216342, 3523235, 837787172, 3830128, 4137021, 4443914 })));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);

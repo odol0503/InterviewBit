@@ -657,6 +657,9 @@
     <ClCompile Include="level7\DynamicProgramming\TusharsBirthdayBombs.cpp">
       <Filter>level7\DynamicProgramming</Filter>
     </ClCompile>
+    <ClCompile Include="level7\DynamicProgramming\LongestArithmeticProgression.cpp">
+      <Filter>level7\DynamicProgramming</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="level6\HeapsAndMaps\LRUCache.h">

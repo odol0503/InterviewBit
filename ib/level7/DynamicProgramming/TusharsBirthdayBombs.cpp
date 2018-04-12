@@ -29,7 +29,7 @@ Here, [2,3], [2,2] or [3,3] also give the maximum no. kicks.
 #include <unordered_set>
 using namespace std;
 
-#define OWN
+#define OWN2
 
 #ifdef OWN
 void kick(int A, vector<pair<int, int>> &C, int pos, vector<int> &list, vector<int> &ret)
