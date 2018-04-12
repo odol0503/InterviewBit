@@ -36,17 +36,21 @@ int LongestArithmeticProgression(const vector<int> &A) {
 
 	for (int i = 0; i < len-2; i++)
 	{
-		int cnt = 2;
-		int j = i+1;
-		int diff = A[j] - A[i];
-		for (; j < len-1; j++)
+		for (int j = i + 1; j < len-1; j++)
 		{
+			int cnt = 2;
+			int diff = A[j] - A[i];
+			int temp = A[j];
 			for (int k = j + 1; k < len; k++)
 			{
-				if ((A[k]-A[j]) == diff) cnt++;
+				if ((A[k] - temp) == diff)
+				{
+					cnt++;
+					temp = A[k];
+				}
 			}
+			ret = max(ret, cnt);
 		}
-		ret = max(ret, cnt);
 	}
 
 	return ret;

@@ -32,17 +32,9 @@ Hence 2 will be the answer in this case.
 #include <unordered_set>
 using namespace std;
 
-#define OWN
+#define OWN5
 
 #ifdef OWN
-static void SwapCol(vector < vector<int>> &A, int x, int y)
-{
-	for (int i = 0; i < (int)A.size(); i++)
-	{
-		swap(A[i][x], A[i][y]);
-	}
-}
-
 static int CalRect(vector<vector<int>> &A)
 {
 	int row = (int)A.size();
@@ -67,22 +59,6 @@ static int CalRect(vector<vector<int>> &A)
 	return max_area;
 }
 
-static void Permute(vector<vector<int>> &A, int pos, int &max_area)
-{
-	int len = (int)A[0].size();
-	if (pos == len - 1)
-	{
-		max_area = max(max_area, CalRect(A));
-	}
-
-	for (int i = pos; i < len; i++)
-	{
-		SwapCol(A, pos, i);
-		Permute(A, pos + 1, max_area);
-		SwapCol(A, pos, i);
-	}
-}
-
 static void MakeForm(vector<vector<int>> &A)
 {
 	int row = (int)A.size();
@@ -97,12 +73,77 @@ static void MakeForm(vector<vector<int>> &A)
 	}
 }
 
+static void SortMat(vector<vector<int>> &A)
+{
+	for (int i = 0; i<(int)A.size(); i++)
+	{
+		sort(A[i].begin(), A[i].end());
+	}
+}
+
 int LargestAreaOfRectangleWithPermutations(vector<vector<int> > &A) {
 	int max_area = 0;
 	MakeForm(A);
-	Permute(A, 0, max_area);
-	return max_area;
+	SortMat(A);
+	return CalRect(A);
 }
 #else
+int LargestAreaOfRectangleWithPermutations(vector<vector<int> > &mat) {
+	int R = mat.size();
+	int C = mat[0].size();
+	vector<vector<int>> hist(R + 1, vector<int>(C + 1));
 
+	// Step 1: Fill the auxiliary array hist[][]
+	for (int i = 0; i<C; i++)
+	{
+		// First row in hist[][] is copy of first row in mat[][]
+		hist[0][i] = mat[0][i];
+
+		// Fill remaining rows of hist[][]
+		for (int j = 1; j<R; j++)
+			hist[j][i] = (mat[j][i] == 0) ? 0 : hist[j - 1][i] + 1;
+	}
+
+
+	// Step 2: Sort rows of hist[][] in non-increasing order
+	for (int i = 0; i<R; i++)
+	{
+		vector<int>count(R + 1, 0);
+
+		// counting occurrence
+		for (int j = 0; j<C; j++)
+			count[hist[i][j]]++;
+
+		//  Traverse the count array from right side
+		int col_no = 0;
+		for (int j = R; j >= 0; j--)
+		{
+			if (count[j] > 0)
+			{
+				for (int k = 0; k<count[j]; k++)
+				{
+					hist[i][col_no] = j;
+					col_no++;
+				}
+			}
+		}
+	}
+
+	// Step 3: Traverse the sorted hist[][] to find maximum area
+	int curr_area, max_area = 0;
+	for (int i = 0; i<R; i++)
+	{
+		for (int j = 0; j<C; j++)
+		{
+			// Since values are in decreasing order,
+			// The area ending with cell (i, j) can
+			// be obtained by multiplying column number
+			// with value of hist[i][j]
+			curr_area = (j + 1)*hist[i][j];
+			if (curr_area > max_area)
+				max_area = curr_area;
+		}
+	}
+	return max_area;
+}
 #endif
