@@ -216,6 +216,7 @@
     <ClCompile Include="level7\DynamicProgramming\LargestAreaOfRectangleWithPermutations.cpp" />
     <ClCompile Include="level7\DynamicProgramming\LengthOfLongestSubsequence.cpp" />
     <ClCompile Include="level7\DynamicProgramming\LongestArithmeticProgression.cpp" />
+    <ClCompile Include="level7\DynamicProgramming\NDigitNumWithSumS.cpp" />
     <ClCompile Include="level7\DynamicProgramming\Stairs.cpp" />
     <ClCompile Include="level7\DynamicProgramming\TusharsBirthdayBombs.cpp" />
     <ClCompile Include="level7\DynamicProgramming\WaysToDecode.cpp" />

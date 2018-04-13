@@ -32,7 +32,7 @@ Hence 2 will be the answer in this case.
 #include <unordered_set>
 using namespace std;
 
-#define OWN5
+#define OWN
 
 #ifdef OWN
 static int CalRect(vector<vector<int>> &A)
