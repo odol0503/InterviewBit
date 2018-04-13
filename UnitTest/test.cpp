@@ -1223,6 +1223,8 @@ TEST(IB, JumpGameArray)
 int digitNumWithSum(int A, int B);
 TEST(IB, digitNumWithSum)
 {
+	EXPECT_EQ(2, digitNumWithSum(2, 2));
+	EXPECT_EQ(10, digitNumWithSum(3, 4));
 	EXPECT_EQ(478432066, digitNumWithSum(75, 22));
 }
 
