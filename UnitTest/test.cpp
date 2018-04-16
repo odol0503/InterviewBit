@@ -47,6 +47,11 @@ int UniquePaths(int A, int B);
 void RearrangeArray(vector<int> &A);
 
 
+vector<int> AddOneToNumber(vector<int> &A);
+TEST(IB, AddOneToNumber) {
+	EXPECT_EQ(vector<int>({ 6, 0, 6, 4, 8, 8, 2 }), AddOneToNumber(vector<int>({ 0, 6, 0, 6, 4, 8, 8, 1 })));
+}
+
 int MinStepsInfiniteGrid(vector<int> &A, vector<int> &B);
 TEST(IB, MinStepsInfiniteGrid) {
 	EXPECT_EQ(2, MinStepsInfiniteGrid(vector<int>({ 0, 1, 1 }), vector<int>({ 0, 1, 2 })));
