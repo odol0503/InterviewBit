@@ -38,6 +38,7 @@
     <ClCompile Include="level2\Arrays\RotateMatrix.cpp" />
     <ClCompile Include="level2\Arrays\SetMatrixZeros.cpp" />
     <ClCompile Include="level2\Arrays\SpiralOrderMatrix.cpp" />
+    <ClCompile Include="level2\Arrays\SpiralOrderMatrix1.cpp" />
     <ClCompile Include="level2\Arrays\TripletsWithSumBetweenGivenRange.cpp" />
     <ClCompile Include="level2\Arrays\WaveArray.cpp" />
     <ClCompile Include="level2\Math\ExcelColumnNumber.cpp" />
