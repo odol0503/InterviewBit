@@ -672,6 +672,9 @@
     <ClCompile Include="level2\Arrays\SpiralOrderMatrix1.cpp">
       <Filter>level2\Arrays</Filter>
     </ClCompile>
+    <ClCompile Include="level2\Arrays\MinStepsInfiniteGrid.cpp">
+      <Filter>level2\Arrays</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="level6\HeapsAndMaps\LRUCache.h">

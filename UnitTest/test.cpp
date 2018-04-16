@@ -47,6 +47,11 @@ int UniquePaths(int A, int B);
 void RearrangeArray(vector<int> &A);
 
 
+int MinStepsInfiniteGrid(vector<int> &A, vector<int> &B);
+TEST(IB, MinStepsInfiniteGrid) {
+	EXPECT_EQ(2, MinStepsInfiniteGrid(vector<int>({ 0, 1, 1 }), vector<int>({ 0, 1, 2 })));
+}
+
 vector<int> SpiralOrderMatrix1(const vector<vector<int> > &A);
 TEST(IB, SpiralOrderMatrix1) {
 	EXPECT_EQ(vector<int>({ 1, 2, 3, 6, 9, 8, 7, 4, 5 }), SpiralOrderMatrix1(vector<vector<int>>({ { 1, 2, 3 }, { 4, 5, 6 }, {7, 8, 9 } })));

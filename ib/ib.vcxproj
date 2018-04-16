@@ -31,6 +31,7 @@
     <ClCompile Include="level2\Arrays\MaxUnsortedSubarray.cpp" />
     <ClCompile Include="level2\Arrays\MergeIntervals.cpp" />
     <ClCompile Include="level2\Arrays\MergeOverlappingIntervals.cpp" />
+    <ClCompile Include="level2\Arrays\MinStepsInfiniteGrid.cpp" />
     <ClCompile Include="level2\Arrays\N3RepeatNumber.cpp" />
     <ClCompile Include="level2\Arrays\NextPermutation.cpp" />
     <ClCompile Include="level2\Arrays\NobleInteger.cpp" />
