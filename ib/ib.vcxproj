@@ -29,6 +29,7 @@
     <ClCompile Include="level2\Arrays\LargestNumber.cpp" />
     <ClCompile Include="level2\Arrays\MaxConsecutiveGap.cpp" />
     <ClCompile Include="level2\Arrays\MaxDistance.cpp" />
+    <ClCompile Include="level2\Arrays\MaxSumContiguousSubarray.cpp" />
     <ClCompile Include="level2\Arrays\MaxUnsortedSubarray.cpp" />
     <ClCompile Include="level2\Arrays\MergeIntervals.cpp" />
     <ClCompile Include="level2\Arrays\MergeOverlappingIntervals.cpp" />
