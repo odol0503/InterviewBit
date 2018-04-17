@@ -24,6 +24,7 @@
     <ClCompile Include="level2\Arrays\FindDuplicate.cpp" />
     <ClCompile Include="level2\Arrays\FindPermutation.cpp" />
     <ClCompile Include="level2\Arrays\FirstMissingInteger.cpp" />
+    <ClCompile Include="level2\Arrays\Flip.cpp" />
     <ClCompile Include="level2\Arrays\HotelBookings.cpp" />
     <ClCompile Include="level2\Arrays\KthPascalTriangle.cpp" />
     <ClCompile Include="level2\Arrays\LargestNumber.cpp" />
