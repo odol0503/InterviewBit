@@ -46,10 +46,9 @@ int FindPermutationRank2(string A);
 int UniquePaths(int A, int B);
 void RearrangeArray(vector<int> &A);
 
-
-vector<int> AddOneToNumber(vector<int> &A);
-TEST(IB, AddOneToNumber) {
-	EXPECT_EQ(vector<int>({ 6, 0, 6, 4, 8, 8, 2 }), AddOneToNumber(vector<int>({ 0, 6, 0, 6, 4, 8, 8, 1 })));
+vector<int> SpiralOrderMatrix1(const vector<vector<int> > &A);
+TEST(IB, SpiralOrderMatrix1) {
+	EXPECT_EQ(vector<int>({ 1, 2, 3, 6, 9, 8, 7, 4, 5 }), SpiralOrderMatrix1(vector<vector<int>>({ { 1, 2, 3 }, { 4, 5, 6 }, {7, 8, 9 } })));
 }
 
 int MinStepsInfiniteGrid(vector<int> &A, vector<int> &B);
@@ -57,14 +56,19 @@ TEST(IB, MinStepsInfiniteGrid) {
 	EXPECT_EQ(2, MinStepsInfiniteGrid(vector<int>({ 0, 1, 1 }), vector<int>({ 0, 1, 2 })));
 }
 
-vector<int> SpiralOrderMatrix1(const vector<vector<int> > &A);
-TEST(IB, SpiralOrderMatrix1) {
-	EXPECT_EQ(vector<int>({ 1, 2, 3, 6, 9, 8, 7, 4, 5 }), SpiralOrderMatrix1(vector<vector<int>>({ { 1, 2, 3 }, { 4, 5, 6 }, {7, 8, 9 } })));
+vector<int> AddOneToNumber(vector<int> &A);
+TEST(IB, AddOneToNumber) {
+	EXPECT_EQ(vector<int>({ 6, 0, 6, 4, 8, 8, 2 }), AddOneToNumber(vector<int>({ 0, 6, 0, 6, 4, 8, 8, 1 })));
 }
 
 int MaxSumContiguousSubarray(const vector<int> &A);
 TEST(IB, MaxSumContiguousSubarray) {
 	EXPECT_EQ(6, MaxSumContiguousSubarray(vector<int>({ -2,1,-3,4,-1,2,1,-5,4 })));
+}
+
+int MaximumAbsoluteDifference(vector<int> &A);
+TEST(IB, MaximumAbsoluteDifference) {
+	EXPECT_EQ(5, MaximumAbsoluteDifference(vector<int>({ 1, 3, -1 })));
 }
 
 int FindDuplicate(vector<int> &A);
