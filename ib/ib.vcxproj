@@ -39,6 +39,7 @@
     <ClCompile Include="level2\Arrays\NextPermutation.cpp" />
     <ClCompile Include="level2\Arrays\NobleInteger.cpp" />
     <ClCompile Include="level2\Arrays\PascalTriangle.cpp" />
+    <ClCompile Include="level2\Arrays\RepeatAndMissingNumberArray.cpp" />
     <ClCompile Include="level2\Arrays\RotateMatrix.cpp" />
     <ClCompile Include="level2\Arrays\SetMatrixZeros.cpp" />
     <ClCompile Include="level2\Arrays\SpiralOrderMatrix.cpp" />
