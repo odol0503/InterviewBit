@@ -1268,6 +1268,12 @@ TEST(IB, digitNumWithSum)
 	EXPECT_EQ(478432066, digitNumWithSum(75, 22));
 }
 
+int WaysToColorA3xNBoard(int A);
+TEST(IB, WaysToColorA3xNBoard) {
+	EXPECT_EQ(9612, WaysToColorA3xNBoard(4));
+	EXPECT_EQ(582449702, WaysToColorA3xNBoard(38));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleTest(&argc, argv);

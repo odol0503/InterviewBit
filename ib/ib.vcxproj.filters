@@ -693,6 +693,9 @@
     <ClCompile Include="level2\Arrays\MaxNonNegativeSubArray.cpp">
       <Filter>level2\Arrays</Filter>
     </ClCompile>
+    <ClCompile Include="level7\DynamicProgramming\WaysToColorA3xNBoard.cpp">
+      <Filter>level7\DynamicProgramming</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="level6\HeapsAndMaps\LRUCache.h">
