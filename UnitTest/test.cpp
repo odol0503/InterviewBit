@@ -1270,8 +1270,17 @@ TEST(IB, digitNumWithSum)
 
 int WaysToColorA3xNBoard(int A);
 TEST(IB, WaysToColorA3xNBoard) {
-	EXPECT_EQ(9612, WaysToColorA3xNBoard(4));
+	EXPECT_EQ(157140, WaysToColorA3xNBoard(4));
 	EXPECT_EQ(582449702, WaysToColorA3xNBoard(38));
+}
+
+int ShortestCommonSuperstring(vector<string> &A);
+TEST(IB, ShortestCommonSuperstring) {
+	EXPECT_EQ(108, ShortestCommonSuperstring(vector<string>({ "nejqokaplfbrqe", "cjqpuidbwnbaml", "naiwqahtpubspt", "jvidmdlrhjhkjt", "pjvyhpbqlsm", "lcgkneuqsydk", "mruvnqlapmjhp", "sioft", "nehtaxnb", "xlpsgn" })));
+	EXPECT_EQ(72, ShortestCommonSuperstring(vector<string>({ "bwpiqhiym", "yalcyea", "vxggfitknygyv", "xnspubqjppjbrl", "ugesmmxwjjlk", "mgbnwvf", "yveolprfdcajiu" })));
+	EXPECT_EQ(4, ShortestCommonSuperstring(vector<string>({ "abc", "bcd" })));
+	EXPECT_EQ(4, ShortestCommonSuperstring(vector<string>({ "bcd", "ab", "cd" })));
+	EXPECT_EQ(8, ShortestCommonSuperstring(vector<string>({ "abcd", "cdef", "fgh", "de" })));
 }
 
 int main(int argc, char** argv)
