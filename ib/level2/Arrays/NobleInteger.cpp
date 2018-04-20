@@ -9,23 +9,31 @@ If such an integer is found return 1 else return -1.
 #include <algorithm>
 using namespace std;
 
+#define OWN
+
+#ifdef OWN
 int NobleInteger(vector<int> &A)
 {
-	vector<int> ans(A);
-	size_t len = ans.size();
+	sort(A.begin(), A.end());
 
-	sort(ans.begin(), ans.end());
-
-	for (size_t i = 0; i < len; i++)
+	for (int i = (int)A.size() - 1; i >= 0; i--)
 	{
-		if (ans[i] >= 0)
-		{
-			if ((i < len - 1 && ans[i] != ans[i + 1]) || i == len - 1)
-			{
-				if (ans[i] == len - (i + 1)) return 1;
-			}
-		}
+		int num = A.end() - upper_bound(A.begin(), A.end(), A[i]);
+		if (A[i] == (int)num) return 1;
 	}
 
 	return -1;
 }
+#else
+int NobleInteger(vector<int> &A) {
+	sort(A.begin(), A.end());
+	int size = A.size();
+	for (int i = 0; i<size; i++) {
+		while (i + 1<size && A[i] == A[i + 1])
+			i++;
+		if (A[i] == size - 1 - i)
+			return 1;
+	}
+	return -1;
+}
+#endif
