@@ -13,34 +13,51 @@ Note : The result may be very large, so you need to return a string instead of a
 #include <algorithm>
 using namespace std;
 
-int compare(string a, string b)
+#define OWN
+
+#ifdef OWN
+int comp(string a, string b)
 {
 	return a + b > b + a;
 }
 
 string LargestNumber(const vector<int> &A)
 {
+	int num = (int)A.size();
 	vector<string> str;
-	size_t len = A.size();
-
-	for (size_t i = 0; i < len; i++)
-	{
-		str.push_back(to_string(A[i]));
-	}
-
-	sort(str.begin(), str.end(), compare);
-
 	string ret;
-	for (size_t i = 0; i < len; i++)
+
+	for (int i = 0; i<num; i++)
 	{
-		ret += str[i];
+		if (A[i]) str.push_back(to_string(A[i]));
 	}
 
-	while (ret.size() > 1)
-	{
-		if (ret[0] == '0') ret.erase(ret.begin());
-		else break;
-	}
+	if (str.size() == 0) return "0";
+
+	sort(str.begin(), str.end(), comp);
+
+	for (auto s : str) ret += s;
 
 	return ret;
 }
+#else
+static bool compareNum(string a, string b) {
+	return a + b > b + a;
+}
+
+string LargestNumber(const vector<int> &num) {
+	string result;
+	vector<string> str;
+	for (int i = 0; i < num.size(); i++) {
+		str.push_back(to_string(num[i]));
+	}
+	sort(str.begin(), str.end(), compareNum);
+	for (int i = 0; i < str.size(); i++) {
+		result += str[i];
+	}
+
+	int pos = 0;
+	while (result[pos] == '0' && pos + 1 < result.size()) pos++;
+	return result.substr(pos);
+}
+#endif

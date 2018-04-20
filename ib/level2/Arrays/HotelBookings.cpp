@@ -32,31 +32,56 @@ At day = 5, there are 2 guests in the hotel. But I have only one room.
 #include <cassert>
 using namespace std;
 
+#define OWN
+
+#ifdef OWN
 bool HotelBooking(vector<int> &arrive, vector<int> &depart, int K)
 {
-	assert(arrive.size() == depart.size());
-
-	if (K == 0) return 0;
-
-	size_t len = arrive.size();
-	vector<pair<int, int>> it;
-	for (size_t i = 0; i < len; i++)
+	vector<pair<int, int>> A;
+	for (int i = 0; i<(int)arrive.size(); i++)
 	{
-		it.push_back(make_pair(arrive[i], 1));
-		it.push_back(make_pair(depart[i], 0));
+		A.push_back({ arrive[i], 1 });
+		A.push_back({ depart[i], -1 });
 	}
+	sort(A.begin(), A.end());
 
-	sort(it.begin(), it.end());
-
-	len *= 2;
-	int cnt = 0;
-	for (size_t i = 0; i < len; i++)
+	int sum = 0;
+	for (auto a : A)
 	{
-		if (it[i].second == 1) cnt++;
-		else cnt--;
-
-		if (cnt > K) return 0;
+		sum += a.second;
+		if (sum > K) return false;
 	}
-
-	return 1;
+	return true;
 }
+#else
+bool HotelBooking(vector<int> &arrive, vector<int> &depart, int K) {
+
+	if (K == 0)
+		return false;
+
+	int N = arrive.size();
+
+	vector<pair<int, int> > vec;
+	for (int i = 0; i < N; ++i) {
+		vec.push_back(make_pair(arrive[i], 1));
+		vec.push_back(make_pair(depart[i], 0));
+	}
+
+	sort(vec.begin(), vec.end());
+
+	int curActive = 0;
+	int maxAns = 0;
+	for (int i = 0; i < vec.size(); i++) {
+		if (vec[i].second == 1) { // arrival
+			curActive++;
+			maxAns = max(maxAns, curActive);
+		}
+		else {
+			curActive--;
+		}
+	}
+
+	if (K >= maxAns) return true;
+	return false;
+}
+#endif

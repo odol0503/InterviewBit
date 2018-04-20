@@ -15,19 +15,27 @@ So, in example case, you will return [2, 1, 4, 3]
 #include <algorithm>
 using namespace std;
 
+#define OWN
+
+#ifdef OWN
 vector<int> WaveArray(vector<int> &A) 
 {
-	size_t len = A.size();
-	vector<int> ans(A);
-
-	sort(ans.begin(), ans.end());
-
-	for (size_t i = 0; i < len - 1; i+=2)
+	sort(A.begin(), A.end());
+	int len = (int)A.size();
+	for (int i = 0; i<(len&(~0x01)); i += 2)
 	{
-		int temp = ans[i + 1];
-		ans[i + 1] = ans[i];
-		ans[i] = temp;
+		swap(A[i], A[i + 1]);
 	}
 
-	return ans;
+	return A;
 }
+#else
+vector<int> WaveArray(vector<int> Vec) {
+	sort(Vec.begin(), Vec.end());
+	int N = Vec.size();
+	for (int i = 0; i < N - 1; i += 2) {
+		swap(Vec[i], Vec[i + 1]);
+	}
+	return Vec;
+}
+#endif
