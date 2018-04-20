@@ -21,14 +21,26 @@ using namespace std;
 #define OWN
 
 #ifdef OWN
-static int getLen(vector<string> &A, vector<int> idx)
+static int getLen(vector<string> &A, vector<int> idx, vector<string> &dp)
 {
 	int num = (int)A.size();
-	string str = A[idx[0]];
+	int mask = 1 << idx[0];
+	string str;
+	
+	if (dp[mask].empty()) str = A[idx[0]];
+	else str = dp[mask];
 
 	for (int n=1; n<(int)idx.size(); n++)
 	{
 		int i = idx[n];
+		mask |= 1 << idx[n];
+
+		if (!dp[mask].empty())
+		{
+			str = dp[mask];
+			continue;
+		}
+
 		int len1 = (int)str.size();
 
 		for (int j = 0; j<len1; j++)
@@ -36,10 +48,15 @@ static int getLen(vector<string> &A, vector<int> idx)
 			if (str.compare(j, string::npos, A[i], 0, len1 - j) == 0)
 			{
 				str += A[i].substr(len1-j);
+				dp[mask] = str;
 				break;
 			}
 
-			if (j == len1 - 1) str += A[i];
+			if (j == len1 - 1)
+			{
+				str += A[i];
+				dp[mask] = str;
+			}
 		}
 	}
 
@@ -73,13 +90,14 @@ int ShortestCommonSuperstring(vector<string> &A) {
 	if (num == 0) return 0;
 	if (num == 1) return (int)A[0].size();
 
+	vector<string> dp((int)pow(2, A.size()));
 	vector<int> idx(num);
 	iota(idx.begin(), idx.end(), 0);
 
 	int min_len = INT_MAX;
 	do
 	{
-		min_len = min(min_len, getLen(A, idx));
+		min_len = min(min_len, getLen(A, idx, dp));
 	} while (nextPermute(idx));
 
 	return min_len;

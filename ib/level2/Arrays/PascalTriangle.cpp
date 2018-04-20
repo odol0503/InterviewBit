@@ -24,21 +24,52 @@ Return
 
 using namespace std;
 
+#define OWN
+
+#ifdef OWN
+static int combination(int n, int k)
+{
+	if (n == 0 || k == 0 || n == k)
+	{
+		return 1;
+	}
+
+	int ans = combination(n - 1, k) + combination(n - 1, k - 1);
+	return ans;
+}
+
 vector<vector<int>> PascalTriangle(int A)
 {
-	vector<vector<int>> ans(A);
-	for (int i = 1; i <= A; i++) ans[i-1].assign(i, 1);
+	vector<vector<int>> ret(A);
 
-	if (A > 2)
+	for (int i = 0; i < A; i++)
 	{
-		for (int i = 2; i < A; i++)
+		for (int j = 0; j <= i; j++)
 		{
-			for (int j = 1; j < i; j++)
-			{
-				ans[i][j] = ans[i - 1][j - 1] + ans[i - 1][j];
-			}
+			ret[i].push_back(combination(i, j));
 		}
 	}
 
+	return ret;
+}
+#else
+vector<vector<int> > PascalTriangle(int numRows) {
+	vector<vector<int> > ans;
+	if (numRows <= 0) {
+		return ans;
+	}
+	vector<int> tmp;
+	tmp.push_back(1);
+	ans.push_back(tmp);
+	for (int i = 0; i < numRows - 1; i++) {
+		vector<int> newRow;
+		newRow.push_back(1);
+		for (int j = 0; j < ans[i].size() - 1; j++) {
+			newRow.push_back(ans[i][j] + ans[i][j + 1]);
+		}
+		newRow.push_back(1);
+		ans.push_back(newRow);
+	}
 	return ans;
 }
+#endif

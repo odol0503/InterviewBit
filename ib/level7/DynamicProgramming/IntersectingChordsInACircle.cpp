@@ -58,9 +58,9 @@ long long pow2(long long A, long long radix, long long mod)
 }
 
 int IntersectingChordsInACircle(int A) {
-	long long denom = (fact(A) * fact(A + 1)) % MOD;
-	long long numer = fact(2 * A) % MOD;
-	int ans = (int)((numer * pow2(denom, MOD - 2, MOD)) % MOD);
+	long long den = (fact(A) * fact(A + 1)) % MOD;
+	long long num = fact(2 * A) % MOD;
+	int ans = (int)((num * pow2(den, MOD - 2, MOD)) % MOD);
 	return (int)ans;
 }
 #else
