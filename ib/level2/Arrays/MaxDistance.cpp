@@ -15,26 +15,50 @@ for the pair (3, 4)
 #include <cmath>
 using namespace std;
 
+#define OWN
+
+#ifdef OWN
 int MaxDistance(const vector<int> &A)
 {
-	int len = static_cast<int>(A.size());
-	vector<pair<int, int>> it(len);
-	for (int i = 0; i < len; i++)
+	int ret = 0;
+	vector<pair<int, int>> B;
+
+	for (int i = 0; i<(int)A.size(); i++)
 	{
-		it[i] = make_pair(A[i], i);
+		B.push_back({ A[i], i });
+	}
+	sort(B.begin(), B.end());
+
+	int max_idx = B[B.size() - 1].second;
+	for (int i = (int)B.size() - 2; i >= 0; i--)
+	{
+		int diff = max_idx - B[i].second;
+		if (diff < 0)
+		{
+			max_idx = B[i].second;
+			continue;
+		}
+		ret = max(ret, diff);
 	}
 
-	sort(it.begin(), it.end());
-
-	int max_idx = it[len - 1].second;
-	int max_diff = 0;
-	int diff = 0;
-	for (int i = len - 2; i >= 0; i--)
-	{
-		diff = max_idx - it[i].second;
-		max_diff = max(max_diff, diff);
-		max_idx = max(max_idx, it[i].second);
-	}
-
-	return max_diff;
+	return ret;
 }
+#else
+int MaxDistance(const vector<int> &num) {
+	if (num.size() == 0) return -1;
+	if (num.size() == 1) return 0;
+	vector<pair<int, int> > toSort;
+	for (int i = 0; i < num.size(); i++) {
+		toSort.push_back(make_pair(num[i], i));
+	}
+	sort(toSort.begin(), toSort.end());
+	int len = toSort.size();
+	int maxIndex = toSort[len - 1].second;
+	int ans = 0;
+	for (int i = len - 2; i >= 0; i--) {
+		ans = max(ans, maxIndex - toSort[i].second);
+		maxIndex = max(maxIndex, toSort[i].second);
+	}
+	return ans;
+}
+#endif
