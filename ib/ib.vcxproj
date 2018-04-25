@@ -48,6 +48,8 @@
     <ClCompile Include="level2\Arrays\SpiralOrderMatrix1.cpp" />
     <ClCompile Include="level2\Arrays\TripletsWithSumBetweenGivenRange.cpp" />
     <ClCompile Include="level2\Arrays\WaveArray.cpp" />
+    <ClCompile Include="level2\Math\AllFactors.cpp" />
+    <ClCompile Include="level2\Math\BinaryRepresentation.cpp" />
     <ClCompile Include="level2\Math\ExcelColumnNumber.cpp" />
     <ClCompile Include="level2\Math\ExcelColumnTitle.cpp" />
     <ClCompile Include="level2\Math\FizzBuzz.cpp" />
@@ -58,12 +60,14 @@
     <ClCompile Include="level2\Math\NumbersOfLengthN.cpp" />
     <ClCompile Include="level2\Math\PalindromeInteger.cpp" />
     <ClCompile Include="level2\Math\PowerOfTwoIntegers.cpp" />
+    <ClCompile Include="level2\Math\PrimeNumbers.cpp" />
     <ClCompile Include="level2\Math\PrimeSum.cpp" />
     <ClCompile Include="level2\Math\RearrangeArray.cpp" />
     <ClCompile Include="level2\Math\ReverseInteger.cpp" />
     <ClCompile Include="level2\Math\SortedPermutationRank.cpp" />
     <ClCompile Include="level2\Math\SortedPermutationRank2.cpp" />
     <ClCompile Include="level2\Math\TrailingZeros.cpp" />
+    <ClCompile Include="level2\Math\VerifyPrime.cpp" />
     <ClCompile Include="level2\PrettyPrint.cpp" />
     <ClCompile Include="level3\BinarySearch\AllocateBooks.cpp" />
     <ClCompile Include="level3\BinarySearch\CountElementOccurence.cpp" />

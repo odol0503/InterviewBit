@@ -15,7 +15,7 @@ If there is no duplicate, output -1
 #include <cmath>
 using namespace std;
 
-#define OWN
+#define OWN2
 
 #ifdef OWN
 int FindDuplicate(vector<int> &A)
@@ -51,6 +51,21 @@ int FindDuplicate(vector<int> &A)
 				}
 			}
 		}
+	}
+
+	return -1;
+}
+#elif defined(OWN2)
+int FindDuplicate(vector<int> &A) {
+	int len = (int)A.size();
+	int *arr = (int*)A.data();
+
+	for (int i = 0; i < len; i++)
+	{
+		if (arr[abs(arr[i])] >= 0)
+			arr[abs(arr[i])] = -arr[abs(arr[i])];
+		else
+			return abs(arr[i]);
 	}
 
 	return -1;
