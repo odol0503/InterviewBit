@@ -32,20 +32,20 @@ struct TreeNode {
 #ifdef OWN
 vector<int> InorderTraversal(TreeNode* A) {
 	vector<int> ret;
-	stack<TreeNode*> pPrev;
+	stack<TreeNode*> st;
 
-	while (A || pPrev.size())
+	while (A || st.size())
 	{
 		if (A)
 		{
-			pPrev.push(A);
+			st.push(A);
 			A = A->left;
 		}
 		else
 		{
-			A = pPrev.top();
+			A = st.top();
+			st.pop();
 			ret.push_back(A->val);
-			pPrev.pop();
 			A = A->right;
 		}
 	}

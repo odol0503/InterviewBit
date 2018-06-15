@@ -33,25 +33,13 @@ struct TreeNode {
 };
 
 #ifdef OWN
-void Preorder(TreeNode *A, vector<int> &values)
-{
-	if (A == nullptr) return;
-	values.push_back(A->val);
-	Preorder(A->left, values);
-	Preorder(A->right, values);
-}
+int isSameTree(TreeNode* A, TreeNode* B) {
+	if (!A && !B) return 1;
+	if (!A || !B) return 0;
 
-int IsSameTree(TreeNode* A, TreeNode* B) {
-	vector<int> v1;
-	vector<int> v2;
+	if (A->val != B->val) return 0;
 
-	Preorder(A, v1);
-	Preorder(B, v2);
-
-	sort(v1.begin(), v1.end());
-	sort(v2.begin(), v2.end());
-
-	return v1 == v2;
+	return (isSameTree(A->left, B->left) && isSameTree(A->right, B->right));
 }
 #else
 bool IsSameTree(TreeNode *p, TreeNode *q) {

@@ -38,8 +38,8 @@ int MinStepsInfiniteGrid(vector<int> &A, vector<int> &B) {
 
 	for (int i = 1; i < len; i++)
 	{
-		int tempA = abs(A[i] - A[i-1]);
-		int tempB = abs(B[i] - B[i-1]);
+		int tempA = abs(A[i] - A[i - 1]);
+		int tempB = abs(B[i] - B[i - 1]);
 		ret += max(tempA, tempB);
 	}
 

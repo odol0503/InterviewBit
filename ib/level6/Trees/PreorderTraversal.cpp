@@ -33,25 +33,25 @@ struct TreeNode {
 
 #ifdef OWN
 vector<int> PreorderTraversal(TreeNode* A) {
-	stack<TreeNode*> st;
 	vector<int> ret;
+	stack<TreeNode*> st;
+	TreeNode *cur = A;
 
-	while (A || !st.empty())
+	while (cur || st.size())
 	{
-		if (A)
+		if (cur)
 		{
-			ret.push_back(A->val);
-			st.push(A);
-			A = A->left;
+			ret.push_back(cur->val);
+			st.push(cur);
+			cur = cur->left;
 		}
 		else
 		{
-			A = st.top();
+			cur = st.top();
 			st.pop();
-			A = A->right;
+			cur = cur->right;
 		}
 	}
-
 	return ret;
 }
 #else

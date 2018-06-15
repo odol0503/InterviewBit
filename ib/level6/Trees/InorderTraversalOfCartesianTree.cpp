@@ -33,39 +33,18 @@ struct TreeNode {
 };
 
 #ifdef OWN
-void MakeTree(vector<int> A, int left, int right, TreeNode *ret)
-{
-	int max_idx = -1;
-	int max_value = INT_MIN;
-	for (int i = left; i <= right; i++)
-	{
-		if (A[i] > max_value)
-		{
-			max_idx = i;
-			max_value = A[i];
-		}
-	}
-
-	ret->val = max_value;
-
-	if (max_idx > left)
-	{
-		ret->left = new TreeNode(0);
-		MakeTree(A, left, max_idx - 1, ret->left);
-	}
-
-	if (max_idx < right)
-	{
-		ret->right = new TreeNode(0);
-		MakeTree(A, max_idx + 1, right, ret->right);
-	}
-}
-
 TreeNode* InorderTraversalOfCartesianTree(vector<int> &A) {
-	TreeNode *ret = new TreeNode(0);
-	int len = (int)A.size();
-	MakeTree(A, 0, len - 1, ret);
-	return ret;
+	if (A.empty()) return nullptr;
+
+	auto it = max_element(A.begin(), A.end());
+	TreeNode *node = new TreeNode(*it);
+
+	vector<int> B(A.begin(), it);
+	vector<int> C(it + 1, A.end());
+	node->left = InorderTraversalOfCartesianTree(B);
+	node->right = InorderTraversalOfCartesianTree(C);
+
+	return node;
 }
 #else
 TreeNode *buildTree(vector<int> &inorder, int start, int end) {

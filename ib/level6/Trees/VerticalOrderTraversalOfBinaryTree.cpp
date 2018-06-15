@@ -38,59 +38,36 @@ struct TreeNode {
 };
 
 #ifdef OWN
-static void GetMinMax(TreeNode *A, int x, int &min_x, int &max_x)
-{
-	if (A->left)
-	{
-		if (x == min_x) min_x--;
-		GetMinMax(A->left, x - 1, min_x, max_x);
-	}
-
-	if (A->right)
-	{
-		if (x == max_x) max_x++;
-		GetMinMax(A->right, x + 1, min_x, max_x);
-	}
-}
-
-void GetVertical(TreeNode *A, int x, int y, vector<vector<pair<int, int>>> &result)
-{
-	if (A == nullptr) return;
-
-	y++;
-	if (A->left) GetVertical(A->left, x - 1, y, result);
-	if (A->right) GetVertical(A->right, x + 1, y, result);
-
-	result[x].push_back(make_pair(y, A->val));
-}
-
-static int TreeComp(pair<int,int> a, pair<int,int> b)
-{
-	return a.first < b.first;
-}
-
 vector<vector<int> > VerticalOrderTraversal(TreeNode* A) 
 {
-	if (A == nullptr) return vector<vector<int>>();
+	vector<vector<int>> ret;
+	map<int, vector<int>> M;
+	queue<pair<TreeNode*, int>> Q;
+	queue<pair<TreeNode*, int>> Q2;
 
-	int min_x = 0;
-	int max_x = 0;
-	int x = 0;
-	int y = 0;
+	if (!A) return ret;
 
-	GetMinMax(A, x, min_x, max_x);
+	Q.push({ A, 0 });
 
-	int len = 1 + max_x - min_x;
-	vector<vector<int>> ret(len);
-	vector<vector<pair<int, int>>> result(len);
-	
-	x = -min_x;
-	GetVertical(A, x, y, result);
-
-	for (int i = 0; i < result.size(); i++)
+	while (Q.size())
 	{
-		sort(result[i].begin(), result[i].end(), TreeComp);
-		for (auto v : result[i]) ret[i].push_back(v.second);
+		pair<TreeNode*, int> temp = Q.front();
+		Q.pop();
+
+		M[temp.second].push_back(temp.first->val);
+
+		if (temp.first->left) Q2.push({ temp.first->left, temp.second - 1 });
+		if (temp.first->right) Q2.push({ temp.first->right, temp.second + 1 });
+
+		if (Q.empty())
+		{
+			swap(Q, Q2);
+		}
+	}
+
+	for (auto it = M.begin(); it != M.end(); it++)
+	{
+		ret.push_back(it->second);
 	}
 
 	return ret;

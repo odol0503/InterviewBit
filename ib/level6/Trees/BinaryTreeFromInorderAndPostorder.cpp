@@ -31,35 +31,32 @@ struct TreeNode {
 };
 
 #ifdef OWN
-static TreeNode* MakeTree(vector<int> &A, vector<int> &B)
+static TreeNode *makeTree(vector<int> &A, vector<int> &B, int start, int end)
 {
-	int len = (int)A.size();
-	int i = 0;
-	for (; i<len; i++)
+	if (B.empty()) return nullptr;
+
+	if (start <= end)
 	{
-		if (A[i] == B[len - 1]) break;
+		int val = B.back();
+		B.pop_back();
+
+		int i = start;
+		for (; i <= end; i++)
+		{
+			if (A[i] == val) break;
+		}
+
+		TreeNode *node = new TreeNode(A[i]);
+		node->right = makeTree(A, B, i + 1, end);
+		node->left = makeTree(A, B, start, i - 1);
+		return node;
 	}
 
-	TreeNode *pNode = new TreeNode(A[i]);
-
-	if (i>0)
-	{
-		vector<int> C(A.begin(), A.begin() + i);
-		vector<int> D(B.begin(), B.begin() + i);
-		pNode->left = MakeTree(C, D);
-	}
-	if (i<len - 1)
-	{
-		vector<int> C(A.begin() + i + 1, A.end());
-		vector<int> D(B.begin() + i, B.end());
-		pNode->right = MakeTree(C, D);
-	}
-
-	return pNode;
+	return nullptr;
 }
 
 TreeNode* BinaryTreeFromInorderAndPostorder(vector<int> &A, vector<int> &B) {
-	return MakeTree(A, B);
+	return makeTree(A, B, 0, (int)A.size() - 1);
 }
 #else
 TreeNode *BinaryTreeFromInorderAndPostorder(vector<int> &inorder, vector<int> &postorder) {

@@ -33,28 +33,19 @@ struct TreeNode {
 };
 
 #ifdef OWN
-static void Preorder(TreeNode *A, vector<int> &B)
+static int isValid(TreeNode *A, TreeNode *B)
 {
-	if (A == nullptr) return;
-	B.push_back(A->val);
-	Preorder(A->left, B);
-	Preorder(A->right, B);
-}
+	if (!A && !B) return 1;
+	if (!A || !B) return 0;
 
-static void RevPreorder(TreeNode *A, vector<int> &B)
-{
-	if (A == nullptr) return;
-	B.push_back(A->val);
-	RevPreorder(A->right, B);
-	RevPreorder(A->left, B);
+	if (A->val != B->val) return 0;
+
+	return isValid(A->left, B->right) && isValid(A->right, B->left);
 }
 
 int IsSymmetric(TreeNode* A) {
-	vector<int> L, R;
-	Preorder(A, L);
-	RevPreorder(A, R);
-
-	return L == R;
+	if (!A) return 1;
+	return isValid(A->left, A->right);
 }
 #else
 bool isSymmetricHelper(TreeNode *leftTree, TreeNode *rightTree) {

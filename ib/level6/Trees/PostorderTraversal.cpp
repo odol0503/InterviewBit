@@ -34,33 +34,23 @@ vector<int> PostorderTraversal(TreeNode* A) {
 	vector<int> ret;
 	stack<TreeNode*> st;
 
-	while (A || !st.empty())
+	while (A || st.size())
 	{
 		if (A)
 		{
 			st.push(A);
-			A = A->left;
+			ret.push_back(A->val);
+			A = A->right;
 		}
 		else
 		{
 			A = st.top();
 			st.pop();
-
-			if (A->right == nullptr)
-			{
-				ret.push_back(A->val);
-				A = nullptr;
-			}
-			else
-			{
-				st.push(A);
-				TreeNode *right = A->right;
-				A->right = nullptr;
-				A = right;
-			}
+			A = A->left;
 		}
 	}
 
+	reverse(ret.begin(), ret.end());
 	return ret;
 }
 #else
