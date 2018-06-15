@@ -38,46 +38,48 @@ struct TreeNode {
 };
 
 #ifdef OWN
-static void Inorder(TreeNode *A, vector<int> &array)
+void check(TreeNode *A, TreeNode **prev, int &val1, int &val2, int &val3)
 {
-	if (A == nullptr) return;
-	Inorder(A->left, array);
-	array.push_back(A->val);
-	Inorder(A->right, array);
+	if (!A) return;
+
+	check(A->left, prev, val1, val2, val3);
+
+	if (*prev && A->val < (*prev)->val)
+	{
+		if (val1 == INT_MIN)
+		{
+			val1 = (*prev)->val;
+			val2 = A->val;
+		}
+		else
+		{
+			val3 = A->val;
+		}
+	}
+	*prev = A;
+
+	check(A->right, prev, val1, val2, val3);
 }
 
 vector<int> RecoverBinarySearchTree(TreeNode* A) {
-	vector<int> array;
+	TreeNode *prev = nullptr;
+	int val1 = INT_MIN;
+	int val2 = INT_MIN;
+	int val3 = INT_MIN;
+
+	check(A, &prev, val1, val2, val3);
+
 	vector<int> ret;
-	Inorder(A, array);
-
-	if (array.size() == 2)
+	if (val3 == INT_MIN)
 	{
-		ret.push_back(array[1]);
-		ret.push_back(array[0]);
-		return ret;
+		ret.push_back(min(val1, val2));
+		ret.push_back(max(val1, val2));
 	}
-
-	int idx = 0;
-	for (int i = 1; i<(int)array.size(); i++)
+	else
 	{
-		if (array[i - 1] > array[i])
-		{
-			if (ret.size() == 1)
-			{
-				ret.push_back(array[i]);
-				break;
-			}
-			else
-			{
-				ret.push_back(array[i - 1]);
-				idx = i;
-			}
-		}
+		ret.push_back(min(val1, val3));
+		ret.push_back(max(val1, val3));
 	}
-
-	if (ret.size() == 1) ret.push_back(array[idx]);
-	swap(ret[0], ret[1]);
 
 	return ret;
 }
