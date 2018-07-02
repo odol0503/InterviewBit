@@ -53,7 +53,7 @@ int find(TreeNode* root, int &k) {
 	k--;
 	if (k == 0) return root->val; // root is the kth element.
 	return find(root->right, k); // answer lies in the right node.
-		}
+}
 
 int kthsmallest(TreeNode* root, int k) {
 	return find(root, k); // Call another function to pass k by reference.

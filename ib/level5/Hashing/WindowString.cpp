@@ -102,7 +102,7 @@ string MinWindow(string S, string T) {
 			// If this character is not present in T at all, 
 			// we don't care about this character. 
 			continue;
-	}
+		}
 		counts[S[tail]]--;
 		// We check if the current character represented by tail caused
 		// a character to be included which is relevant to T and is still
