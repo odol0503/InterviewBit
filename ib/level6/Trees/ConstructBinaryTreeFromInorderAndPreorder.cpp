@@ -31,39 +31,31 @@ struct TreeNode {
 };
 
 #ifdef OWN
-static TreeNode* BuildTree(vector<int> &A, vector<int> &B)
+static TreeNode *makeTree(vector<int> &A, vector<int> &B, int start, int end)
 {
-	int idx = 0;
-	for (int i = 0; i<(int)B.size(); i++)
+	if (A.empty()) return nullptr;
+	if (start <= end)
 	{
-		if (A[0] == B[i])
+		int val = A.back();
+		A.pop_back();
+		int i = start;
+		for (; i <= end; i++)
 		{
-			idx = i;
-			break;
+			if (A[i] == val) break;
 		}
+
+		TreeNode *node = new TreeNode(A[i]);
+		node->left = makeTree(A, B, start, i - 1);
+		node->right = makeTree(A, B, i + 1, end);
+		return node;
 	}
 
-	TreeNode *pNode = new TreeNode(A[0]);
-
-	if (idx > 0)
-	{
-		vector<int> C(A.begin() + 1, A.begin() + idx + 1);
-		vector<int> D(B.begin(), B.begin() + idx);
-		pNode->left = BuildTree(C, D);
-	}
-
-	if (idx < (int)A.size() - 1)
-	{
-		vector<int> C(A.begin() + idx + 1, B.end());
-		vector<int> D(B.begin() + idx + 1, B.end());
-		pNode->right = BuildTree(C, D);
-	}
-
-	return pNode;
+	return nullptr;
 }
 
 TreeNode* ConstructBinaryTreeFromInorderAndPreorder(vector<int> &A, vector<int> &B) {
-	return BuildTree(A, B);
+	reverse(A.begin(), A.end());
+	return makeTree(A, B, 0, B.size() - 1);
 }
 #else
 TreeNode *buildTreeTmp(vector<int>::iterator prel, vector<int>::iterator prer,

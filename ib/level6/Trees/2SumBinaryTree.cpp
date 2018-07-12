@@ -40,42 +40,108 @@ struct TreeNode {
 	TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 #ifdef OWN
-static void FindNode(TreeNode *A, TreeNode *origin, int val, int &result)
-{
-	if (A == nullptr) return;
+class Traverse {
+public:
+	TreeNode * cur1;
+	TreeNode *cur2;
+	stack<TreeNode*> st1;
+	stack<TreeNode*> st2;
 
-	if (A->val == val && A != origin)
+	Traverse(TreeNode *A)
 	{
-		result = 1;
-		return;
-	}
-	else if (A->val > val) FindNode(A->left, origin, val, result);
-	else FindNode(A->right, origin, val, result);
-}
-
-static void PreorderFind(TreeNode *root, TreeNode *A, int B, int &ret)
-{
-	if (A == nullptr) return;
-
-	int val = B - A->val;
-	int result = 0;
-	FindNode(root, A, val, result);
-
-	if (result)
-	{
-		ret = result;
-		return;
+		cur1 = A;
+		cur2 = A;
 	}
 
-	PreorderFind(root, A->left, B, ret);
-	if (ret) return;
-	PreorderFind(root, A->right, B, ret);
-}
+	int hasNext()
+	{
+		if (cur1) return 1;
+	}
+
+	int hasPrev()
+	{
+		if (cur2) return 1;
+	}
+
+	int getNext()
+	{
+		int val = 0;
+		while (cur1 || st1.size())
+		{
+			if (cur1)
+			{
+				st1.push(cur1);
+				cur1 = cur1->left;
+			}
+			else
+			{
+				cur1 = st1.top();
+				st1.pop();
+				val = cur1->val;
+				cur1 = cur1->right;
+				break;
+			}
+		}
+
+		return val;
+	}
+
+	int getPrev()
+	{
+		int val = 0;
+		while (cur2 || st2.size())
+		{
+			if (cur2)
+			{
+				st2.push(cur2);
+				cur2 = cur2->right;
+			}
+			else
+			{
+				cur2 = st2.top();
+				st2.pop();
+				val = cur2->val;
+				cur2 = cur2->left;
+				break;
+			}
+		}
+		return val;
+	}
+};
 
 int TwoSumBinaryTree(TreeNode* A, int B) {
-	int ret = 0;
-	PreorderFind(A, A, B, ret);
-	return ret;
+	if (!A) return 0;
+
+	Traverse t(A);
+	int L = t.getNext();
+	int R = t.getPrev();
+
+	while (L<R)
+	{
+		if (L + R < B)
+		{
+			if (t.hasNext())
+			{
+				L = t.getNext();
+			}
+			else return 0;
+		}
+		else if (L + R > B)
+		{
+			if (t.hasPrev())
+			{
+				R = t.getPrev();
+			}
+			else return 0;
+		}
+		else
+		{
+			return 1;
+		}
+
+	}
+
+	return 0;
 }
 #else
 class BST {

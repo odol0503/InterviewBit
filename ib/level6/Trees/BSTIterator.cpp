@@ -31,31 +31,40 @@ struct TreeNode {
 
 class BSTIterator
 {
-	queue<int> st;
-
-	void BSTIterator::IterBST(TreeNode *A, queue<int> &st)
-	{
-		if (A == nullptr) return;
-		if (A->left) IterBST(A->left, st);
-		st.push(A->val);
-		if (A->right) IterBST(A->right, st);
-	}
+	TreeNode *cur;
+	stack<TreeNode*> st;
 
 	BSTIterator::BSTIterator(TreeNode *root) {
-		while (!st.empty()) st.pop();
-		IterBST(root, st);
+		cur = root;
+		while (st.size()) st.pop();
 	}
 
 	/** @return whether we have a next smallest number */
 	bool BSTIterator::hasNext() {
-		return st.size() > 0;
+		if (cur || st.size()) return true;
+		else return false;
 	}
 
 	/** @return the next smallest number */
 	int BSTIterator::next() {
-		int ret = st.front();
-		st.pop();
-		return ret;
+		int val = 0;
+		while (cur || st.size())
+		{
+			if (cur)
+			{
+				st.push(cur);
+				cur = cur->left;
+			}
+			else
+			{
+				cur = st.top();
+				st.pop();
+				val = cur->val;
+				cur = cur->right;
+				break;
+			}
+		}
+		return val;
 	}
 
 	/**
