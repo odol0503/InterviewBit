@@ -1290,16 +1290,21 @@ TEST(IB, WaysToColorA3xNBoard) {
 
 int ShortestCommonSuperstring(vector<string> &A);
 TEST(IB, ShortestCommonSuperstring) {
-	//EXPECT_EQ(108, ShortestCommonSuperstring(vector<string>({ "nejqokaplfbrqe", "cjqpuidbwnbaml", "naiwqahtpubspt", "jvidmdlrhjhkjt", "pjvyhpbqlsm", "lcgkneuqsydk", "mruvnqlapmjhp", "sioft", "nehtaxnb", "xlpsgn" })));
-	//EXPECT_EQ(72, ShortestCommonSuperstring(vector<string>({ "bwpiqhiym", "yalcyea", "vxggfitknygyv", "xnspubqjppjbrl", "ugesmmxwjjlk", "mgbnwvf", "yveolprfdcajiu" })));
-	//EXPECT_EQ(4, ShortestCommonSuperstring(vector<string>({ "abc", "bcd" })));
-	//EXPECT_EQ(4, ShortestCommonSuperstring(vector<string>({ "bcd", "ab", "cd" })));
+	EXPECT_EQ(108, ShortestCommonSuperstring(vector<string>({ "nejqokaplfbrqe", "cjqpuidbwnbaml", "naiwqahtpubspt", "jvidmdlrhjhkjt", "pjvyhpbqlsm", "lcgkneuqsydk", "mruvnqlapmjhp", "sioft", "nehtaxnb", "xlpsgn" })));
+	EXPECT_EQ(72, ShortestCommonSuperstring(vector<string>({ "bwpiqhiym", "yalcyea", "vxggfitknygyv", "xnspubqjppjbrl", "ugesmmxwjjlk", "mgbnwvf", "yveolprfdcajiu" })));
+	EXPECT_EQ(4, ShortestCommonSuperstring(vector<string>({ "abc", "bcd" })));
+	EXPECT_EQ(4, ShortestCommonSuperstring(vector<string>({ "bcd", "ab", "cd" })));
 	EXPECT_EQ(8, ShortestCommonSuperstring(vector<string>({ "abcd", "cdef", "fgh", "de" })));
 }
 
 vector<vector<int> > KthManhattanDistanceNeighbourhood(int A, vector<vector<int> > &B);
 TEST(IB, KthManhattanDistanceNeighbourhood) {
 	EXPECT_EQ(vector<vector<int>>({ { 5, 8, 8 }, { 8, 8, 8 } }), KthManhattanDistanceNeighbourhood(2, vector<vector<int>>({ { 1,2,4},{4,5,8 } })));
+}
+
+int WordBreak(string A, vector<string> &B);
+TEST(IB, WordBreak) {
+	EXPECT_EQ(1, WordBreak("myinterviewtrainer", vector<string>({ "trainer", "my", "interview" })));
 }
 
 int main(int argc, char** argv)
