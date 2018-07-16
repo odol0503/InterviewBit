@@ -236,6 +236,7 @@
     <ClCompile Include="level7\DynamicProgramming\WaysToColorA3xNBoard.cpp" />
     <ClCompile Include="level7\DynamicProgramming\WaysToDecode.cpp" />
     <ClCompile Include="level7\DynamicProgramming\WordBreak.cpp" />
+    <ClCompile Include="level7\DynamicProgramming\WordBreak2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="level6\HeapsAndMaps\LRUCache.h" />

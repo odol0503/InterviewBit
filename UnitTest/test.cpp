@@ -1302,6 +1302,12 @@ TEST(IB, KthManhattanDistanceNeighbourhood) {
 	EXPECT_EQ(vector<vector<int>>({ { 5, 8, 8 }, { 8, 8, 8 } }), KthManhattanDistanceNeighbourhood(2, vector<vector<int>>({ { 1,2,4},{4,5,8 } })));
 }
 
+vector<string> wordBreak2(string A, vector<string> &B);
+int WordBreak(string A, vector<string> &B);
+TEST(IB, wordBreak2) {
+	EXPECT_EQ(vector<string>({ "cat sand dog", "cats and dog" }), wordBreak2("catsanddog", vector<string>({ "cat", "cats", "and", "sand", "dog" })));
+}
+
 int WordBreak(string A, vector<string> &B);
 TEST(IB, WordBreak) {
 	EXPECT_EQ(1, WordBreak("myinterviewtrainer", vector<string>({ "trainer", "my", "interview" })));
