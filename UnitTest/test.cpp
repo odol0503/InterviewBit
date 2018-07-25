@@ -1220,7 +1220,7 @@ TEST(IB, HotelReviews)
 TreeNode* BinaryTreeFromInorderAndPostorder(vector<int> &A, vector<int> &B);
 TEST(IB, BinaryTreeFromInorderAndPostorder)
 {
-	EXPECT_EQ(nullptr, BinaryTreeFromInorderAndPostorder(vector<int>({ 1, 2, 3 }), vector<int>({ 2, 1, 3 })));
+	//EXPECT_EQ(nullptr, BinaryTreeFromInorderAndPostorder(vector<int>({ 1, 2, 3 }), vector<int>({ 2, 1, 3 })));
 }
 
 int WaysToDecode(string A);
@@ -1312,6 +1312,13 @@ int WordBreak(string A, vector<string> &B);
 TEST(IB, WordBreak) {
 	EXPECT_EQ(1, WordBreak("myinterviewtrainer", vector<string>({ "trainer", "my", "interview" })));
 }
+
+int LadderLength(string start, string end, vector<string> &dictV);
+TEST(IB, LadderLength) {
+	EXPECT_EQ(4, LadderLength("bbaba", "babaa", vector<string>({ "bbaba", "babaa", "abbaa", "bbbbb", "bbbab", "bbaaa", "bbbab", "aaabb", "babbb", "bbaaa", "bbaaa", "bbbba", "baabb", "abaab", "bbaaa", "bbbaa", "baabb", "abbaa", "aaaba", "abaaa", "abbba", "aaaab", "baaaa", "abaaa", "abaab", "aaabb", "bbaab", "babbb", "ababa", "aaaab", "bbabb" })));
+	EXPECT_EQ(0, LadderLength("aabbaaba", "aababaaa", vector<string>({ "aabbaaba", "aababaaa", "baabbaaa", "baabbbab", "bbbabbaa", "bbabbaba", "abbaabaa", "aabbbabb", "abababbb", "abaaabba", "bbbaaabb", "abbaaaab", "abababab", "abbbabab", "abaaaabb", "aaaaabaa", "baaaabaa", "bbabbabb", "ababaaab", "aabaabab", "babbbaba", "bbbaaabb", "babaaabb", "aabaaaab", "bbaabbaa", "aaababaa", "bbbbabab", "aaaababa", "bbbbbaba", "abaabaab", "baaababb", "bbabbaaa", "abbbbbab", "bbbbbabb", "abaaabaa", "babbaabb", "babaabab", "aabbbbba", "baabaabb", "ababbabb", "aababaab" })));
+}
+
 
 int main(int argc, char** argv)
 {

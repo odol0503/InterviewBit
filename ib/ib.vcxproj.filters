@@ -64,6 +64,12 @@
     <Filter Include="level6\Checkpoint">
       <UniqueIdentifier>{472659e8-c62d-4278-84ac-8daddd8a19ce}</UniqueIdentifier>
     </Filter>
+    <Filter Include="level8">
+      <UniqueIdentifier>{03bdb983-6cf7-4226-a0fe-1f229ce34658}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="level8\GraphDataStructure">
+      <UniqueIdentifier>{06e535e8-fdfe-4746-b02d-06ce4988d316}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="level2\Arrays\AntiDiagonals.cpp">
@@ -719,6 +725,9 @@
     </ClCompile>
     <ClCompile Include="level7\DynamicProgramming\WordBreak2.cpp">
       <Filter>level7\DynamicProgramming</Filter>
+    </ClCompile>
+    <ClCompile Include="level8\GraphDataStructure\WordLadder.cpp">
+      <Filter>level8\GraphDataStructure</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
