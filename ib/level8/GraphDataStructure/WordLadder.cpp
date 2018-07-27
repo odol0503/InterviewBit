@@ -33,10 +33,10 @@ All words contain only lowercase alphabetic characters.
 #include <unordered_map>
 using namespace std;
 
-#define OWN5
+#define OWN
 
 #ifdef OWN
-bool checkLadder(string A, string B)
+static bool checkLadder(string A, string B)
 {
 	if (A.size() != B.size()) return false;
 
@@ -68,22 +68,16 @@ int LadderLength(string start, string end, vector<string> &dictV) {
 		string val = Q1.front();
 		Q1.pop();
 
+		S.erase(val);
+
 		for (auto s : S)
 		{
 			if (checkLadder(val, s))
 			{
-				if (end == s)
-				{
-					return cnt + 1;
-				}
+				if (end == s) return cnt + 1;
 				Q2.push(s);
 			}
-			else
-			{
-				temp.insert(s);
-			}
 		}
-		S = temp;
 
 		if (Q1.empty())
 		{

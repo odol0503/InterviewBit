@@ -1319,6 +1319,11 @@ TEST(IB, LadderLength) {
 	EXPECT_EQ(0, LadderLength("aabbaaba", "aababaaa", vector<string>({ "aabbaaba", "aababaaa", "baabbaaa", "baabbbab", "bbbabbaa", "bbabbaba", "abbaabaa", "aabbbabb", "abababbb", "abaaabba", "bbbaaabb", "abbaaaab", "abababab", "abbbabab", "abaaaabb", "aaaaabaa", "baaaabaa", "bbabbabb", "ababaaab", "aabaabab", "babbbaba", "bbbaaabb", "babaaabb", "aabaaaab", "bbaabbaa", "aaababaa", "bbbbabab", "aaaababa", "bbbbbaba", "abaabaab", "baaababb", "bbabbaaa", "abbbbbab", "bbbbbabb", "abaaabaa", "babbaabb", "babaabab", "aabbbbba", "baabaabb", "ababbabb", "aababaab" })));
 }
 
+vector<vector<string> > findLadders(string start, string end, vector<string> &dict);
+TEST(IB, findLadders) {
+	EXPECT_EQ(vector<vector<string>>({ {"bbaa", "baaa", "baba", "babb"}, {"bbaa", "bbba", "baba", "babb"}, {"bbaa", "bbba", "bbbb", "babb"} }), findLadders("bbaa", "babb", vector<string>({ "baba", "abba", "aaba", "bbbb", "abaa", "abab", "aaab", "abba", "abba", "abba", "bbba", "aaab", "abaa", "baba", "baaa", "bbaa", "babb" })));
+}
+
 
 int main(int argc, char** argv)
 {

@@ -238,6 +238,7 @@
     <ClCompile Include="level7\DynamicProgramming\WordBreak.cpp" />
     <ClCompile Include="level7\DynamicProgramming\WordBreak2.cpp" />
     <ClCompile Include="level8\GraphDataStructure\WordLadder.cpp" />
+    <ClCompile Include="level8\GraphDataStructure\WordLadder2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="level6\HeapsAndMaps\LRUCache.h" />
