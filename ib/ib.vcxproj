@@ -232,6 +232,7 @@
     <ClCompile Include="level7\DynamicProgramming\NDigitNumWithSumS.cpp" />
     <ClCompile Include="level7\DynamicProgramming\ShortestCommonSuperstring.cpp" />
     <ClCompile Include="level7\DynamicProgramming\Stairs.cpp" />
+    <ClCompile Include="level7\DynamicProgramming\SubMatricesWithSumZero.cpp" />
     <ClCompile Include="level7\DynamicProgramming\TusharsBirthdayBombs.cpp" />
     <ClCompile Include="level7\DynamicProgramming\WaysToColorA3xNBoard.cpp" />
     <ClCompile Include="level7\DynamicProgramming\WaysToDecode.cpp" />

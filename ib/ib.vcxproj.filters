@@ -732,6 +732,9 @@
     <ClCompile Include="level8\GraphDataStructure\WordLadder2.cpp">
       <Filter>level8\GraphDataStructure</Filter>
     </ClCompile>
+    <ClCompile Include="level7\DynamicProgramming\SubMatricesWithSumZero.cpp">
+      <Filter>level7\DynamicProgramming</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="level6\HeapsAndMaps\LRUCache.h">

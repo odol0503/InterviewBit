@@ -1302,6 +1302,25 @@ TEST(IB, KthManhattanDistanceNeighbourhood) {
 	EXPECT_EQ(vector<vector<int>>({ { 5, 8, 8 }, { 8, 8, 8 } }), KthManhattanDistanceNeighbourhood(2, vector<vector<int>>({ { 1,2,4},{4,5,8 } })));
 }
 
+int SubMatricesWithSumZero(vector<vector<int>> &A);
+TEST(IB, SubMatricesWithSumZero) {
+	EXPECT_EQ(64, SubMatricesWithSumZero(vector<vector<int>>({
+		{ -10, 10, -10, 10 },
+		{ 10, -10, 10, -10 },
+		{ -10, 10, -10, 10 },
+		{ 10, -10, 10, -10 } })));
+
+	EXPECT_EQ(2660, SubMatricesWithSumZero(vector<vector<int>>({ 
+		{ -10, 10, -10, 10, -10, 10, -10, 10, -10, 10, -10, 10, -10, 10 },
+		{ 10, -10, 10, -10, 10, -10, 10, -10, 10, -10, 10, -10, 10, -10 },
+		{ -10, 10, -10, 10, -10, 10, -10, 10, -10, 10, -10, 10, -10, 10 },
+		{ 10, -10, 10, -10, 10, -10, 10, -10, 10, -10, 10, -10, 10, -10 },
+		{ -10, 10, -10, 10, -10, 10, -10, 10, -10, 10, -10, 10, -10, 10 },
+		{ 10, -10, 10, -10, 10, -10, 10, -10, 10, -10, 10, -10, 10, -10 },
+		{ -10, 10, -10, 10, -10, 10, -10, 10, -10, 10, -10, 10, -10, 10 },
+		{ 10, -10, 10, -10, 10, -10, 10, -10, 10, -10, 10, -10, 10, -10 } })));
+}
+
 vector<string> wordBreak2(string A, vector<string> &B);
 int WordBreak(string A, vector<string> &B);
 TEST(IB, wordBreak2) {
