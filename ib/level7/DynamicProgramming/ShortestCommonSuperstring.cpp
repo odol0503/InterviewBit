@@ -18,9 +18,9 @@ Output: 8 (Shortest string: ¡°abcdefgh¡±)
 #include <numeric>
 using namespace std;
 
-#define OWN
+#define OWN2
 
-#ifdef OWN
+#ifdef OWN1
 void merge(string &A, string &B, int overLen, string &M, bool reverse)
 {
 	if (reverse)
@@ -112,6 +112,62 @@ int ShortestCommonSuperstring(vector<string> &A) {
 
 	//cout << A[0] << " ";
 	return A[0].size();
+}
+#elif defined(OWN2)
+#define NUM 16
+
+int getNonOverlap(vector<string> &A, int prev, int cur)
+{
+	if (prev < 0) return A[cur].size();
+
+	for (int i = 0; i<A[prev].size(); i++)
+	{
+		for (int j = 0; j<A[cur].size(); j++)
+		{
+			if (A[prev][i + j] != A[cur][j]) break;
+			if (i + j == A[prev].size() - 1) return A[cur].size() - j - 1;
+			if (j == A[cur].size() - 1) return 0;
+		}
+	}
+
+	return A[cur].size();
+}
+
+int getMin(vector<string> &A, int prev, int mask, int target, vector<vector<int>> &dp)
+{
+	int ret = INT_MAX;
+	int num = (int)A.size();
+
+	if (mask == target)
+	{
+		dp[prev + 1][mask] = 0;
+		return 0;
+	}
+
+	if (dp[prev + 1][mask] != -1) return dp[prev + 1][mask];
+
+	for (int i = 0; i<num; i++)
+	{
+		if (!((mask >> i) & 0x01))
+		{
+			ret = min(ret, (getMin(A, i, (mask | (0x01 << i)), target, dp)
+				+ getNonOverlap(A, prev, i)));
+		}
+	}
+
+	dp[prev + 1][mask] = ret;
+
+	return ret;
+}
+
+int ShortestCommonSuperstring(vector<string> &A) {
+	int num = (int)A.size();
+	vector<vector<int>> dp(NUM + 2, vector<int>(1 << NUM, -1));
+	int target = (1 << num) - 1;
+	int mask = 0;
+
+	int ret = getMin(A, -1, mask, target, dp);
+	return ret;
 }
 #else
 #define INF 1<<20

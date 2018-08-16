@@ -1302,6 +1302,11 @@ TEST(IB, KthManhattanDistanceNeighbourhood) {
 	EXPECT_EQ(vector<vector<int>>({ { 5, 8, 8 }, { 8, 8, 8 } }), KthManhattanDistanceNeighbourhood(2, vector<vector<int>>({ { 1,2,4},{4,5,8 } })));
 }
 
+int CoinsInLine(vector<int> &A);
+TEST(IB, CoinsInLine) {
+	EXPECT_EQ(6, CoinsInLine(vector<int>({ 1,2,3,4 })));
+}
+
 int SubMatricesWithSumZero(vector<vector<int>> &A);
 TEST(IB, SubMatricesWithSumZero) {
 	EXPECT_EQ(64, SubMatricesWithSumZero(vector<vector<int>>({
