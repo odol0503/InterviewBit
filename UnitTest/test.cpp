@@ -1337,6 +1337,11 @@ TEST(IB, CoinSumInfinite) {
 	EXPECT_EQ(867621, CoinSumInfinite(vector<int>({ 18, 24, 23, 10, 16, 19, 2, 9, 5, 12, 17, 3, 28, 29, 4, 13, 15, 8 }), 458));
 }
 
+int BestTimeToBuyAndSellStocks1(const vector<int> &A);
+TEST(IB, BestTimeToBuyAndSellStocks1) {
+	EXPECT_EQ(990, BestTimeToBuyAndSellStocks3(vector<int>({ 100, 10, 1000 })));
+}
+
 vector<string> wordBreak2(string A, vector<string> &B);
 int WordBreak(string A, vector<string> &B);
 TEST(IB, wordBreak2) {
