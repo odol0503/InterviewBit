@@ -1331,6 +1331,12 @@ TEST(IB, SubMatricesWithSumZero) {
 		{ 10, -10, 10, -10, 10, -10, 10, -10, 10, -10, 10, -10, 10, -10 } })));
 }
 
+int CoinSumInfinite(vector<int> &A, int B);
+TEST(IB, CoinSumInfinite) {
+	EXPECT_EQ(4, CoinSumInfinite(vector<int>({ 1, 2, 3}), 4));
+	EXPECT_EQ(867621, CoinSumInfinite(vector<int>({ 18, 24, 23, 10, 16, 19, 2, 9, 5, 12, 17, 3, 28, 29, 4, 13, 15, 8 }), 458));
+}
+
 vector<string> wordBreak2(string A, vector<string> &B);
 int WordBreak(string A, vector<string> &B);
 TEST(IB, wordBreak2) {
