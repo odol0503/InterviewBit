@@ -1342,6 +1342,11 @@ TEST(IB, BestTimeToBuyAndSellStocks1) {
 	EXPECT_EQ(990, BestTimeToBuyAndSellStocks3(vector<int>({ 100, 10, 1000 })));
 }
 
+int MaxProductSubarray(vector<int> A);
+TEST(IB, MaxProductSubarray) {
+	EXPECT_EQ(6, MaxProductSubarray(vector<int>({ -1, 2, 3 })));
+}
+
 vector<string> wordBreak2(string A, vector<string> &B);
 int WordBreak(string A, vector<string> &B);
 TEST(IB, wordBreak2) {
