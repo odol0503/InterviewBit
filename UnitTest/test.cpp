@@ -1347,6 +1347,11 @@ TEST(IB, MaxProductSubarray) {
 	EXPECT_EQ(6, MaxProductSubarray(vector<int>({ -1, 2, 3 })));
 }
 
+int arrange2(string A, int B);
+TEST(IB, arrange2) {
+	EXPECT_EQ(0, arrange2("BWWWWBBWWBWBWWBBBBBWBWWBBBWWWWBBBW", 28));
+}
+
 vector<string> wordBreak2(string A, vector<string> &B);
 int WordBreak(string A, vector<string> &B);
 TEST(IB, wordBreak2) {
