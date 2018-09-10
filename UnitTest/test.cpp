@@ -1352,6 +1352,11 @@ TEST(IB, arrange2) {
 	EXPECT_EQ(0, arrange2("BWWWWBBWWBWBWWBBBBBWBWWBBBWWWWBBBW", 28));
 }
 
+int BestTimeToBuyAndSellStocks2(const vector<int> &A);
+TEST(IB, BestTimeToBuyAndSellStocks2) {
+	EXPECT_EQ(2, BestTimeToBuyAndSellStocks2(vector<int>({ 1, 2, 3 })));
+}
+
 vector<string> wordBreak2(string A, vector<string> &B);
 int WordBreak(string A, vector<string> &B);
 TEST(IB, wordBreak2) {

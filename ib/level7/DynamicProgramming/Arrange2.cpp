@@ -33,7 +33,7 @@ If a solution is not possible, then return -1
 #include <numeric>
 using namespace std;
 
-#define OWN5
+#define OWN
 
 #ifdef OWN
 int getVal(string &A, int pos, int num)

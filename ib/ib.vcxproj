@@ -225,6 +225,7 @@
     <ClCompile Include="level6\Trees\ZigZagLevelOrderTraversalBT.cpp" />
     <ClCompile Include="level7\DynamicProgramming\Arrange2.cpp" />
     <ClCompile Include="level7\DynamicProgramming\BestTimeToBuyAndSellStocks1.cpp" />
+    <ClCompile Include="level7\DynamicProgramming\BestTimeToBuyAndSellStocks2.cpp" />
     <ClCompile Include="level7\DynamicProgramming\BestTimeToBuyAndSellStocks3.cpp" />
     <ClCompile Include="level7\DynamicProgramming\CoinsInLine.cpp" />
     <ClCompile Include="level7\DynamicProgramming\CoinSumInfinite.cpp" />
