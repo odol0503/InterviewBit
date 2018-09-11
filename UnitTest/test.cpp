@@ -1357,6 +1357,11 @@ TEST(IB, BestTimeToBuyAndSellStocks2) {
 	EXPECT_EQ(2, BestTimeToBuyAndSellStocks2(vector<int>({ 1, 2, 3 })));
 }
 
+int TusharBirthdayParty(const vector<int> &A, const vector<int> &B, const vector<int> &C);
+TEST(IB, TusharBirthdayParty) {
+	EXPECT_EQ(72225, TusharBirthdayParty(vector<int>({ 665, 154, 269, 501, 998, 992, 904, 763, 254, 591, 869, 843, 683, 708, 410, 88, 352, 566, 497, 252, 486, 565, 115, 585, 414, 864, 23, 389, 308 }), vector<int>({ 1, 586, 973, 418, 573, 193, 416, 566, 815, 179, 538, 406, 766, 381, 807, 194, 510, 894, 264, 76, 111, 515, 281, 675, 630, 865, 807, 213, 887, 914, 520, 433, 501 }), vector<int>({ 493, 570, 792, 404, 985, 77, 219, 883, 334, 343, 649, 714, 151, 561, 942, 763, 825, 737, 592, 340, 18, 267, 688, 601, 75, 900, 488, 988, 421, 639, 208, 632, 209 })));
+}
+
 vector<string> wordBreak2(string A, vector<string> &B);
 int WordBreak(string A, vector<string> &B);
 TEST(IB, wordBreak2) {
