@@ -1362,6 +1362,12 @@ TEST(IB, TusharBirthdayParty) {
 	EXPECT_EQ(72225, TusharBirthdayParty(vector<int>({ 665, 154, 269, 501, 998, 992, 904, 763, 254, 591, 869, 843, 683, 708, 410, 88, 352, 566, 497, 252, 486, 565, 115, 585, 414, 864, 23, 389, 308 }), vector<int>({ 1, 586, 973, 418, 573, 193, 416, 566, 815, 179, 538, 406, 766, 381, 807, 194, 510, 894, 264, 76, 111, 515, 281, 675, 630, 865, 807, 213, 887, 914, 520, 433, 501 }), vector<int>({ 493, 570, 792, 404, 985, 77, 219, 883, 334, 343, 649, 714, 151, 561, 942, 763, 825, 737, 592, 340, 18, 267, 688, 601, 75, 900, 488, 988, 421, 639, 208, 632, 209 })));
 }
 
+vector<vector<int> > EqualAveragePartition(vector<int> &A);
+TEST(IB, EqualAveragePartition) {
+	EXPECT_EQ(vector<vector<int>>({ {9, 15}, {1, 7, 11, 29} }), EqualAveragePartition(vector<int>({ 1, 7, 15, 29, 11, 9 })));
+	EXPECT_EQ(vector<vector<int>>({ {1, 1, 2, 16, 39, 46, 46, 48}, {5, 9, 10, 13, 13, 18, 24, 28, 28, 31, 31, 32, 33, 39, 40, 44} }), EqualAveragePartition(vector<int>({ 28, 10, 2, 44, 33, 31, 39, 46, 1, 24, 32, 31, 28, 9, 13, 40, 46, 1, 16, 18, 39, 13, 48, 5 })));
+}
+
 vector<string> wordBreak2(string A, vector<string> &B);
 int WordBreak(string A, vector<string> &B);
 TEST(IB, wordBreak2) {
