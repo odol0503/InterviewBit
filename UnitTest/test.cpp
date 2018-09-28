@@ -1374,6 +1374,11 @@ TEST(IB, FlipArray) {
 	EXPECT_EQ(27, FlipArray(vector<int>({ 11, 10, 8, 6, 8, 11, 1, 10, 2, 3, 8, 3, 8, 12, 11, 1, 7, 5, 5, 12, 9, 4, 10, 3, 3, 3, 8, 8, 8, 6, 7, 7, 7, 6, 4, 2, 5, 8, 11, 10, 10, 10, 12, 9, 2, 3, 9, 12, 7, 6, 11, 8, 9, 9, 10, 3, 3, 5, 2, 10, 10, 9, 4, 9, 6, 11, 10, 2, 6, 1, 4, 7, 10, 3, 4, 3, 9, 4, 3, 8, 1, 1, 3 })));
 }
 
+int MaxSumWithoutAdjacentElements(vector<vector<int> > &A);
+TEST(IB, MaxSumWithoutAdjacentElements) {
+	EXPECT_EQ(8, MaxSumWithoutAdjacentElements(vector<vector<int>>({ {1, 2, 3, 4}, {2, 3, 4, 5} })));
+}
+
 vector<string> wordBreak2(string A, vector<string> &B);
 int WordBreak(string A, vector<string> &B);
 TEST(IB, wordBreak2) {
