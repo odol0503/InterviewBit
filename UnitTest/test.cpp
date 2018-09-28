@@ -1368,6 +1368,12 @@ TEST(IB, EqualAveragePartition) {
 	EXPECT_EQ(vector<vector<int>>({ {1, 1, 2, 16, 39, 46, 46, 48}, {5, 9, 10, 13, 13, 18, 24, 28, 28, 31, 31, 32, 33, 39, 40, 44} }), EqualAveragePartition(vector<int>({ 28, 10, 2, 44, 33, 31, 39, 46, 1, 24, 32, 31, 28, 9, 13, 40, 46, 1, 16, 18, 39, 13, 48, 5 })));
 }
 
+int FlipArray(const vector<int> &A);
+TEST(IB, FlipArray) {
+	EXPECT_EQ(3, FlipArray(vector<int>({ 5, 4, 6, 8, 7, 2, 3 })));
+	EXPECT_EQ(27, FlipArray(vector<int>({ 11, 10, 8, 6, 8, 11, 1, 10, 2, 3, 8, 3, 8, 12, 11, 1, 7, 5, 5, 12, 9, 4, 10, 3, 3, 3, 8, 8, 8, 6, 7, 7, 7, 6, 4, 2, 5, 8, 11, 10, 10, 10, 12, 9, 2, 3, 9, 12, 7, 6, 11, 8, 9, 9, 10, 3, 3, 5, 2, 10, 10, 9, 4, 9, 6, 11, 10, 2, 6, 1, 4, 7, 10, 3, 4, 3, 9, 4, 3, 8, 1, 1, 3 })));
+}
+
 vector<string> wordBreak2(string A, vector<string> &B);
 int WordBreak(string A, vector<string> &B);
 TEST(IB, wordBreak2) {
