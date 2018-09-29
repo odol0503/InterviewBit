@@ -1379,6 +1379,12 @@ TEST(IB, MaxSumWithoutAdjacentElements) {
 	EXPECT_EQ(8, MaxSumWithoutAdjacentElements(vector<vector<int>>({ {1, 2, 3, 4}, {2, 3, 4, 5} })));
 }
 
+int EditDistance(string A, string B);
+TEST(IB, EditDistance) {
+	EXPECT_EQ(7, EditDistance("abbbaaaaaaabaabaaaa", "abaabbbaabaaabaabab"));
+}
+
+
 vector<string> wordBreak2(string A, vector<string> &B);
 int WordBreak(string A, vector<string> &B);
 TEST(IB, wordBreak2) {
