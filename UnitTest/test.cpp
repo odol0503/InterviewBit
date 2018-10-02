@@ -1379,9 +1379,15 @@ TEST(IB, MaxSumWithoutAdjacentElements) {
 	EXPECT_EQ(8, MaxSumWithoutAdjacentElements(vector<vector<int>>({ {1, 2, 3, 4}, {2, 3, 4, 5} })));
 }
 
+<<<<<<< HEAD
 int DistinctSubsequences(string A, string B);
 TEST(IB, DistinctSubsequences) {
 	EXPECT_EQ(22113, DistinctSubsequences("aaaababbababbaabbaaababaaabbbaaabbb", "bbababa"));
+=======
+int EditDistance(string A, string B);
+TEST(IB, EditDistance) {
+	EXPECT_EQ(7, EditDistance("abbbaaaaaaabaabaaaa", "abaabbbaabaaabaabab"));
+>>>>>>> aa8c8c654429fde26bb4535b5465b60d0320d1b1
 }
 
 
