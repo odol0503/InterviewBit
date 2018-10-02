@@ -229,6 +229,7 @@
     <ClCompile Include="level7\DynamicProgramming\BestTimeToBuyAndSellStocks3.cpp" />
     <ClCompile Include="level7\DynamicProgramming\CoinsInLine.cpp" />
     <ClCompile Include="level7\DynamicProgramming\CoinSumInfinite.cpp" />
+    <ClCompile Include="level7\DynamicProgramming\DistinctSubsequences.cpp" />
     <ClCompile Include="level7\DynamicProgramming\EqualAveragePartition.cpp" />
     <ClCompile Include="level7\DynamicProgramming\FlipArray.cpp" />
     <ClCompile Include="level7\DynamicProgramming\IntersectingChordsInACircle.cpp" />

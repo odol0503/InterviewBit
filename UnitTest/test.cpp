@@ -1379,6 +1379,12 @@ TEST(IB, MaxSumWithoutAdjacentElements) {
 	EXPECT_EQ(8, MaxSumWithoutAdjacentElements(vector<vector<int>>({ {1, 2, 3, 4}, {2, 3, 4, 5} })));
 }
 
+int DistinctSubsequences(string A, string B);
+TEST(IB, DistinctSubsequences) {
+	EXPECT_EQ(22113, DistinctSubsequences("aaaababbababbaabbaaababaaabbbaaabbb", "bbababa"));
+}
+
+
 vector<string> wordBreak2(string A, vector<string> &B);
 int WordBreak(string A, vector<string> &B);
 TEST(IB, wordBreak2) {
