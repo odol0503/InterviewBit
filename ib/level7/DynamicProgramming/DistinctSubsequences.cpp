@@ -24,7 +24,7 @@ S3="rabb_it"
 #include <numeric>
 using namespace std;
 
-#define OWN6
+#define OWN
 
 #ifdef OWN
 int rec(string &A, string &B, int num, int cur, string &str, vector<vector<int>> &dp)

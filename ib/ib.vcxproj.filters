@@ -768,12 +768,11 @@
     <ClCompile Include="level7\DynamicProgramming\MaxSumWithoutAdjacentElements.cpp">
       <Filter>level7\DynamicProgramming</Filter>
     </ClCompile>
-<<<<<<< HEAD
-    <ClCompile Include="level7\DynamicProgramming\DistinctSubsequences.cpp">
-=======
     <ClCompile Include="level7\DynamicProgramming\EditDistance.cpp">
->>>>>>> aa8c8c654429fde26bb4535b5465b60d0320d1b1
       <Filter>level7\DynamicProgramming</Filter>
+    </ClCompile>
+	<ClCompile Include="level7\DynamicProgramming\DistinctSubsequences.cpp">
+	  <Filter>level7\DynamicProgramming</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
