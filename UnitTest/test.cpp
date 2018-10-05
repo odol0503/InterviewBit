@@ -1386,6 +1386,7 @@ TEST(IB, EditDistance) {
 
 int DistinctSubsequences(string A, string B);
 TEST(IB, DistinctSubsequences) {
+	EXPECT_EQ(2956, DistinctSubsequences("bbbbbbabaaaaabaababbaabbbabbbbbbaaababbaaaabaaabbb", "bab"));
 	EXPECT_EQ(22113, DistinctSubsequences("aaaababbababbaabbaaababaaabbbaaabbb", "bbababa"));
 }
 

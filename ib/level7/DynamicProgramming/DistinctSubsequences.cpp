@@ -27,35 +27,22 @@ using namespace std;
 #define OWN
 
 #ifdef OWN
-int rec(string &A, string &B, int num, int cur, string &str, vector<vector<int>> &dp)
+int rec(string &A, string &B, int m, int n, vector<vector<int>> &dp)
 {
-	if (num == 0)
-	{
-		if (B == str) return 1;
-		return 0;
-	}
+	if (n == B.size()) return 1;
+	if (m == A.size()) return 0;
 
-	if (dp[cur][num - 1]) return dp[cur][num - 1];
+	if (dp[m][n]) return dp[m][n];
 
-	int cnt = 0;
-	for (int i = cur; i<A.size(); i++)
-	{
-		if (A.size() - cur + 1 < num) break;
-		if (B[str.size()] != A[i]) continue;
-		str += A[i];
-		cnt += rec(A, B, num - 1, i + 1, str, dp);
-		str.pop_back();
-	}
-
-	if (cnt) dp[cur][num - 1] = cnt;
-	return cnt;
+	dp[m][n] = rec(A, B, m + 1, n, dp) + (A[m] == B[n] ? rec(A, B, m + 1, n + 1, dp) : 0);
+	return dp[m][n];
 }
 
 int DistinctSubsequences(string A, string B) {
 	int num = (int)B.size();
 	string str;
 	vector<vector<int>> dp(A.size() + 1, vector<int>(num + 1, 0));
-	return rec(A, B, num, 0, str, dp);
+	return rec(A, B, 0, 0, dp);
 }
 #else
 /**
