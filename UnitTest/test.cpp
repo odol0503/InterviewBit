@@ -1390,6 +1390,12 @@ TEST(IB, DistinctSubsequences) {
 	EXPECT_EQ(22113, DistinctSubsequences("aaaababbababbaabbaaababaaabbbaaabbb", "bbababa"));
 }
 
+int InterleavingStrings(string A, string B, string C);
+TEST(IB, InterleavingStrings) {
+	EXPECT_EQ(1, InterleavingStrings("aabcc", "dbbca", "aadbbcbcac"));
+	EXPECT_EQ(0, InterleavingStrings("aabcc", "dbbca", "aadbbbaccc"));
+}
+
 vector<string> wordBreak2(string A, vector<string> &B);
 int WordBreak(string A, vector<string> &B);
 TEST(IB, wordBreak2) {

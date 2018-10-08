@@ -233,6 +233,7 @@
     <ClCompile Include="level7\DynamicProgramming\DistinctSubsequences.cpp" />
     <ClCompile Include="level7\DynamicProgramming\EqualAveragePartition.cpp" />
     <ClCompile Include="level7\DynamicProgramming\FlipArray.cpp" />
+    <ClCompile Include="level7\DynamicProgramming\InterleavingStrings.cpp" />
     <ClCompile Include="level7\DynamicProgramming\IntersectingChordsInACircle.cpp" />
     <ClCompile Include="level7\DynamicProgramming\JumpGameArray.cpp" />
     <ClCompile Include="level7\DynamicProgramming\KthManhattanDistanceNeighbourhood.cpp" />

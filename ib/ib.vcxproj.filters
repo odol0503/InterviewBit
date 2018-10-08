@@ -771,8 +771,11 @@
     <ClCompile Include="level7\DynamicProgramming\EditDistance.cpp">
       <Filter>level7\DynamicProgramming</Filter>
     </ClCompile>
-	<ClCompile Include="level7\DynamicProgramming\DistinctSubsequences.cpp">
-	  <Filter>level7\DynamicProgramming</Filter>
+    <ClCompile Include="level7\DynamicProgramming\DistinctSubsequences.cpp">
+      <Filter>level7\DynamicProgramming</Filter>
+    </ClCompile>
+    <ClCompile Include="level7\DynamicProgramming\InterleavingStrings.cpp">
+      <Filter>level7\DynamicProgramming</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
