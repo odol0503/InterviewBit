@@ -777,6 +777,9 @@
     <ClCompile Include="level7\DynamicProgramming\InterleavingStrings.cpp">
       <Filter>level7\DynamicProgramming</Filter>
     </ClCompile>
+    <ClCompile Include="level3\Strings\Stringoholics.cpp">
+      <Filter>level3\Strings</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="level6\HeapsAndMaps\LRUCache.h">
