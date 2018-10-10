@@ -53,6 +53,7 @@ Hence, 3 strings are their original self at time 4.
 #include <algorithm>
 #include <string>
 #include <vector>
+#include <cstdint>
 using namespace std;
 
 #define OWN
@@ -115,9 +116,16 @@ int Stringoholics(vector<string> &A) {
 		temp.clear();
 	}
 
-	long long ret = 0;
+#if 1
+	long long ret = val[0];
+	for (int i = 1; i < num; i++)
+	{
+		long long g = gcd(ret, val[i]);
+		ret = ((ret * val[i]) / g) % MOD;
+	}
+	return ret;
+#else
 	vector<long long> temp;
-
 	while (num > 1)
 	{
 		for (int i = 0; i<num / 2; i++)
@@ -133,6 +141,8 @@ int Stringoholics(vector<string> &A) {
 	}
 
 	return val[0];
+#endif
+
 }
 #else
 
