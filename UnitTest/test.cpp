@@ -1407,6 +1407,11 @@ TEST(IB, RegularExpressionMatch) {
 	EXPECT_EQ(0, RegularExpressionMatch("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "*b"));
 }
 
+int RegularExpression2(const string A, const string B);
+TEST(IB, RegularExpression2) {
+	EXPECT_EQ(1, RegularExpression2("aab", "c*a*b"));
+}
+
 vector<string> wordBreak2(string A, vector<string> &B);
 int WordBreak(string A, vector<string> &B);
 TEST(IB, wordBreak2) {

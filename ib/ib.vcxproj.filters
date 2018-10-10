@@ -780,8 +780,11 @@
     <ClCompile Include="level3\Strings\Stringoholics.cpp">
       <Filter>level3\Strings</Filter>
     </ClCompile>
+    <ClCompile Include="level7\DynamicProgramming\RegularExpression2.cpp">
+      <Filter>level7\DynamicProgramming</Filter>
+    </ClCompile>
     <ClCompile Include="level7\DynamicProgramming\RegularExpressionMatch.cpp">
-      <Filter>level3\Strings</Filter>
+      <Filter>level7\DynamicProgramming</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

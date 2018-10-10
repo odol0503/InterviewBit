@@ -29,7 +29,7 @@ using namespace std;
 #define OWN
 
 #ifdef OWN
-int rec(const string &A, const string &B, int i, int j, vector<vector<bool>> &dp)
+static int rec(const string &A, const string &B, int i, int j, vector<vector<bool>> &dp)
 {
 	int ret = 0;
 
@@ -43,17 +43,11 @@ int rec(const string &A, const string &B, int i, int j, vector<vector<bool>> &dp
 		else return 0;
 	}
 
-	if (B.size() == j)
-	{
-		if (A[i] == '*') return rec(A, B, i + 1, j, dp);
-		else return 0;
-	}
-
-	if (A[i] == B[j] || A[i] == '?' || B[j] == '?')
+	if (A[i] == B[j] || B[j] == '?')
 	{
 		if (rec(A, B, i + 1, j + 1, dp)) return 1;
 	}
-	else if (A[i] == '*' || B[j] == '*')
+	else if (B[j] == '*')
 	{
 		if (rec(A, B, i + 1, j + 1, dp)) return 1;
 		if (rec(A, B, i, j + 1, dp)) return 1;

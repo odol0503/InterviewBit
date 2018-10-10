@@ -244,6 +244,7 @@
     <ClCompile Include="level7\DynamicProgramming\MaxProductSubarray.cpp" />
     <ClCompile Include="level7\DynamicProgramming\MaxSumWithoutAdjacentElements.cpp" />
     <ClCompile Include="level7\DynamicProgramming\NDigitNumWithSumS.cpp" />
+    <ClCompile Include="level7\DynamicProgramming\RegularExpression2.cpp" />
     <ClCompile Include="level7\DynamicProgramming\RegularExpressionMatch.cpp" />
     <ClCompile Include="level7\DynamicProgramming\ShortestCommonSuperstring.cpp" />
     <ClCompile Include="level7\DynamicProgramming\Stairs.cpp" />
