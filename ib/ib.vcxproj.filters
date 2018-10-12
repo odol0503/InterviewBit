@@ -789,6 +789,9 @@
     <ClCompile Include="level7\DynamicProgramming\ScrambleString.cpp">
       <Filter>level7\DynamicProgramming</Filter>
     </ClCompile>
+    <ClCompile Include="level7\DynamicProgramming\MinSumPathInMatrix.cpp">
+      <Filter>level7\DynamicProgramming</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="level6\HeapsAndMaps\LRUCache.h">

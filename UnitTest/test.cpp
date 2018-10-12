@@ -1418,6 +1418,11 @@ TEST(IB, ScrambleString) {
 	EXPECT_EQ(0, ScrambleString("lwiwpifn", "lifwpwni"));
 }
 
+int MinSumPathInMatrix(vector<vector<int> > A);
+TEST(IB, MinSumPathInMatrix) {
+	EXPECT_EQ(8, MinSumPathInMatrix({ {1, 3, 2}, {4, 3, 1}, {5, 6, 1} }));
+}
+
 vector<string> wordBreak2(string A, vector<string> &B);
 int WordBreak(string A, vector<string> &B);
 TEST(IB, wordBreak2) {
