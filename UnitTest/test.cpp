@@ -1423,6 +1423,26 @@ TEST(IB, MinSumPathInMatrix) {
 	EXPECT_EQ(8, MinSumPathInMatrix({ {1, 3, 2}, {4, 3, 1}, {5, 6, 1} }));
 }
 
+int DungeonPrincess(vector<vector<int> > dungeon);
+TEST(IB, DungeonPrincess) {
+	EXPECT_EQ(7, DungeonPrincess({ {-2, -3, 3}, {-5, -10, 1}, {10, 30, -5} }));
+}
+
+int MinSumPathInTriangle(vector<vector<int> > A);
+TEST(IB, MinSumPathInTriangle) {
+	EXPECT_EQ(11, MinSumPathInTriangle({ {2}, {3,4}, {6,5,7}, {4,1,8,3} }));
+}
+
+int UniquePathsInGrid(vector<vector<int> > A);
+TEST(IB, UniquePathsInGrid) {
+	EXPECT_EQ(2, UniquePathsInGrid({ {0,0,0}, {0,1,0}, {0,0,0} }));
+}
+
+int MaxRectangleInBinaryMatrix(vector<vector<int> > A);
+TEST(IB, MaxRectangleInBinaryMatrix) {
+	EXPECT_EQ(4, MaxRectangleInBinaryMatrix({ { 1, 1, 1}, {0, 1, 1}, {1, 0, 0 } }));
+}
+
 vector<string> wordBreak2(string A, vector<string> &B);
 int WordBreak(string A, vector<string> &B);
 TEST(IB, wordBreak2) {

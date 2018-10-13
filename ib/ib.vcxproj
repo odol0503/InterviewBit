@@ -230,6 +230,7 @@
     <ClCompile Include="level7\DynamicProgramming\BestTimeToBuyAndSellStocks3.cpp" />
     <ClCompile Include="level7\DynamicProgramming\CoinsInLine.cpp" />
     <ClCompile Include="level7\DynamicProgramming\CoinSumInfinite.cpp" />
+    <ClCompile Include="level7\DynamicProgramming\DungeonPrincess.cpp" />
     <ClCompile Include="level7\DynamicProgramming\EditDistance.cpp" />
     <ClCompile Include="level7\DynamicProgramming\DistinctSubsequences.cpp" />
     <ClCompile Include="level7\DynamicProgramming\EqualAveragePartition.cpp" />
@@ -242,8 +243,10 @@
     <ClCompile Include="level7\DynamicProgramming\LengthOfLongestSubsequence.cpp" />
     <ClCompile Include="level7\DynamicProgramming\LongestArithmeticProgression.cpp" />
     <ClCompile Include="level7\DynamicProgramming\MaxProductSubarray.cpp" />
+    <ClCompile Include="level7\DynamicProgramming\MaxRectangleInBinaryMatrix.cpp" />
     <ClCompile Include="level7\DynamicProgramming\MaxSumWithoutAdjacentElements.cpp" />
     <ClCompile Include="level7\DynamicProgramming\MinSumPathInMatrix.cpp" />
+    <ClCompile Include="level7\DynamicProgramming\MinSumPathInTriangle.cpp" />
     <ClCompile Include="level7\DynamicProgramming\NDigitNumWithSumS.cpp" />
     <ClCompile Include="level7\DynamicProgramming\RegularExpression2.cpp" />
     <ClCompile Include="level7\DynamicProgramming\RegularExpressionMatch.cpp" />
@@ -253,6 +256,7 @@
     <ClCompile Include="level7\DynamicProgramming\SubMatricesWithSumZero.cpp" />
     <ClCompile Include="level7\DynamicProgramming\TusharBirthdayParty.cpp" />
     <ClCompile Include="level7\DynamicProgramming\TusharsBirthdayBombs.cpp" />
+    <ClCompile Include="level7\DynamicProgramming\UniquePathsInGrid.cpp" />
     <ClCompile Include="level7\DynamicProgramming\WaysToColorA3xNBoard.cpp" />
     <ClCompile Include="level7\DynamicProgramming\WaysToDecode.cpp" />
     <ClCompile Include="level7\DynamicProgramming\WordBreak.cpp" />
