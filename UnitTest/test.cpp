@@ -1443,6 +1443,11 @@ TEST(IB, MaxRectangleInBinaryMatrix) {
 	EXPECT_EQ(4, MaxRectangleInBinaryMatrix({ { 1, 1, 1}, {0, 1, 1}, {1, 0, 0 } }));
 }
 
+int UniqueBinarySearchTrees2(int A);
+TEST(IB, UniqueBinarySearchTrees2) {
+	EXPECT_EQ(5, UniqueBinarySearchTrees2(3));
+}
+
 vector<string> wordBreak2(string A, vector<string> &B);
 int WordBreak(string A, vector<string> &B);
 TEST(IB, wordBreak2) {

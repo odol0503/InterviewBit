@@ -24,7 +24,7 @@ As the max area rectangle is created by the 2x2 rectangle created by (0,1), (0,2
 #include <queue>
 using namespace std;
 
-#define OWN5
+#define OWN
 
 #ifdef OWN
 int MaxRectangleInBinaryMatrix(vector<vector<int> > A) {
@@ -40,9 +40,9 @@ int MaxRectangleInBinaryMatrix(vector<vector<int> > A) {
 				int sum = 0;
 				for (int k = j; k<A[0].size(); k++)
 				{
-					if (A[l][k] == 0) break;
-					dp[k] = (A[l][k] > 0 ? A[l][k] + dp[k] : 0);
-					sum = sum + (dp[k] == (l - i + 1) ? dp[k] : 0);
+					dp[k] += A[l][k];
+					if (dp[k] != (l - i + 1)) break;
+					sum += dp[k];
 				}
 
 				ret = max(ret, sum);

@@ -256,6 +256,7 @@
     <ClCompile Include="level7\DynamicProgramming\SubMatricesWithSumZero.cpp" />
     <ClCompile Include="level7\DynamicProgramming\TusharBirthdayParty.cpp" />
     <ClCompile Include="level7\DynamicProgramming\TusharsBirthdayBombs.cpp" />
+    <ClCompile Include="level7\DynamicProgramming\UniqueBinarySearchTrees2.cpp" />
     <ClCompile Include="level7\DynamicProgramming\UniquePathsInGrid.cpp" />
     <ClCompile Include="level7\DynamicProgramming\WaysToColorA3xNBoard.cpp" />
     <ClCompile Include="level7\DynamicProgramming\WaysToDecode.cpp" />
